@@ -4768,7 +4768,10 @@ int flag = 0;
 int prev_adc_val = 0;
 int state = 0;
 int start_val = 0;
-# 38 "main.c"
+int duty_cycle_us = 500;
+
+int pitch_duty_cycles[180];
+# 41 "main.c"
 void SystemInitialize(void){
     IntConfig int_config = {
         .button = INTERRUPT_HIGH,
@@ -4785,9 +4788,9 @@ void SystemInitialize(void){
     };
 
     OscillatorInitialize();
-    ComponentInitialize(COMPONENT_LED | COMPONENT_UART,
+    ComponentInitialize(COMPONENT_LED | COMPONENT_UART | COMPONENT_PWM,
                         &int_config, component_config);
-
+    PWMSetDutyCycle(500);
 }
 
 void main(void) {
@@ -4812,15 +4815,17 @@ void __attribute__((picinterrupt(("low_priority")))) LowIsr(void){
         char ch = UartGetChar();
 
         if(ch == '\r'){
+            char str[20];
+            UartCopyBufferToString(str);
+
+
+
+             duty_cycle_us = atoi(str);
+             PWMSetDutyCycle(duty_cycle_us);
+
+
+
             UartClearBuffer();
-        } else {
-            if(flag == 0){
-                state = ch - '0';
-                flag = 1;
-            } else {
-                start_val = ch - '0';
-                (LATA = ((start_val) << 1) | (LATA & 0x01));
-            }
         }
     }
     if(PIR1bits.ADIF){

@@ -27,6 +27,8 @@ int state = 0;
 int start_val = 0;
 int duty_cycle_us = MOTOR_NEG_90_DEG_US;
 
+int pitch_duty_cycles[180];
+
 
 //void putch(char c){
 //    UartSendChar(c);
@@ -52,9 +54,9 @@ void SystemInitialize(void){
     };
 
     OscillatorInitialize();
-    ComponentInitialize(COMPONENT_LED | COMPONENT_UART,
+    ComponentInitialize(COMPONENT_LED | COMPONENT_UART | COMPONENT_PWM,
                         &int_config, component_config);
-    PWMSetDutyCycle(MOTOR_0_DEG_US);
+    PWMSetDutyCycle(MOTOR_NEG_90_DEG_US);
 }
 
 void main(void) {
@@ -65,7 +67,7 @@ void main(void) {
 }
 
 void __interrupt(high_priority) HighIsr(void){
-    if(BUTTON_IF){
+    if(BUTTON_IF){ 
         ButtonIntDone();
     }
     if(Timer2IF){
@@ -81,8 +83,14 @@ void __interrupt(low_priority) LowIsr(void){
         if(ch == '\r'){
             char str[20];
             UartCopyBufferToString(str);
-            duty_cycle_us = atoi(str);
-            PWMSetDutyCycle(duty_cycle_us);
+//             int pitch = atoi(str);
+//             PWMSetDutyCycle(pitch_duty_cycles[pitch]);
+
+             duty_cycle_us = atoi(str);
+             PWMSetDutyCycle(duty_cycle_us);
+
+//            int num = atoi(str);
+//            LedSet(num);
             UartClearBuffer();
         }
     }

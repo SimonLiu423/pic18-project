@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"39 main.c
-[; ;main.c: 39:     IntConfig int_config = {
+"42 main.c
+[; ;main.c: 42:     IntConfig int_config = {
 [c E2584 0 1 2 .. ]
 [n E2584 . INTERRUPT_LOW INTERRUPT_HIGH INTERRUPT_NONE  ]
 "37 ./utils/settings.h
@@ -14,13 +14,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "86
 [; ;./utils/settings.h: 86: void OscillatorInitialize();
 [v _OscillatorInitialize `(v ~T0 @X0 0 e? ]
-"54 main.c
-[; ;main.c: 54:     ComponentInitialize(COMPONENT_LED | COMPONENT_UART,
+"57 main.c
+[; ;main.c: 57:     ComponentInitialize(COMPONENT_LED | COMPONENT_UART | COMPONENT_PWM,
 [c E2612 0 1 2 4 8 16 32 63 .. ]
 [n E2612 . COMPONENT_NONE COMPONENT_LED COMPONENT_BUTTON COMPONENT_ADC COMPONENT_PWM COMPONENT_UART COMPONENT_TIMER COMPONENT_ALL  ]
 "85 ./utils/settings.h
 [; ;./utils/settings.h: 85: void ComponentInitialize(SystemComponents components, IntConfig *int_config, ComponentConfig component_config);
 [v _ComponentInitialize `(v ~T0 @X0 0 ef3`E2612`*S281`S282 ]
+"12 ./utils/ccp.h
+[; ;./utils/ccp.h: 12: void PWMSetDutyCycle(double duty_cycle_us);
+[v _PWMSetDutyCycle `(v ~T0 @X0 0 ef1`d ]
 [p mainexit ]
 [t ~ __interrupt . k ]
 [t T41 __interrupt high_priority ]
@@ -83,19 +86,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "34
 [; ;./utils/uart.h: 34: char UartGetChar(void);
 [v _UartGetChar `(uc ~T0 @X0 0 ef ]
-"30
+"37
+[; ;./utils/uart.h: 37: void UartCopyBufferToString(char *str);
+[v _UartCopyBufferToString `(v ~T0 @X0 0 ef1`*uc ]
+"23 /Applications/microchip/xc8/v2.50/pic/include/c99/stdlib.h
+[; ;/Applications/microchip/xc8/v2.50/pic/include/c99/stdlib.h: 23: int atoi (const char *);
+[v _atoi `(i ~T0 @X0 0 ef1`*Cuc ]
+"30 ./utils/uart.h
 [; ;./utils/uart.h: 30: void UartClearBuffer(void);
 [v _UartClearBuffer `(v ~T0 @X0 0 ef ]
-"977 /Applications/microchip/mplabx/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8/pic/include/proc/pic18f4520.h
-[; ;/Applications/microchip/mplabx/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8/pic/include/proc/pic18f4520.h: 977: extern volatile unsigned char LATA __attribute__((address(0xF89)));
-[v _LATA `Vuc ~T0 @X0 0 e@3977 ]
-"4908
+"4908 /Applications/microchip/mplabx/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8/pic/include/proc/pic18f4520.h
 [; ;/Applications/microchip/mplabx/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8/pic/include/proc/pic18f4520.h: 4908: extern volatile unsigned char ADRESH __attribute__((address(0xFC4)));
 [v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
-"12 ./utils/ccp.h
-[; ;./utils/ccp.h: 12: void PWMSetDutyCycle(double duty_cycle_us);
-[v _PWMSetDutyCycle `(v ~T0 @X0 0 ef1`d ]
-"4781 /Applications/microchip/mplabx/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8/pic/include/proc/pic18f4520.h
+"4781
 [; ;/Applications/microchip/mplabx/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8/pic/include/proc/pic18f4520.h: 4781:     struct {
 [s S189 :1 `uc 1 :1 `uc 1 ]
 [n S189 . . GO_NOT_DONE ]
@@ -572,18 +575,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _start_val
 -> 0 `i
 ]
-"38
-[; ;main.c: 38: void SystemInitialize(void){
+"28
+[; ;main.c: 28: int duty_cycle_us = 500;
+[v _duty_cycle_us `i ~T0 @X0 1 e ]
+[i _duty_cycle_us
+-> 500 `i
+]
+"30
+[; ;main.c: 30: int pitch_duty_cycles[180];
+[v _pitch_duty_cycles `i ~T0 @X0 -> 180 `i e ]
+"41
+[; ;main.c: 41: void SystemInitialize(void){
 [v _SystemInitialize `(v ~T0 @X0 1 ef ]
 {
 [e :U _SystemInitialize ]
 [f ]
-[v F2686 `S281 ~T0 @X0 1 s ]
-[i F2686
+[v F2688 `S281 ~T0 @X0 1 s ]
+[i F2688
 :U ..
 :U ..
-"39
-[; ;main.c: 39:     IntConfig int_config = {
+"42
+[; ;main.c: 42:     IntConfig int_config = {
 . `E2584 1
 . `E2584 0
 . `E2584 2
@@ -593,13 +605,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _int_config `S281 ~T0 @X0 1 a ]
-[e = _int_config F2686 ]
-[v F2688 `S282 ~T0 @X0 1 s ]
-[i F2688
+[e = _int_config F2688 ]
+[v F2690 `S282 ~T0 @X0 1 s ]
+[i F2690
 :U ..
 :U ..
-"46
-[; ;main.c: 46:     ComponentConfig component_config = {
+"49
+[; ;main.c: 49:     ComponentConfig component_config = {
 -> 16 `i
 -> 16 `i
 -> 1000 `i
@@ -608,164 +620,147 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _component_config `S282 ~T0 @X0 1 a ]
-[e = _component_config F2688 ]
-"53
-[; ;main.c: 53:     OscillatorInitialize();
+[e = _component_config F2690 ]
+"56
+[; ;main.c: 56:     OscillatorInitialize();
 [e ( _OscillatorInitialize ..  ]
-"54
-[; ;main.c: 54:     ComponentInitialize(COMPONENT_LED | COMPONENT_UART,
-[e ( _ComponentInitialize (3 , , -> | -> . `E2612 1 `i -> . `E2612 5 `i `E2612 &U _int_config _component_config ]
 "57
-[; ;main.c: 57: }
+[; ;main.c: 57:     ComponentInitialize(COMPONENT_LED | COMPONENT_UART | COMPONENT_PWM,
+[e ( _ComponentInitialize (3 , , -> | | -> . `E2612 1 `i -> . `E2612 5 `i -> . `E2612 4 `i `E2612 &U _int_config _component_config ]
+"59
+[; ;main.c: 59:     PWMSetDutyCycle(500);
+[e ( _PWMSetDutyCycle (1 -> -> 500 `i `d ]
+"60
+[; ;main.c: 60: }
 [e :UE 283 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"59
-[; ;main.c: 59: void main(void) {
+"62
+[; ;main.c: 62: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"60
-[; ;main.c: 60:     SystemInitialize();
+"63
+[; ;main.c: 63:     SystemInitialize();
 [e ( _SystemInitialize ..  ]
-"61
-[; ;main.c: 61:     while(1){
+"64
+[; ;main.c: 64:     while(1){
 [e :U 286 ]
 {
-"62
-[; ;main.c: 62:     };
+"65
+[; ;main.c: 65:     };
 }
 [e :U 285 ]
 [e $U 286  ]
 [e :U 287 ]
-"63
-[; ;main.c: 63:     return;
+"66
+[; ;main.c: 66:     return;
 [e $UE 284  ]
-"64
-[; ;main.c: 64: }
+"67
+[; ;main.c: 67: }
 [e :UE 284 ]
 }
 [v $root$_HighIsr `(v ~T0 @X0 0 e ]
-"66
-[; ;main.c: 66: void __attribute__((picinterrupt(("high_priority")))) HighIsr(void){
+"69
+[; ;main.c: 69: void __attribute__((picinterrupt(("high_priority")))) HighIsr(void){
 [v _HighIsr `(v ~T41 @X0 1 ef ]
 {
 [e :U _HighIsr ]
 [f ]
-"67
-[; ;main.c: 67:     if((INTCONbits.INT0IE && INTCONbits.INT0IF)){
+"70
+[; ;main.c: 70:     if((INTCONbits.INT0IE && INTCONbits.INT0IF)){
 [e $ ! && != -> . . _INTCONbits 0 4 `i -> 0 `i != -> . . _INTCONbits 0 1 `i -> 0 `i 289  ]
 {
-"68
-[; ;main.c: 68:         INTCONbits.INT0IF = 0;
-[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-"69
-[; ;main.c: 69:     }
-}
-[e :U 289 ]
-"70
-[; ;main.c: 70:     if((PIR1bits.TMR2IF && PIE1bits.TMR2IE)){
-[e $ ! && != -> . . _PIR1bits 0 1 `i -> 0 `i != -> . . _PIE1bits 0 1 `i -> 0 `i 290  ]
-{
 "71
-[; ;main.c: 71:         PIR1bits.TMR2IF = 0;
-[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 71:         INTCONbits.INT0IF = 0;
+[e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
 "72
 [; ;main.c: 72:     }
 }
-[e :U 290 ]
+[e :U 289 ]
 "73
-[; ;main.c: 73: }
+[; ;main.c: 73:     if((PIR1bits.TMR2IF && PIE1bits.TMR2IE)){
+[e $ ! && != -> . . _PIR1bits 0 1 `i -> 0 `i != -> . . _PIE1bits 0 1 `i -> 0 `i 290  ]
+{
+"74
+[; ;main.c: 74:         PIR1bits.TMR2IF = 0;
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
+"75
+[; ;main.c: 75:     }
+}
+[e :U 290 ]
+"76
+[; ;main.c: 76: }
 [e :UE 288 ]
 }
 [v $root$_LowIsr `(v ~T0 @X0 0 e ]
-"75
-[; ;main.c: 75: void __attribute__((picinterrupt(("low_priority")))) LowIsr(void){
+"78
+[; ;main.c: 78: void __attribute__((picinterrupt(("low_priority")))) LowIsr(void){
 [v _LowIsr `(v ~T42 @X0 1 ef ]
 {
 [e :U _LowIsr ]
 [f ]
-"76
-[; ;main.c: 76:     if(RCIF){
+"79
+[; ;main.c: 79:     if(RCIF){
 [e $ ! _RCIF 292  ]
 {
-"77
-[; ;main.c: 77:         UartReceiveChar();
+"80
+[; ;main.c: 80:         UartReceiveChar();
 [e ( _UartReceiveChar ..  ]
-"78
-[; ;main.c: 78:         char ch = UartGetChar();
+"81
+[; ;main.c: 81:         char ch = UartGetChar();
 [v _ch `uc ~T0 @X0 1 a ]
 [e = _ch ( _UartGetChar ..  ]
-"80
-[; ;main.c: 80:         if(ch == '\r'){
+"83
+[; ;main.c: 83:         if(ch == '\r'){
 [e $ ! == -> _ch `ui -> 13 `ui 293  ]
 {
-"81
-[; ;main.c: 81:             UartClearBuffer();
-[e ( _UartClearBuffer ..  ]
-"82
-[; ;main.c: 82:         } else {
-}
-[e $U 294  ]
-[e :U 293 ]
-{
-"83
-[; ;main.c: 83:             if(flag == 0){
-[e $ ! == _flag -> 0 `i 295  ]
-{
 "84
-[; ;main.c: 84:                 state = ch - '0';
-[e = _state -> - -> _ch `ui -> 48 `ui `i ]
+[; ;main.c: 84:             char str[20];
+[v _str `uc ~T0 @X0 -> 20 `i a ]
 "85
-[; ;main.c: 85:                 flag = 1;
-[e = _flag -> 1 `i ]
-"86
-[; ;main.c: 86:             } else {
-}
-[e $U 296  ]
-[e :U 295 ]
-{
-"87
-[; ;main.c: 87:                 start_val = ch - '0';
-[e = _start_val -> - -> _ch `ui -> 48 `ui `i ]
-"88
-[; ;main.c: 88:                 (LATA = ((start_val) << 1) | (LATA & 0x01));
-[e = _LATA -> | << _start_val -> 1 `i & -> _LATA `i -> 1 `i `uc ]
+[; ;main.c: 85:             UartCopyBufferToString(str);
+[e ( _UartCopyBufferToString (1 &U _str ]
 "89
-[; ;main.c: 89:             }
-}
-[e :U 296 ]
+[; ;main.c: 89:              duty_cycle_us = atoi(str);
+[e = _duty_cycle_us ( _atoi (1 -> &U _str `*Cuc ]
 "90
-[; ;main.c: 90:         }
+[; ;main.c: 90:              PWMSetDutyCycle(duty_cycle_us);
+[e ( _PWMSetDutyCycle (1 -> _duty_cycle_us `d ]
+"94
+[; ;main.c: 94:             UartClearBuffer();
+[e ( _UartClearBuffer ..  ]
+"95
+[; ;main.c: 95:         }
 }
-[e :U 294 ]
-"91
-[; ;main.c: 91:     }
+[e :U 293 ]
+"96
+[; ;main.c: 96:     }
 }
 [e :U 292 ]
-"92
-[; ;main.c: 92:     if(PIR1bits.ADIF){
-[e $ ! != -> . . _PIR1bits 0 6 `i -> 0 `i 297  ]
+"97
+[; ;main.c: 97:     if(PIR1bits.ADIF){
+[e $ ! != -> . . _PIR1bits 0 6 `i -> 0 `i 294  ]
 {
-"93
-[; ;main.c: 93:         int val = (ADRESH);
+"98
+[; ;main.c: 98:         int val = (ADRESH);
 [v _val `i ~T0 @X0 1 a ]
 [e = _val -> _ADRESH `i ]
-"94
-[; ;main.c: 94:         PWMSetDutyCycle((2400 - 1450) * (double)val / 0b11111111 + 1450);
+"99
+[; ;main.c: 99:         PWMSetDutyCycle((2400 - 1450) * (double)val / 0b11111111 + 1450);
 [e ( _PWMSetDutyCycle (1 + / * -> - -> 2400 `i -> 1450 `i `d -> _val `d -> -> 255 `i `d -> -> 1450 `i `d ]
-"95
-[; ;main.c: 95:         ADCON0bits.GO = 1;
+"100
+[; ;main.c: 100:         ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-"96
-[; ;main.c: 96:         PIR1bits.ADIF = 0;
+"101
+[; ;main.c: 101:         PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"97
-[; ;main.c: 97:     }
+"102
+[; ;main.c: 102:     }
 }
-[e :U 297 ]
-"98
-[; ;main.c: 98: }
+[e :U 294 ]
+"103
+[; ;main.c: 103: }
 [e :UE 291 ]
 }

@@ -48,13 +48,13 @@ INTERRUPT_LOW 0
 INTERRUPT_HIGH 1
 INTERRUPT_NONE 2
 ]
-"39 /Users/simon/MPLABXProjects/final_project.X/main.c
+"42 /Users/simon/MPLABXProjects/final_project.X/main.c
 [e E2584 . `uc
 INTERRUPT_LOW 0
 INTERRUPT_HIGH 1
 INTERRUPT_NONE 2
 ]
-"54
+"57
 [e E2612 . `uc
 COMPONENT_NONE 0
 COMPONENT_LED 1
@@ -65,6 +65,8 @@ COMPONENT_UART 16
 COMPONENT_TIMER 32
 COMPONENT_ALL 63
 ]
+"5 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/atoi.c
+[v _atoi atoi `(i  1 e 2 0 ]
 "4 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
 "4 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/flge.c
@@ -104,13 +106,13 @@ COMPONENT_ALL 63
 "10 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 [v i1___xxtofl __xxtofl `(d  1 e 4 0 ]
-"38 /Users/simon/MPLABXProjects/final_project.X/main.c
+"41 /Users/simon/MPLABXProjects/final_project.X/main.c
 [v _SystemInitialize SystemInitialize `(v  1 e 1 0 ]
-"59
+"62
 [v _main main `(v  1 e 1 0 ]
-"66
+"69
 [v _HighIsr HighIsr `IIH(v  1 e 1 0 ]
-"75
+"78
 [v _LowIsr LowIsr `IIL(v  1 e 1 0 ]
 "5 /Users/simon/MPLABXProjects/final_project.X/utils/adc.c
 [v _AdcInitialize AdcInitialize `(v  1 e 1 0 ]
@@ -122,6 +124,7 @@ COMPONENT_ALL 63
 [v _PWMSetPeriod PWMSetPeriod `(v  1 e 1 0 ]
 "29
 [v _PWMSetDutyCycle PWMSetDutyCycle `(v  1 e 1 0 ]
+[v i1_PWMSetDutyCycle PWMSetDutyCycle `(v  1 e 1 0 ]
 "47
 [v _MotorRotateWithDelay MotorRotateWithDelay `(v  1 e 1 0 ]
 "3 /Users/simon/MPLABXProjects/final_project.X/utils/interrupt_manager.c
@@ -157,6 +160,8 @@ COMPONENT_ALL 63
 [v _UartReceiveChar UartReceiveChar `(v  1 e 1 0 ]
 "86
 [v _UartGetChar UartGetChar `(uc  1 e 1 0 ]
+"108
+[v _UartCopyBufferToString UartCopyBufferToString `(v  1 e 1 0 ]
 "977 /Applications/microchip/mplabx/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8/pic/include/proc/pic18f4520.h
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
 [s S28 . 1 `uc 1 TRISA0 1 0 :1:0 
@@ -530,12 +535,8 @@ COMPONENT_ALL 63
 [v _IRCF2 IRCF2 `VEb  1 e 0 @32414 ]
 "8180
 [v _RCIF RCIF `VEb  1 e 0 @31989 ]
-"24 /Users/simon/MPLABXProjects/final_project.X/main.c
-[v _flag flag `i  1 e 2 0 ]
-"26
-[v _state state `i  1 e 2 0 ]
-"27
-[v _start_val start_val `i  1 e 2 0 ]
+"28 /Users/simon/MPLABXProjects/final_project.X/main.c
+[v _duty_cycle_us duty_cycle_us `i  1 e 2 0 ]
 "5 /Users/simon/MPLABXProjects/final_project.X/utils/ccp.c
 [v _PWMDutyCycle PWMDutyCycle `d  1 e 4 0 ]
 "6
@@ -548,25 +549,36 @@ COMPONENT_ALL 63
 [v _uart_buffer uart_buffer `[128]uc  1 e 128 0 ]
 "8
 [v _uart_buffer_idx uart_buffer_idx `i  1 e 2 0 ]
-"59 /Users/simon/MPLABXProjects/final_project.X/main.c
+"62 /Users/simon/MPLABXProjects/final_project.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"64
+"67
 } 0
-"38
+"41
 [v _SystemInitialize SystemInitialize `(v  1 e 1 0 ]
 {
 [s S735 . 8 `i 1 prescaler 2 0 `i 1 postscaler 2 2 `i 1 timer_period_ms 2 4 `i 1 pwm_period_ms 2 6 ]
-"46
-[v SystemInitialize@component_config component_config `S735  1 a 8 112 ]
+"49
+[v SystemInitialize@component_config component_config `S735  1 a 8 68 ]
 [s S729 . 5 `E2584 1 button 1 0 `E2584 1 adc 1 1 `E2584 1 timer 1 2 `E2584 1 uart_tx 1 3 `E2584 1 uart_rx 1 4 ]
-"39
-[v SystemInitialize@int_config int_config `S729  1 a 5 120 ]
+"42
+[v SystemInitialize@int_config int_config `S729  1 a 5 76 ]
+"41
+[v SystemInitialize@F2688 F2688 `S729  1 s 5 F2688 ]
+"42
+[v SystemInitialize@F2690 F2690 `S735  1 s 8 F2690 ]
+"60
+} 0
+"29 /Users/simon/MPLABXProjects/final_project.X/utils/ccp.c
+[v _PWMSetDutyCycle PWMSetDutyCycle `(v  1 e 1 0 ]
+{
 "38
-[v SystemInitialize@F2686 F2686 `S729  1 s 5 F2686 ]
-"39
-[v SystemInitialize@F2688 F2688 `S735  1 s 8 F2688 ]
-"57
+[v PWMSetDutyCycle@val val `o  1 a 8 50 ]
+"37
+[v PWMSetDutyCycle@prescaler prescaler `i  1 a 2 48 ]
+"29
+[v PWMSetDutyCycle@duty_cycle_us duty_cycle_us `d  1 p 4 31 ]
+"41
 } 0
 "95 /Users/simon/MPLABXProjects/final_project.X/utils/settings.c
 [v _OscillatorInitialize OscillatorInitialize `(v  1 e 1 0 ]
@@ -579,10 +591,10 @@ COMPONENT_ALL 63
 [v ComponentInitialize@components components `E2612  1 p 1 wreg ]
 [v ComponentInitialize@components components `E2612  1 p 1 wreg ]
 [s S729 . 5 `E2584 1 button 1 0 `E2584 1 adc 1 1 `E2584 1 timer 1 2 `E2584 1 uart_tx 1 3 `E2584 1 uart_rx 1 4 ]
-[v ComponentInitialize@int_config int_config `*.30S729  1 p 1 93 ]
+[v ComponentInitialize@int_config int_config `*.39S729  1 p 2 48 ]
 [s S735 . 8 `i 1 prescaler 2 0 `i 1 postscaler 2 2 `i 1 timer_period_ms 2 4 `i 1 pwm_period_ms 2 6 ]
-[v ComponentInitialize@component_config component_config `S735  1 p 8 94 ]
-[v ComponentInitialize@components components `E2612  1 p 1 111 ]
+[v ComponentInitialize@component_config component_config `S735  1 p 8 50 ]
+[v ComponentInitialize@components components `E2612  1 p 1 67 ]
 "93
 } 0
 "29 /Users/simon/MPLABXProjects/final_project.X/utils/uart.c
@@ -590,8 +602,8 @@ COMPONENT_ALL 63
 {
 [v UartInitialize@tx_priority tx_priority `E2584  1 p 1 wreg ]
 [v UartInitialize@tx_priority tx_priority `E2584  1 p 1 wreg ]
-[v UartInitialize@rx_priority rx_priority `E2584  1 p 1 1 ]
-[v UartInitialize@tx_priority tx_priority `E2584  1 p 1 2 ]
+[v UartInitialize@rx_priority rx_priority `E2584  1 p 1 32 ]
+[v UartInitialize@tx_priority tx_priority `E2584  1 p 1 33 ]
 "50
 } 0
 "19
@@ -599,7 +611,7 @@ COMPONENT_ALL 63
 {
 [v TxEnableInterrupt@priority priority `E2584  1 p 1 wreg ]
 [v TxEnableInterrupt@priority priority `E2584  1 p 1 wreg ]
-[v TxEnableInterrupt@priority priority `E2584  1 p 1 0 ]
+[v TxEnableInterrupt@priority priority `E2584  1 p 1 31 ]
 "22
 } 0
 "11
@@ -612,13 +624,13 @@ COMPONENT_ALL 63
 {
 [v RxEnableInterrupt@priority priority `E2584  1 p 1 wreg ]
 [v RxEnableInterrupt@priority priority `E2584  1 p 1 wreg ]
-[v RxEnableInterrupt@priority priority `E2584  1 p 1 0 ]
+[v RxEnableInterrupt@priority priority `E2584  1 p 1 31 ]
 "27
 } 0
 "8 /Users/simon/MPLABXProjects/final_project.X/utils/ccp.c
 [v _PWMInitialize PWMInitialize `(v  1 e 1 0 ]
 {
-[v PWMInitialize@period_ms period_ms `d  1 p 4 89 ]
+[v PWMInitialize@period_ms period_ms `d  1 p 4 44 ]
 "17
 } 0
 "7 /Users/simon/MPLABXProjects/final_project.X/utils/timer.c
@@ -626,19 +638,19 @@ COMPONENT_ALL 63
 {
 [v Timer2Initialize@priority priority `E2584  1 p 1 wreg ]
 [v Timer2Initialize@priority priority `E2584  1 p 1 wreg ]
-[v Timer2Initialize@prescaler prescaler `i  1 p 2 76 ]
-[v Timer2Initialize@postscaler postscaler `i  1 p 2 78 ]
-[v Timer2Initialize@period_ms period_ms `d  1 p 4 80 ]
-[v Timer2Initialize@priority priority `E2584  1 p 1 88 ]
+[v Timer2Initialize@prescaler prescaler `i  1 p 2 31 ]
+[v Timer2Initialize@postscaler postscaler `i  1 p 2 33 ]
+[v Timer2Initialize@period_ms period_ms `d  1 p 4 35 ]
+[v Timer2Initialize@priority priority `E2584  1 p 1 43 ]
 "25
 } 0
 "19 /Users/simon/MPLABXProjects/final_project.X/utils/ccp.c
 [v _PWMSetPeriod PWMSetPeriod `(v  1 e 1 0 ]
 {
 "25
-[v PWMSetPeriod@prescaler prescaler `i  1 a 2 82 ]
+[v PWMSetPeriod@prescaler prescaler `i  1 a 2 37 ]
 "19
-[v PWMSetPeriod@period_ms period_ms `d  1 p 4 76 ]
+[v PWMSetPeriod@period_ms period_ms `d  1 p 4 31 ]
 "27
 } 0
 "10 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/xxtofl.c
@@ -646,85 +658,85 @@ COMPONENT_ALL 63
 {
 [v ___xxtofl@sign sign `uc  1 p 1 wreg ]
 "13
-[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+[v ___xxtofl@arg arg `ul  1 a 4 41 ]
 "12
-[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+[v ___xxtofl@exp exp `uc  1 a 1 40 ]
 "10
 [v ___xxtofl@sign sign `uc  1 p 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 0 ]
+[v ___xxtofl@val val `l  1 p 4 31 ]
 "15
-[v ___xxtofl@sign sign `uc  1 p 1 8 ]
+[v ___xxtofl@sign sign `uc  1 p 1 39 ]
 "44
 } 0
 "43 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
 "45
-[v ___fltol@exp1 exp1 `uc  1 a 1 75 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 74 ]
+[v ___fltol@exp1 exp1 `uc  1 a 1 30 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 29 ]
 "43
-[v ___fltol@f1 f1 `d  1 p 4 66 ]
+[v ___fltol@f1 f1 `d  1 p 4 21 ]
 "70
 } 0
 "8 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1663 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1672 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1668 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1671 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1663 1 fAsBytes 4 0 `S1668 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1671  1 a 4 19 ]
+[s S1677 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1680 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1672 1 fAsBytes 4 0 `S1677 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1680  1 a 4 50 ]
 "12
-[v ___flmul@grs grs `ul  1 a 4 13 ]
-[s S1739 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[v ___flmul@grs grs `ul  1 a 4 44 ]
+[s S1748 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1742 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1739 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1742  1 a 2 23 ]
+[u S1751 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1748 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1751  1 a 2 54 ]
 "10
-[v ___flmul@bexp bexp `uc  1 a 1 18 ]
+[v ___flmul@bexp bexp `uc  1 a 1 49 ]
 "11
-[v ___flmul@aexp aexp `uc  1 a 1 17 ]
+[v ___flmul@aexp aexp `uc  1 a 1 48 ]
 "9
-[v ___flmul@sign sign `uc  1 a 1 12 ]
+[v ___flmul@sign sign `uc  1 a 1 43 ]
 "8
-[v ___flmul@b b `d  1 p 4 0 ]
-[v ___flmul@a a `d  1 p 4 4 ]
+[v ___flmul@b b `d  1 p 4 31 ]
+[v ___flmul@a a `d  1 p 4 35 ]
 "205
 } 0
 "11 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 {
 "21
-[v ___fldiv@grs grs `ul  1 a 4 44 ]
+[v ___fldiv@grs grs `ul  1 a 4 7 ]
 "22
-[v ___fldiv@rem rem `ul  1 a 4 37 ]
+[v ___fldiv@rem rem `ul  1 a 4 0 ]
 "20
-[v ___fldiv@new_exp new_exp `s  1 a 2 42 ]
+[v ___fldiv@new_exp new_exp `s  1 a 2 5 ]
 "19
-[v ___fldiv@aexp aexp `uc  1 a 1 49 ]
+[v ___fldiv@aexp aexp `uc  1 a 1 12 ]
 "18
-[v ___fldiv@bexp bexp `uc  1 a 1 48 ]
+[v ___fldiv@bexp bexp `uc  1 a 1 11 ]
 "16
-[v ___fldiv@sign sign `uc  1 a 1 41 ]
+[v ___fldiv@sign sign `uc  1 a 1 4 ]
 "11
-[v ___fldiv@b b `d  1 p 4 25 ]
-[v ___fldiv@a a `d  1 p 4 29 ]
+[v ___fldiv@b b `d  1 p 4 56 ]
+[v ___fldiv@a a `d  1 p 4 60 ]
 "185
 } 0
 "10 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 {
 "17
-[v ___fladd@grs grs `uc  1 a 1 65 ]
+[v ___fladd@grs grs `uc  1 a 1 20 ]
 "15
-[v ___fladd@bexp bexp `uc  1 a 1 64 ]
+[v ___fladd@bexp bexp `uc  1 a 1 19 ]
 "16
-[v ___fladd@aexp aexp `uc  1 a 1 63 ]
+[v ___fladd@aexp aexp `uc  1 a 1 18 ]
 "13
-[v ___fladd@signs signs `uc  1 a 1 62 ]
+[v ___fladd@signs signs `uc  1 a 1 17 ]
 "10
-[v ___fladd@b b `d  1 p 4 50 ]
-[v ___fladd@a a `d  1 p 4 54 ]
+[v ___fladd@b b `d  1 p 4 68 ]
+[v ___fladd@a a `d  1 p 4 72 ]
 "237
 } 0
 "31 /Users/simon/MPLABXProjects/final_project.X/utils/timer.c
@@ -745,7 +757,7 @@ COMPONENT_ALL 63
 "9
 [v _ButtonInitialize ButtonInitialize `(v  1 e 1 0 ]
 {
-[v ButtonInitialize@interrupt interrupt `i  1 p 2 0 ]
+[v ButtonInitialize@interrupt interrupt `i  1 p 2 31 ]
 "16
 } 0
 "5 /Users/simon/MPLABXProjects/final_project.X/utils/adc.c
@@ -753,7 +765,7 @@ COMPONENT_ALL 63
 {
 [v AdcInitialize@int_priority int_priority `E2584  1 p 1 wreg ]
 [v AdcInitialize@int_priority int_priority `E2584  1 p 1 wreg ]
-[v AdcInitialize@int_priority int_priority `E2584  1 p 1 1 ]
+[v AdcInitialize@int_priority int_priority `E2584  1 p 1 32 ]
 "25
 } 0
 "27
@@ -761,17 +773,19 @@ COMPONENT_ALL 63
 {
 [v AdcEnableInterrupt@priority priority `E2584  1 p 1 wreg ]
 [v AdcEnableInterrupt@priority priority `E2584  1 p 1 wreg ]
-[v AdcEnableInterrupt@priority priority `E2584  1 p 1 0 ]
+[v AdcEnableInterrupt@priority priority `E2584  1 p 1 31 ]
 "31
 } 0
-"75 /Users/simon/MPLABXProjects/final_project.X/main.c
+"78 /Users/simon/MPLABXProjects/final_project.X/main.c
 [v _LowIsr LowIsr `IIL(v  1 e 1 0 ]
 {
-"93
-[v LowIsr@val val `i  1 a 2 118 ]
-"78
-[v LowIsr@ch ch `uc  1 a 1 120 ]
+"84
+[v LowIsr@str str `[20]uc  1 a 20 0 ]
 "98
+[v LowIsr@val val `i  1 a 2 28 ]
+"81
+[v LowIsr@ch ch `uc  1 a 1 30 ]
+"103
 } 0
 "10 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/sprcadd.c
 [v i1___fladd __fladd `(d  1 e 4 0 ]
@@ -789,40 +803,15 @@ COMPONENT_ALL 63
 [v i1___fladd@a a `d  1 p 4 68 ]
 "237
 } 0
-"74 /Users/simon/MPLABXProjects/final_project.X/utils/uart.c
-[v _UartReceiveChar UartReceiveChar `(v  1 e 1 0 ]
-{
-"80
-[v UartReceiveChar@c c `uc  1 a 1 1 ]
-"84
-} 0
-"57
-[v _UartSendChar UartSendChar `(v  1 e 1 0 ]
-{
-[v UartSendChar@c c `uc  1 p 1 wreg ]
-[v UartSendChar@c c `uc  1 p 1 wreg ]
-[v UartSendChar@c c `uc  1 p 1 0 ]
-"60
-} 0
-"86
-[v _UartGetChar UartGetChar `(uc  1 e 1 0 ]
-{
-"89
-} 0
-"52
-[v _UartClearBuffer UartClearBuffer `(v  1 e 1 0 ]
-{
-"55
-} 0
 "29 /Users/simon/MPLABXProjects/final_project.X/utils/ccp.c
-[v _PWMSetDutyCycle PWMSetDutyCycle `(v  1 e 1 0 ]
+[v i1_PWMSetDutyCycle PWMSetDutyCycle `(v  1 e 1 0 ]
 {
 "38
-[v PWMSetDutyCycle@val val `o  1 a 8 99 ]
+[v i1PWMSetDutyCycle@val val `o  1 a 8 93 ]
 "37
-[v PWMSetDutyCycle@prescaler prescaler `i  1 a 2 97 ]
+[v i1PWMSetDutyCycle@prescaler prescaler `i  1 a 2 91 ]
 "29
-[v PWMSetDutyCycle@duty_cycle_us duty_cycle_us `d  1 p 4 80 ]
+[v i1PWMSetDutyCycle@duty_cycle_us duty_cycle_us `d  1 p 4 74 ]
 "41
 } 0
 "10 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/xxtofl.c
@@ -853,17 +842,17 @@ COMPONENT_ALL 63
 "8 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/sprcmul.c
 [v i1___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1663 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1672 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1668 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1671 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1663 1 fAsBytes 4 0 `S1668 1 fAsWords 4 0 ]
-[v i1___flmul@prod prod `S1671  1 a 4 33 ]
+[s S1677 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1680 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1672 1 fAsBytes 4 0 `S1677 1 fAsWords 4 0 ]
+[v i1___flmul@prod prod `S1680  1 a 4 33 ]
 "12
 [v i1___flmul@grs grs `ul  1 a 4 27 ]
-[s S1739 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1748 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1742 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1739 1 nAsBytes 2 0 ]
-[v i1___flmul@temp temp `S1742  1 a 2 37 ]
+[u S1751 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1748 1 nAsBytes 2 0 ]
+[v i1___flmul@temp temp `S1751  1 a 2 37 ]
 "10
 [v i1___flmul@bexp bexp `uc  1 a 1 32 ]
 "11
@@ -900,8 +889,53 @@ COMPONENT_ALL 63
 {
 "33
 } 0
-"66 /Users/simon/MPLABXProjects/final_project.X/main.c
+"5 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/atoi.c
+[v _atoi atoi `(i  1 e 2 0 ]
+{
+"7
+[v atoi@n n `i  1 a 2 6 ]
+"8
+[v atoi@neg neg `a  1 a 1 5 ]
+"5
+[v atoi@s s `*.30Cuc  1 p 1 0 ]
+"24
+} 0
+"74 /Users/simon/MPLABXProjects/final_project.X/utils/uart.c
+[v _UartReceiveChar UartReceiveChar `(v  1 e 1 0 ]
+{
+"80
+[v UartReceiveChar@c c `uc  1 a 1 1 ]
+"84
+} 0
+"57
+[v _UartSendChar UartSendChar `(v  1 e 1 0 ]
+{
+[v UartSendChar@c c `uc  1 p 1 wreg ]
+[v UartSendChar@c c `uc  1 p 1 wreg ]
+[v UartSendChar@c c `uc  1 p 1 0 ]
+"60
+} 0
+"86
+[v _UartGetChar UartGetChar `(uc  1 e 1 0 ]
+{
+"89
+} 0
+"108
+[v _UartCopyBufferToString UartCopyBufferToString `(v  1 e 1 0 ]
+{
+"109
+[v UartCopyBufferToString@i i `i  1 a 2 2 ]
+"108
+[v UartCopyBufferToString@str str `*.30uc  1 p 1 0 ]
+"113
+} 0
+"52
+[v _UartClearBuffer UartClearBuffer `(v  1 e 1 0 ]
+{
+"55
+} 0
+"69 /Users/simon/MPLABXProjects/final_project.X/main.c
 [v _HighIsr HighIsr `IIH(v  1 e 1 0 ]
 {
-"73
+"76
 } 0

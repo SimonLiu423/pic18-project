@@ -1,242 +1,1001 @@
-771 1736584304459 GEN4_CONNECT_DIAGNOSTICS:MPLABCommTool is NOT null
-771 1736584304460 GEN4_CONNECT_DIAGNOSTICS:AttachedToolPID = 9012, AttachedToolVID = 4d8
-771 1736584304460 GEN4_CONNECT_DIAGNOSTICS:transport type = USB
-771 1736584304460 GEN4_CONNECT_DIAGNOSTICS:AttachedToolPID = 9012, AttachedToolVID = 4d8
-771 1736584304505 com.microchip.mplab.mdbcore.RealICETool.RIDbgToolCom
-771 1736584304505 GEN4_CONNECT_DIAGNOSTICS:Before MPLABCommTool.Connect()
-771 1736584304506 GEN4_CONNECT_DIAGNOSTICS:After MPLABCommTool.Connect()
-771 1736584304506 GEN4_CONNECT_DIAGNOSTICS:MPLABCommTool.Connect() returned MPLABCOMM_NO_ERROR
-771 1736584304506 GEN4_CONNECT_DIAGNOSTICS:Attaching to MPLABCommTool plugnplay
-771 1736584304517 GEN4_CONNECT_DIAGNOSTICS:Adding new plug and play observer com.microchip.mplab.mdbcore.RI4Tool.RI4ToolBase$RI4PlugNPlayObserver@2831dfa7
-771 1736584304517 GEN4_CONNECT_DIAGNOSTICS:Begin PlugNPlayObservers list dump:
-771 1736584304517 GEN4_CONNECT_DIAGNOSTICS:com.microchip.mplab.mdbcore.RI4Tool.RI4ToolBase$RI4PlugNPlayObserver@2831dfa7
-771 1736584304517 GEN4_CONNECT_DIAGNOSTICS:End PlugNPlayObservers list dump:
-771 1736584304520 GEN4_CONNECT_DIAGNOSTICS:Registering for alternate PNP notifications. CommPnPCriteria.cPIDList = [2177, 2179, 217a, 2141, 9017, 901b, 9036, 9035], CommPnPCriteria.cSerialNumber = bur221672038
+1052 1736657248470 XXXX 1736657248470, Thread 1052: XXXX 1736657248470, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657248574 XXXX 1736657248574, Thread 1052: XXXX 1736657248574, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657248576 XXXX 1736657248576, Thread 1052: XXXX 1736657248576, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657248680 XXXX 1736657248680, Thread 1052: XXXX 1736657248680, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657248681 XXXX 1736657248681, Thread 1052: XXXX 1736657248681, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657248785 XXXX 1736657248785, Thread 1052: XXXX 1736657248785, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657248787 XXXX 1736657248787, Thread 1052: XXXX 1736657248787, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657248890 XXXX 1736657248890, Thread 1052: XXXX 1736657248890, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657248892 XXXX 1736657248892, Thread 1052: XXXX 1736657248892, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657248996 XXXX 1736657248996, Thread 1052: XXXX 1736657248996, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657248997 XXXX 1736657248997, Thread 1052: XXXX 1736657248997, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657249098 XXXX 1736657249098, Thread 1052: XXXX 1736657249098, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657249099 XXXX 1736657249099, Thread 1052: XXXX 1736657249099, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657249203 XXXX 1736657249203, Thread 1052: XXXX 1736657249203, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657249204 XXXX 1736657249204, Thread 1052: XXXX 1736657249204, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657249308 XXXX 1736657249308, Thread 1052: XXXX 1736657249308, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657249309 XXXX 1736657249309, Thread 1052: XXXX 1736657249309, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657249413 XXXX 1736657249413, Thread 1052: XXXX 1736657249413, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657249415 XXXX 1736657249415, Thread 1052: XXXX 1736657249415, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657249519 XXXX 1736657249519, Thread 1052: XXXX 1736657249519, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657249520 XXXX 1736657249520, Thread 1052: XXXX 1736657249520, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657249623 XXXX 1736657249623, Thread 1052: XXXX 1736657249623, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657249624 XXXX 1736657249624, Thread 1052: XXXX 1736657249624, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657249728 XXXX 1736657249728, Thread 1052: XXXX 1736657249728, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657249729 XXXX 1736657249729, Thread 1052: XXXX 1736657249729, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657249833 XXXX 1736657249833, Thread 1052: XXXX 1736657249833, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657249834 XXXX 1736657249834, Thread 1052: XXXX 1736657249834, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657249938 XXXX 1736657249938, Thread 1052: XXXX 1736657249938, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657249939 XXXX 1736657249939, Thread 1052: XXXX 1736657249939, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657250044 XXXX 1736657250044, Thread 1052: XXXX 1736657250044, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657250045 XXXX 1736657250045, Thread 1052: XXXX 1736657250045, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657250150 XXXX 1736657250150, Thread 1052: XXXX 1736657250150, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657250151 XXXX 1736657250151, Thread 1052: XXXX 1736657250151, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657250254 XXXX 1736657250254, Thread 1052: XXXX 1736657250254, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657250255 XXXX 1736657250255, Thread 1052: XXXX 1736657250255, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657250356 XXXX 1736657250356, Thread 1052: XXXX 1736657250356, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657250357 XXXX 1736657250357, Thread 1052: XXXX 1736657250357, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657250461 XXXX 1736657250461, Thread 1052: XXXX 1736657250461, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657250463 XXXX 1736657250463, Thread 1052: XXXX 1736657250463, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657250567 XXXX 1736657250567, Thread 1052: XXXX 1736657250567, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657250568 XXXX 1736657250568, Thread 1052: XXXX 1736657250568, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657250673 XXXX 1736657250673, Thread 1052: XXXX 1736657250673, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657250674 XXXX 1736657250674, Thread 1052: XXXX 1736657250674, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657250778 XXXX 1736657250778, Thread 1052: XXXX 1736657250778, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657250779 XXXX 1736657250779, Thread 1052: XXXX 1736657250779, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657250882 XXXX 1736657250882, Thread 1052: XXXX 1736657250882, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657250884 XXXX 1736657250884, Thread 1052: XXXX 1736657250884, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657250988 XXXX 1736657250988, Thread 1052: XXXX 1736657250988, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657250989 XXXX 1736657250989, Thread 1052: XXXX 1736657250989, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657251094 XXXX 1736657251094, Thread 1052: XXXX 1736657251094, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657251095 XXXX 1736657251095, Thread 1052: XXXX 1736657251095, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657251199 XXXX 1736657251199, Thread 1052: XXXX 1736657251199, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657251200 XXXX 1736657251200, Thread 1052: XXXX 1736657251200, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657251300 XXXX 1736657251300, Thread 1052: XXXX 1736657251300, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657251302 XXXX 1736657251302, Thread 1052: XXXX 1736657251302, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657251404 XXXX 1736657251404, Thread 1052: XXXX 1736657251404, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657251405 XXXX 1736657251405, Thread 1052: XXXX 1736657251405, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657251509 XXXX 1736657251509, Thread 1052: XXXX 1736657251509, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657251511 XXXX 1736657251511, Thread 1052: XXXX 1736657251511, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657251615 XXXX 1736657251615, Thread 1052: XXXX 1736657251615, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657251616 XXXX 1736657251616, Thread 1052: XXXX 1736657251616, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657251718 XXXX 1736657251718, Thread 1052: XXXX 1736657251718, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657251720 XXXX 1736657251720, Thread 1052: XXXX 1736657251720, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657251824 XXXX 1736657251824, Thread 1052: XXXX 1736657251824, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657251825 XXXX 1736657251825, Thread 1052: XXXX 1736657251825, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657251930 XXXX 1736657251930, Thread 1052: XXXX 1736657251930, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657251931 XXXX 1736657251931, Thread 1052: XXXX 1736657251931, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657252034 XXXX 1736657252034, Thread 1052: XXXX 1736657252034, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657252036 XXXX 1736657252036, Thread 1052: XXXX 1736657252036, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657252136 XXXX 1736657252136, Thread 1052: XXXX 1736657252136, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657252138 XXXX 1736657252138, Thread 1052: XXXX 1736657252138, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657252242 XXXX 1736657252242, Thread 1052: XXXX 1736657252242, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657252244 XXXX 1736657252244, Thread 1052: XXXX 1736657252244, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657252348 XXXX 1736657252348, Thread 1052: XXXX 1736657252348, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657252349 XXXX 1736657252349, Thread 1052: XXXX 1736657252349, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657252454 XXXX 1736657252454, Thread 1052: XXXX 1736657252454, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657252455 XXXX 1736657252455, Thread 1052: XXXX 1736657252455, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657252555 XXXX 1736657252555, Thread 1052: XXXX 1736657252555, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657252557 XXXX 1736657252557, Thread 1052: XXXX 1736657252557, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657252661 XXXX 1736657252661, Thread 1052: XXXX 1736657252661, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657252662 XXXX 1736657252662, Thread 1052: XXXX 1736657252662, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657252767 XXXX 1736657252767, Thread 1052: XXXX 1736657252767, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657252768 XXXX 1736657252768, Thread 1052: XXXX 1736657252768, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657252870 XXXX 1736657252870, Thread 1052: XXXX 1736657252870, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657252871 XXXX 1736657252871, Thread 1052: XXXX 1736657252871, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657252976 XXXX 1736657252976, Thread 1052: XXXX 1736657252976, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657252978 XXXX 1736657252978, Thread 1052: XXXX 1736657252978, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657253080 XXXX 1736657253080, Thread 1052: XXXX 1736657253080, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657253081 XXXX 1736657253081, Thread 1052: XXXX 1736657253081, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657253186 XXXX 1736657253186, Thread 1052: XXXX 1736657253186, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657253187 XXXX 1736657253187, Thread 1052: XXXX 1736657253187, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657253292 XXXX 1736657253292, Thread 1052: XXXX 1736657253292, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657253294 XXXX 1736657253294, Thread 1052: XXXX 1736657253294, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657253395 XXXX 1736657253395, Thread 1052: XXXX 1736657253395, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657253396 XXXX 1736657253396, Thread 1052: XXXX 1736657253396, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657253499 XXXX 1736657253499, Thread 1052: XXXX 1736657253499, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657253500 XXXX 1736657253500, Thread 1052: XXXX 1736657253500, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657253605 XXXX 1736657253605, Thread 1052: XXXX 1736657253605, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657253606 XXXX 1736657253606, Thread 1052: XXXX 1736657253606, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657253711 XXXX 1736657253711, Thread 1052: XXXX 1736657253711, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657253712 XXXX 1736657253712, Thread 1052: XXXX 1736657253712, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657253814 XXXX 1736657253813, Thread 1052: XXXX 1736657253813, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657253815 XXXX 1736657253815, Thread 1052: XXXX 1736657253815, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657253919 XXXX 1736657253919, Thread 1052: XXXX 1736657253919, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657253920 XXXX 1736657253920, Thread 1052: XXXX 1736657253920, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657254022 XXXX 1736657254022, Thread 1052: XXXX 1736657254022, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657254024 XXXX 1736657254024, Thread 1052: XXXX 1736657254024, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657254128 XXXX 1736657254128, Thread 1052: XXXX 1736657254128, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657254129 XXXX 1736657254129, Thread 1052: XXXX 1736657254129, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657254234 XXXX 1736657254234, Thread 1052: XXXX 1736657254234, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657254235 XXXX 1736657254235, Thread 1052: XXXX 1736657254235, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657254340 XXXX 1736657254340, Thread 1052: XXXX 1736657254340, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657254341 XXXX 1736657254341, Thread 1052: XXXX 1736657254341, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657254443 XXXX 1736657254443, Thread 1052: XXXX 1736657254443, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657254444 XXXX 1736657254444, Thread 1052: XXXX 1736657254444, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657254546 XXXX 1736657254546, Thread 1052: XXXX 1736657254545, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657254547 XXXX 1736657254547, Thread 1052: XXXX 1736657254547, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657254648 XXXX 1736657254648, Thread 1052: XXXX 1736657254648, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657254649 XXXX 1736657254649, Thread 1052: XXXX 1736657254649, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657254753 XXXX 1736657254753, Thread 1052: XXXX 1736657254753, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657254754 XXXX 1736657254754, Thread 1052: XXXX 1736657254754, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657254858 XXXX 1736657254858, Thread 1052: XXXX 1736657254858, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657254860 XXXX 1736657254860, Thread 1052: XXXX 1736657254860, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657254960 XXXX 1736657254960, Thread 1052: XXXX 1736657254960, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657254962 XXXX 1736657254962, Thread 1052: XXXX 1736657254962, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657255062 XXXX 1736657255062, Thread 1052: XXXX 1736657255062, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657255063 XXXX 1736657255063, Thread 1052: XXXX 1736657255063, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657255168 XXXX 1736657255168, Thread 1052: XXXX 1736657255168, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657255169 XXXX 1736657255169, Thread 1052: XXXX 1736657255169, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657255274 XXXX 1736657255274, Thread 1052: XXXX 1736657255274, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657255275 XXXX 1736657255275, Thread 1052: XXXX 1736657255275, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657255386 XXXX 1736657255386, Thread 1052: XXXX 1736657255386, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657255387 XXXX 1736657255387, Thread 1052: XXXX 1736657255387, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657255491 XXXX 1736657255491, Thread 1052: XXXX 1736657255491, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657255492 XXXX 1736657255492, Thread 1052: XXXX 1736657255492, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657255597 XXXX 1736657255597, Thread 1052: XXXX 1736657255597, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657255599 XXXX 1736657255599, Thread 1052: XXXX 1736657255599, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657255703 XXXX 1736657255703, Thread 1052: XXXX 1736657255703, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657255704 XXXX 1736657255704, Thread 1052: XXXX 1736657255704, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657255804 XXXX 1736657255804, Thread 1052: XXXX 1736657255804, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657255806 XXXX 1736657255806, Thread 1052: XXXX 1736657255806, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657255910 XXXX 1736657255910, Thread 1052: XXXX 1736657255910, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657255911 XXXX 1736657255911, Thread 1052: XXXX 1736657255911, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657256015 XXXX 1736657256015, Thread 1052: XXXX 1736657256015, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657256016 XXXX 1736657256016, Thread 1052: XXXX 1736657256016, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657256121 XXXX 1736657256121, Thread 1052: XXXX 1736657256121, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657256122 XXXX 1736657256122, Thread 1052: XXXX 1736657256122, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657256227 XXXX 1736657256227, Thread 1052: XXXX 1736657256227, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657256228 XXXX 1736657256228, Thread 1052: XXXX 1736657256228, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657256333 XXXX 1736657256333, Thread 1052: XXXX 1736657256333, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657256334 XXXX 1736657256334, Thread 1052: XXXX 1736657256334, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657256437 XXXX 1736657256437, Thread 1052: XXXX 1736657256437, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657256438 XXXX 1736657256438, Thread 1052: XXXX 1736657256438, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657256543 XXXX 1736657256543, Thread 1052: XXXX 1736657256543, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657256544 XXXX 1736657256544, Thread 1052: XXXX 1736657256544, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657256644 XXXX 1736657256644, Thread 1052: XXXX 1736657256644, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657256645 XXXX 1736657256645, Thread 1052: XXXX 1736657256645, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657256750 XXXX 1736657256750, Thread 1052: XXXX 1736657256750, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657256751 XXXX 1736657256751, Thread 1052: XXXX 1736657256751, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657256856 XXXX 1736657256856, Thread 1052: XXXX 1736657256856, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657256857 XXXX 1736657256857, Thread 1052: XXXX 1736657256857, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657256962 XXXX 1736657256962, Thread 1052: XXXX 1736657256962, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657256963 XXXX 1736657256963, Thread 1052: XXXX 1736657256963, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657257064 XXXX 1736657257064, Thread 1052: XXXX 1736657257064, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657257066 XXXX 1736657257066, Thread 1052: XXXX 1736657257066, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657257170 XXXX 1736657257170, Thread 1052: XXXX 1736657257170, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657257171 XXXX 1736657257171, Thread 1052: XXXX 1736657257171, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657257276 XXXX 1736657257276, Thread 1052: XXXX 1736657257276, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657257278 XXXX 1736657257278, Thread 1052: XXXX 1736657257278, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657257382 XXXX 1736657257382, Thread 1052: XXXX 1736657257382, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657257384 XXXX 1736657257384, Thread 1052: XXXX 1736657257384, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657257483 XXXX 1736657257483, Thread 1052: XXXX 1736657257483, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657257484 XXXX 1736657257484, Thread 1052: XXXX 1736657257484, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657257589 XXXX 1736657257589, Thread 1052: XXXX 1736657257589, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657257590 XXXX 1736657257590, Thread 1052: XXXX 1736657257590, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657257695 XXXX 1736657257695, Thread 1052: XXXX 1736657257695, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657257696 XXXX 1736657257696, Thread 1052: XXXX 1736657257696, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657257801 XXXX 1736657257801, Thread 1052: XXXX 1736657257801, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657257802 XXXX 1736657257802, Thread 1052: XXXX 1736657257802, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657257907 XXXX 1736657257907, Thread 1052: XXXX 1736657257907, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657257908 XXXX 1736657257908, Thread 1052: XXXX 1736657257908, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657258013 XXXX 1736657258013, Thread 1052: XXXX 1736657258013, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657258014 XXXX 1736657258014, Thread 1052: XXXX 1736657258014, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657258118 XXXX 1736657258118, Thread 1052: XXXX 1736657258118, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657258119 XXXX 1736657258119, Thread 1052: XXXX 1736657258119, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657258219 XXXX 1736657258219, Thread 1052: XXXX 1736657258219, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657258220 XXXX 1736657258220, Thread 1052: XXXX 1736657258220, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657258325 XXXX 1736657258325, Thread 1052: XXXX 1736657258325, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657258326 XXXX 1736657258326, Thread 1052: XXXX 1736657258326, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657258427 XXXX 1736657258427, Thread 1052: XXXX 1736657258427, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657258428 XXXX 1736657258428, Thread 1052: XXXX 1736657258428, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657258533 XXXX 1736657258533, Thread 1052: XXXX 1736657258533, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657258535 XXXX 1736657258535, Thread 1052: XXXX 1736657258535, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657258636 XXXX 1736657258636, Thread 1052: XXXX 1736657258636, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657258638 XXXX 1736657258638, Thread 1052: XXXX 1736657258638, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657258741 XXXX 1736657258741, Thread 1052: XXXX 1736657258741, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657258742 XXXX 1736657258742, Thread 1052: XXXX 1736657258742, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657258847 XXXX 1736657258847, Thread 1052: XXXX 1736657258847, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657258848 XXXX 1736657258848, Thread 1052: XXXX 1736657258848, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657258950 XXXX 1736657258950, Thread 1052: XXXX 1736657258949, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657258951 XXXX 1736657258951, Thread 1052: XXXX 1736657258951, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657259051 XXXX 1736657259051, Thread 1052: XXXX 1736657259051, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657259052 XXXX 1736657259052, Thread 1052: XXXX 1736657259052, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657259158 XXXX 1736657259158, Thread 1052: XXXX 1736657259158, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657259159 XXXX 1736657259159, Thread 1052: XXXX 1736657259159, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657259261 XXXX 1736657259261, Thread 1052: XXXX 1736657259261, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657259263 XXXX 1736657259263, Thread 1052: XXXX 1736657259263, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657259367 XXXX 1736657259367, Thread 1052: XXXX 1736657259367, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657259368 XXXX 1736657259368, Thread 1052: XXXX 1736657259368, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657259473 XXXX 1736657259473, Thread 1052: XXXX 1736657259473, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657259475 XXXX 1736657259475, Thread 1052: XXXX 1736657259475, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657259579 XXXX 1736657259579, Thread 1052: XXXX 1736657259579, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657259580 XXXX 1736657259580, Thread 1052: XXXX 1736657259580, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657259685 XXXX 1736657259685, Thread 1052: XXXX 1736657259685, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657259686 XXXX 1736657259686, Thread 1052: XXXX 1736657259686, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657259791 XXXX 1736657259791, Thread 1052: XXXX 1736657259791, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657259792 XXXX 1736657259792, Thread 1052: XXXX 1736657259792, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657259898 XXXX 1736657259898, Thread 1052: XXXX 1736657259898, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657259899 XXXX 1736657259899, Thread 1052: XXXX 1736657259899, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657260003 XXXX 1736657260003, Thread 1052: XXXX 1736657260003, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657260004 XXXX 1736657260004, Thread 1052: XXXX 1736657260004, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657260109 XXXX 1736657260109, Thread 1052: XXXX 1736657260109, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657260110 XXXX 1736657260110, Thread 1052: XXXX 1736657260110, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657260215 XXXX 1736657260215, Thread 1052: XXXX 1736657260215, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657260216 XXXX 1736657260216, Thread 1052: XXXX 1736657260216, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657260320 XXXX 1736657260320, Thread 1052: XXXX 1736657260320, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657260322 XXXX 1736657260322, Thread 1052: XXXX 1736657260322, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657260426 XXXX 1736657260426, Thread 1052: XXXX 1736657260426, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657260427 XXXX 1736657260427, Thread 1052: XXXX 1736657260427, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657260532 XXXX 1736657260532, Thread 1052: XXXX 1736657260532, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657260533 XXXX 1736657260533, Thread 1052: XXXX 1736657260533, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657260635 XXXX 1736657260635, Thread 1052: XXXX 1736657260635, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657260636 XXXX 1736657260636, Thread 1052: XXXX 1736657260636, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657260740 XXXX 1736657260740, Thread 1052: XXXX 1736657260740, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657260742 XXXX 1736657260742, Thread 1052: XXXX 1736657260742, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657260842 XXXX 1736657260842, Thread 1052: XXXX 1736657260842, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657260843 XXXX 1736657260843, Thread 1052: XXXX 1736657260843, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657260948 XXXX 1736657260948, Thread 1052: XXXX 1736657260948, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657260949 XXXX 1736657260949, Thread 1052: XXXX 1736657260949, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657261054 XXXX 1736657261054, Thread 1052: XXXX 1736657261054, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657261055 XXXX 1736657261055, Thread 1052: XXXX 1736657261055, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657261160 XXXX 1736657261160, Thread 1052: XXXX 1736657261160, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657261161 XXXX 1736657261161, Thread 1052: XXXX 1736657261161, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657261266 XXXX 1736657261266, Thread 1052: XXXX 1736657261266, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657261267 XXXX 1736657261267, Thread 1052: XXXX 1736657261267, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657261368 XXXX 1736657261368, Thread 1052: XXXX 1736657261368, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657261369 XXXX 1736657261369, Thread 1052: XXXX 1736657261369, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657261474 XXXX 1736657261474, Thread 1052: XXXX 1736657261474, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657261475 XXXX 1736657261475, Thread 1052: XXXX 1736657261475, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657261580 XXXX 1736657261580, Thread 1052: XXXX 1736657261580, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657261581 XXXX 1736657261581, Thread 1052: XXXX 1736657261581, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657261686 XXXX 1736657261686, Thread 1052: XXXX 1736657261686, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657261687 XXXX 1736657261687, Thread 1052: XXXX 1736657261687, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657261792 XXXX 1736657261792, Thread 1052: XXXX 1736657261792, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657261793 XXXX 1736657261793, Thread 1052: XXXX 1736657261793, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657261898 XXXX 1736657261898, Thread 1052: XXXX 1736657261898, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657261900 XXXX 1736657261900, Thread 1052: XXXX 1736657261900, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657262000 XXXX 1736657262000, Thread 1052: XXXX 1736657262000, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657262001 XXXX 1736657262001, Thread 1052: XXXX 1736657262001, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657262106 XXXX 1736657262106, Thread 1052: XXXX 1736657262106, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657262107 XXXX 1736657262107, Thread 1052: XXXX 1736657262107, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657262212 XXXX 1736657262212, Thread 1052: XXXX 1736657262212, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657262214 XXXX 1736657262214, Thread 1052: XXXX 1736657262214, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657262314 XXXX 1736657262314, Thread 1052: XXXX 1736657262314, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657262315 XXXX 1736657262315, Thread 1052: XXXX 1736657262315, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657262419 XXXX 1736657262419, Thread 1052: XXXX 1736657262419, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657262420 XXXX 1736657262420, Thread 1052: XXXX 1736657262420, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657262525 XXXX 1736657262525, Thread 1052: XXXX 1736657262525, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657262526 XXXX 1736657262526, Thread 1052: XXXX 1736657262526, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657262631 XXXX 1736657262631, Thread 1052: XXXX 1736657262631, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657262632 XXXX 1736657262632, Thread 1052: XXXX 1736657262632, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657262737 XXXX 1736657262737, Thread 1052: XXXX 1736657262737, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657262738 XXXX 1736657262738, Thread 1052: XXXX 1736657262738, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657262843 XXXX 1736657262843, Thread 1052: XXXX 1736657262843, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657262845 XXXX 1736657262845, Thread 1052: XXXX 1736657262845, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657262949 XXXX 1736657262949, Thread 1052: XXXX 1736657262949, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657262950 XXXX 1736657262950, Thread 1052: XXXX 1736657262950, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657263055 XXXX 1736657263055, Thread 1052: XXXX 1736657263055, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657263056 XXXX 1736657263056, Thread 1052: XXXX 1736657263056, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657263161 XXXX 1736657263161, Thread 1052: XXXX 1736657263161, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657263162 XXXX 1736657263162, Thread 1052: XXXX 1736657263162, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657263267 XXXX 1736657263267, Thread 1052: XXXX 1736657263267, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657263268 XXXX 1736657263268, Thread 1052: XXXX 1736657263268, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657263373 XXXX 1736657263373, Thread 1052: XXXX 1736657263373, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657263374 XXXX 1736657263374, Thread 1052: XXXX 1736657263374, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657263477 XXXX 1736657263477, Thread 1052: XXXX 1736657263477, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657263478 XXXX 1736657263478, Thread 1052: XXXX 1736657263478, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657263583 XXXX 1736657263583, Thread 1052: XXXX 1736657263583, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657263584 XXXX 1736657263584, Thread 1052: XXXX 1736657263584, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657263689 XXXX 1736657263689, Thread 1052: XXXX 1736657263689, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657263690 XXXX 1736657263690, Thread 1052: XXXX 1736657263690, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657263795 XXXX 1736657263795, Thread 1052: XXXX 1736657263795, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657263796 XXXX 1736657263796, Thread 1052: XXXX 1736657263796, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657263900 XXXX 1736657263900, Thread 1052: XXXX 1736657263900, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657263901 XXXX 1736657263901, Thread 1052: XXXX 1736657263901, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657264005 XXXX 1736657264005, Thread 1052: XXXX 1736657264005, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657264006 XXXX 1736657264006, Thread 1052: XXXX 1736657264006, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657264111 XXXX 1736657264111, Thread 1052: XXXX 1736657264111, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657264112 XXXX 1736657264112, Thread 1052: XXXX 1736657264112, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657264215 XXXX 1736657264215, Thread 1052: XXXX 1736657264215, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657264216 XXXX 1736657264216, Thread 1052: XXXX 1736657264216, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657264321 XXXX 1736657264321, Thread 1052: XXXX 1736657264321, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657264322 XXXX 1736657264322, Thread 1052: XXXX 1736657264322, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657264426 XXXX 1736657264426, Thread 1052: XXXX 1736657264426, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657264427 XXXX 1736657264427, Thread 1052: XXXX 1736657264427, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657264532 XXXX 1736657264532, Thread 1052: XXXX 1736657264532, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657264533 XXXX 1736657264533, Thread 1052: XXXX 1736657264533, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657264638 XXXX 1736657264638, Thread 1052: XXXX 1736657264638, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657264639 XXXX 1736657264639, Thread 1052: XXXX 1736657264639, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657264744 XXXX 1736657264744, Thread 1052: XXXX 1736657264744, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657264745 XXXX 1736657264745, Thread 1052: XXXX 1736657264745, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657264850 XXXX 1736657264850, Thread 1052: XXXX 1736657264850, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657264851 XXXX 1736657264851, Thread 1052: XXXX 1736657264851, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657264957 XXXX 1736657264957, Thread 1052: XXXX 1736657264957, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657264958 XXXX 1736657264958, Thread 1052: XXXX 1736657264958, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657265064 XXXX 1736657265064, Thread 1052: XXXX 1736657265064, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657265065 XXXX 1736657265065, Thread 1052: XXXX 1736657265065, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657265170 XXXX 1736657265170, Thread 1052: XXXX 1736657265170, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657265171 XXXX 1736657265171, Thread 1052: XXXX 1736657265171, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657265275 XXXX 1736657265275, Thread 1052: XXXX 1736657265275, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657265276 XXXX 1736657265276, Thread 1052: XXXX 1736657265276, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657265377 XXXX 1736657265377, Thread 1052: XXXX 1736657265377, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657265378 XXXX 1736657265378, Thread 1052: XXXX 1736657265378, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657265483 XXXX 1736657265483, Thread 1052: XXXX 1736657265483, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657265484 XXXX 1736657265484, Thread 1052: XXXX 1736657265484, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657265589 XXXX 1736657265589, Thread 1052: XXXX 1736657265589, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657265590 XXXX 1736657265590, Thread 1052: XXXX 1736657265590, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657265696 XXXX 1736657265696, Thread 1052: XXXX 1736657265696, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657265697 XXXX 1736657265697, Thread 1052: XXXX 1736657265697, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657265800 XXXX 1736657265800, Thread 1052: XXXX 1736657265800, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657265801 XXXX 1736657265801, Thread 1052: XXXX 1736657265801, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657265906 XXXX 1736657265906, Thread 1052: XXXX 1736657265906, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657265907 XXXX 1736657265907, Thread 1052: XXXX 1736657265907, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657266012 XXXX 1736657266012, Thread 1052: XXXX 1736657266012, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657266014 XXXX 1736657266014, Thread 1052: XXXX 1736657266014, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657266118 XXXX 1736657266118, Thread 1052: XXXX 1736657266118, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657266119 XXXX 1736657266119, Thread 1052: XXXX 1736657266119, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657266220 XXXX 1736657266220, Thread 1052: XXXX 1736657266220, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657266221 XXXX 1736657266221, Thread 1052: XXXX 1736657266221, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657266326 XXXX 1736657266326, Thread 1052: XXXX 1736657266326, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657266327 XXXX 1736657266327, Thread 1052: XXXX 1736657266327, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657266431 XXXX 1736657266431, Thread 1052: XXXX 1736657266431, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657266432 XXXX 1736657266432, Thread 1052: XXXX 1736657266432, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657266534 XXXX 1736657266534, Thread 1052: XXXX 1736657266534, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657266535 XXXX 1736657266535, Thread 1052: XXXX 1736657266535, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657266640 XXXX 1736657266640, Thread 1052: XXXX 1736657266640, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657266641 XXXX 1736657266641, Thread 1052: XXXX 1736657266641, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657266745 XXXX 1736657266745, Thread 1052: XXXX 1736657266745, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657266746 XXXX 1736657266746, Thread 1052: XXXX 1736657266746, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657266850 XXXX 1736657266850, Thread 1052: XXXX 1736657266850, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657266851 XXXX 1736657266851, Thread 1052: XXXX 1736657266851, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657266956 XXXX 1736657266956, Thread 1052: XXXX 1736657266956, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657266957 XXXX 1736657266957, Thread 1052: XXXX 1736657266957, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657267060 XXXX 1736657267060, Thread 1052: XXXX 1736657267060, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657267061 XXXX 1736657267061, Thread 1052: XXXX 1736657267061, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657267164 XXXX 1736657267164, Thread 1052: XXXX 1736657267164, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657267165 XXXX 1736657267165, Thread 1052: XXXX 1736657267165, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657267268 XXXX 1736657267268, Thread 1052: XXXX 1736657267268, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657267269 XXXX 1736657267269, Thread 1052: XXXX 1736657267269, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657267373 XXXX 1736657267373, Thread 1052: XXXX 1736657267373, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657267374 XXXX 1736657267374, Thread 1052: XXXX 1736657267374, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657267479 XXXX 1736657267479, Thread 1052: XXXX 1736657267479, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657267480 XXXX 1736657267480, Thread 1052: XXXX 1736657267480, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657267584 XXXX 1736657267584, Thread 1052: XXXX 1736657267584, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657267585 XXXX 1736657267585, Thread 1052: XXXX 1736657267585, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657267687 XXXX 1736657267687, Thread 1052: XXXX 1736657267687, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657267688 XXXX 1736657267688, Thread 1052: XXXX 1736657267688, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657267793 XXXX 1736657267793, Thread 1052: XXXX 1736657267793, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657267794 XXXX 1736657267794, Thread 1052: XXXX 1736657267794, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657267899 XXXX 1736657267899, Thread 1052: XXXX 1736657267899, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657267900 XXXX 1736657267900, Thread 1052: XXXX 1736657267900, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657268005 XXXX 1736657268005, Thread 1052: XXXX 1736657268005, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657268006 XXXX 1736657268006, Thread 1052: XXXX 1736657268006, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657268111 XXXX 1736657268111, Thread 1052: XXXX 1736657268111, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657268112 XXXX 1736657268112, Thread 1052: XXXX 1736657268112, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657268217 XXXX 1736657268217, Thread 1052: XXXX 1736657268217, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657268218 XXXX 1736657268218, Thread 1052: XXXX 1736657268218, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657268323 XXXX 1736657268323, Thread 1052: XXXX 1736657268323, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657268325 XXXX 1736657268325, Thread 1052: XXXX 1736657268325, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657268429 XXXX 1736657268429, Thread 1052: XXXX 1736657268429, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657268430 XXXX 1736657268430, Thread 1052: XXXX 1736657268430, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657268535 XXXX 1736657268535, Thread 1052: XXXX 1736657268535, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657268536 XXXX 1736657268536, Thread 1052: XXXX 1736657268536, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657268638 XXXX 1736657268638, Thread 1052: XXXX 1736657268638, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657268640 XXXX 1736657268640, Thread 1052: XXXX 1736657268640, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657268743 XXXX 1736657268743, Thread 1052: XXXX 1736657268743, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657268744 XXXX 1736657268744, Thread 1052: XXXX 1736657268744, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657268849 XXXX 1736657268849, Thread 1052: XXXX 1736657268849, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657268850 XXXX 1736657268850, Thread 1052: XXXX 1736657268850, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657268956 XXXX 1736657268956, Thread 1052: XXXX 1736657268956, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657268957 XXXX 1736657268957, Thread 1052: XXXX 1736657268957, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657269060 XXXX 1736657269060, Thread 1052: XXXX 1736657269060, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657269061 XXXX 1736657269061, Thread 1052: XXXX 1736657269061, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657269162 XXXX 1736657269162, Thread 1052: XXXX 1736657269162, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657269163 XXXX 1736657269163, Thread 1052: XXXX 1736657269163, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657269266 XXXX 1736657269266, Thread 1052: XXXX 1736657269266, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657269272 XXXX 1736657269272, Thread 1052: XXXX 1736657269272, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657269368 XXXX 1736657269368, Thread 1052: XXXX 1736657269368, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657269369 XXXX 1736657269369, Thread 1052: XXXX 1736657269369, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657269474 XXXX 1736657269474, Thread 1052: XXXX 1736657269474, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657269475 XXXX 1736657269475, Thread 1052: XXXX 1736657269475, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657269578 XXXX 1736657269578, Thread 1052: XXXX 1736657269578, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657269579 XXXX 1736657269579, Thread 1052: XXXX 1736657269579, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657269682 XXXX 1736657269682, Thread 1052: XXXX 1736657269682, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657269683 XXXX 1736657269683, Thread 1052: XXXX 1736657269683, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657269788 XXXX 1736657269788, Thread 1052: XXXX 1736657269788, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657269789 XXXX 1736657269789, Thread 1052: XXXX 1736657269789, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657269893 XXXX 1736657269893, Thread 1052: XXXX 1736657269893, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657269894 XXXX 1736657269894, Thread 1052: XXXX 1736657269894, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657269999 XXXX 1736657269999, Thread 1052: XXXX 1736657269999, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657270000 XXXX 1736657270000, Thread 1052: XXXX 1736657270000, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657270103 XXXX 1736657270103, Thread 1052: XXXX 1736657270103, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657270104 XXXX 1736657270104, Thread 1052: XXXX 1736657270104, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657270210 XXXX 1736657270210, Thread 1052: XXXX 1736657270209, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657270210 XXXX 1736657270210, Thread 1052: XXXX 1736657270210, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657270314 XXXX 1736657270314, Thread 1052: XXXX 1736657270314, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657270315 XXXX 1736657270315, Thread 1052: XXXX 1736657270315, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657270420 XXXX 1736657270420, Thread 1052: XXXX 1736657270420, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657270421 XXXX 1736657270421, Thread 1052: XXXX 1736657270421, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657270526 XXXX 1736657270526, Thread 1052: XXXX 1736657270526, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657270527 XXXX 1736657270527, Thread 1052: XXXX 1736657270527, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657270631 XXXX 1736657270631, Thread 1052: XXXX 1736657270631, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657270632 XXXX 1736657270632, Thread 1052: XXXX 1736657270632, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657270737 XXXX 1736657270737, Thread 1052: XXXX 1736657270737, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657270738 XXXX 1736657270738, Thread 1052: XXXX 1736657270738, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657270843 XXXX 1736657270843, Thread 1052: XXXX 1736657270843, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657270844 XXXX 1736657270844, Thread 1052: XXXX 1736657270844, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657270949 XXXX 1736657270949, Thread 1052: XXXX 1736657270949, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657270950 XXXX 1736657270950, Thread 1052: XXXX 1736657270950, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657271053 XXXX 1736657271053, Thread 1052: XXXX 1736657271053, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657271054 XXXX 1736657271054, Thread 1052: XXXX 1736657271054, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657271159 XXXX 1736657271159, Thread 1052: XXXX 1736657271159, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657271160 XXXX 1736657271160, Thread 1052: XXXX 1736657271160, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657271264 XXXX 1736657271264, Thread 1052: XXXX 1736657271264, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657271265 XXXX 1736657271265, Thread 1052: XXXX 1736657271265, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657271366 XXXX 1736657271366, Thread 1052: XXXX 1736657271366, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657271367 XXXX 1736657271367, Thread 1052: XXXX 1736657271367, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657271470 XXXX 1736657271470, Thread 1052: XXXX 1736657271470, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657271471 XXXX 1736657271471, Thread 1052: XXXX 1736657271471, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657271576 XXXX 1736657271576, Thread 1052: XXXX 1736657271576, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657271577 XXXX 1736657271577, Thread 1052: XXXX 1736657271577, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657271681 XXXX 1736657271681, Thread 1052: XXXX 1736657271681, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657271682 XXXX 1736657271682, Thread 1052: XXXX 1736657271682, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657271784 XXXX 1736657271784, Thread 1052: XXXX 1736657271784, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657271785 XXXX 1736657271785, Thread 1052: XXXX 1736657271785, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657271890 XXXX 1736657271890, Thread 1052: XXXX 1736657271890, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657271891 XXXX 1736657271891, Thread 1052: XXXX 1736657271891, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657271996 XXXX 1736657271996, Thread 1052: XXXX 1736657271995, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657271997 XXXX 1736657271997, Thread 1052: XXXX 1736657271997, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657272101 XXXX 1736657272101, Thread 1052: XXXX 1736657272101, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657272102 XXXX 1736657272102, Thread 1052: XXXX 1736657272102, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657272207 XXXX 1736657272207, Thread 1052: XXXX 1736657272206, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657272207 XXXX 1736657272207, Thread 1052: XXXX 1736657272207, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657272311 XXXX 1736657272311, Thread 1052: XXXX 1736657272311, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657272312 XXXX 1736657272312, Thread 1052: XXXX 1736657272312, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657272416 XXXX 1736657272416, Thread 1052: XXXX 1736657272416, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657272418 XXXX 1736657272418, Thread 1052: XXXX 1736657272418, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657272517 XXXX 1736657272517, Thread 1052: XXXX 1736657272517, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657272518 XXXX 1736657272518, Thread 1052: XXXX 1736657272518, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657272622 XXXX 1736657272622, Thread 1052: XXXX 1736657272622, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657272623 XXXX 1736657272623, Thread 1052: XXXX 1736657272623, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657272727 XXXX 1736657272727, Thread 1052: XXXX 1736657272727, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657272728 XXXX 1736657272728, Thread 1052: XXXX 1736657272728, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657272832 XXXX 1736657272832, Thread 1052: XXXX 1736657272832, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657272833 XXXX 1736657272833, Thread 1052: XXXX 1736657272833, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657272937 XXXX 1736657272937, Thread 1052: XXXX 1736657272937, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657272938 XXXX 1736657272938, Thread 1052: XXXX 1736657272938, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657273039 XXXX 1736657273039, Thread 1052: XXXX 1736657273039, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657273040 XXXX 1736657273040, Thread 1052: XXXX 1736657273040, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657273144 XXXX 1736657273144, Thread 1052: XXXX 1736657273144, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657273145 XXXX 1736657273144, Thread 1052: XXXX 1736657273144, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657273248 XXXX 1736657273248, Thread 1052: XXXX 1736657273248, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657273249 XXXX 1736657273249, Thread 1052: XXXX 1736657273249, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657273354 XXXX 1736657273354, Thread 1052: XXXX 1736657273354, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657273354 XXXX 1736657273354, Thread 1052: XXXX 1736657273354, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657273454 XXXX 1736657273454, Thread 1052: XXXX 1736657273454, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657273455 XXXX 1736657273455, Thread 1052: XXXX 1736657273455, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657273562 XXXX 1736657273562, Thread 1052: XXXX 1736657273562, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657273563 XXXX 1736657273563, Thread 1052: XXXX 1736657273563, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657273662 XXXX 1736657273662, Thread 1052: XXXX 1736657273662, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657273663 XXXX 1736657273663, Thread 1052: XXXX 1736657273663, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657273767 XXXX 1736657273767, Thread 1052: XXXX 1736657273767, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657273768 XXXX 1736657273768, Thread 1052: XXXX 1736657273768, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657273872 XXXX 1736657273872, Thread 1052: XXXX 1736657273872, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657273873 XXXX 1736657273873, Thread 1052: XXXX 1736657273873, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657273978 XXXX 1736657273978, Thread 1052: XXXX 1736657273978, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657273979 XXXX 1736657273979, Thread 1052: XXXX 1736657273979, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657274080 XXXX 1736657274080, Thread 1052: XXXX 1736657274080, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657274081 XXXX 1736657274081, Thread 1052: XXXX 1736657274081, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657274185 XXXX 1736657274185, Thread 1052: XXXX 1736657274185, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657274186 XXXX 1736657274186, Thread 1052: XXXX 1736657274186, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657274290 XXXX 1736657274290, Thread 1052: XXXX 1736657274290, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657274291 XXXX 1736657274291, Thread 1052: XXXX 1736657274291, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657274392 XXXX 1736657274392, Thread 1052: XXXX 1736657274392, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657274392 XXXX 1736657274392, Thread 1052: XXXX 1736657274392, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657274498 XXXX 1736657274498, Thread 1052: XXXX 1736657274498, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657274499 XXXX 1736657274499, Thread 1052: XXXX 1736657274499, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657274602 XXXX 1736657274602, Thread 1052: XXXX 1736657274602, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657274603 XXXX 1736657274603, Thread 1052: XXXX 1736657274603, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657274704 XXXX 1736657274704, Thread 1052: XXXX 1736657274704, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657274705 XXXX 1736657274705, Thread 1052: XXXX 1736657274705, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657274804 XXXX 1736657274804, Thread 1052: XXXX 1736657274804, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657274805 XXXX 1736657274805, Thread 1052: XXXX 1736657274805, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657274909 XXXX 1736657274909, Thread 1052: XXXX 1736657274909, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657274910 XXXX 1736657274910, Thread 1052: XXXX 1736657274910, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657275014 XXXX 1736657275014, Thread 1052: XXXX 1736657275014, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657275015 XXXX 1736657275015, Thread 1052: XXXX 1736657275015, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657275116 XXXX 1736657275116, Thread 1052: XXXX 1736657275116, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657275117 XXXX 1736657275117, Thread 1052: XXXX 1736657275117, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657275220 XXXX 1736657275220, Thread 1052: XXXX 1736657275220, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657275221 XXXX 1736657275221, Thread 1052: XXXX 1736657275221, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657275325 XXXX 1736657275325, Thread 1052: XXXX 1736657275325, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657275326 XXXX 1736657275326, Thread 1052: XXXX 1736657275326, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657275430 XXXX 1736657275430, Thread 1052: XXXX 1736657275430, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657275431 XXXX 1736657275431, Thread 1052: XXXX 1736657275431, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657275535 XXXX 1736657275535, Thread 1052: XXXX 1736657275535, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657275535 XXXX 1736657275535, Thread 1052: XXXX 1736657275535, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657275639 XXXX 1736657275639, Thread 1052: XXXX 1736657275639, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657275641 XXXX 1736657275641, Thread 1052: XXXX 1736657275641, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657275745 XXXX 1736657275745, Thread 1052: XXXX 1736657275745, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657275746 XXXX 1736657275746, Thread 1052: XXXX 1736657275746, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657275850 XXXX 1736657275850, Thread 1052: XXXX 1736657275850, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657275851 XXXX 1736657275851, Thread 1052: XXXX 1736657275851, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657275953 XXXX 1736657275953, Thread 1052: XXXX 1736657275953, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657275954 XXXX 1736657275954, Thread 1052: XXXX 1736657275954, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657276058 XXXX 1736657276058, Thread 1052: XXXX 1736657276058, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657276059 XXXX 1736657276059, Thread 1052: XXXX 1736657276059, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657276161 XXXX 1736657276161, Thread 1052: XXXX 1736657276161, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657276162 XXXX 1736657276162, Thread 1052: XXXX 1736657276162, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657276266 XXXX 1736657276266, Thread 1052: XXXX 1736657276266, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657276266 XXXX 1736657276266, Thread 1052: XXXX 1736657276266, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657276370 XXXX 1736657276370, Thread 1052: XXXX 1736657276370, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657276371 XXXX 1736657276371, Thread 1052: XXXX 1736657276371, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657276475 XXXX 1736657276475, Thread 1052: XXXX 1736657276475, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657276476 XXXX 1736657276476, Thread 1052: XXXX 1736657276476, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657276580 XXXX 1736657276580, Thread 1052: XXXX 1736657276580, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657276581 XXXX 1736657276581, Thread 1052: XXXX 1736657276581, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657276686 XXXX 1736657276686, Thread 1052: XXXX 1736657276686, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657276687 XXXX 1736657276687, Thread 1052: XXXX 1736657276687, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657276790 XXXX 1736657276790, Thread 1052: XXXX 1736657276790, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657276791 XXXX 1736657276791, Thread 1052: XXXX 1736657276791, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657276895 XXXX 1736657276895, Thread 1052: XXXX 1736657276895, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657276896 XXXX 1736657276896, Thread 1052: XXXX 1736657276896, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657276998 XXXX 1736657276998, Thread 1052: XXXX 1736657276998, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657276999 XXXX 1736657276998, Thread 1052: XXXX 1736657276998, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657277102 XXXX 1736657277102, Thread 1052: XXXX 1736657277102, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657277103 XXXX 1736657277103, Thread 1052: XXXX 1736657277103, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657277207 XXXX 1736657277207, Thread 1052: XXXX 1736657277207, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657277208 XXXX 1736657277208, Thread 1052: XXXX 1736657277208, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657277308 XXXX 1736657277308, Thread 1052: XXXX 1736657277308, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657277309 XXXX 1736657277309, Thread 1052: XXXX 1736657277309, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657277413 XXXX 1736657277413, Thread 1052: XXXX 1736657277413, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657277414 XXXX 1736657277414, Thread 1052: XXXX 1736657277414, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657277515 XXXX 1736657277515, Thread 1052: XXXX 1736657277515, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657277515 XXXX 1736657277515, Thread 1052: XXXX 1736657277515, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657277625 XXXX 1736657277625, Thread 1052: XXXX 1736657277625, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657277626 XXXX 1736657277626, Thread 1052: XXXX 1736657277626, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657277728 XXXX 1736657277728, Thread 1052: XXXX 1736657277727, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657277728 XXXX 1736657277728, Thread 1052: XXXX 1736657277728, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657277833 XXXX 1736657277833, Thread 1052: XXXX 1736657277833, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657277834 XXXX 1736657277834, Thread 1052: XXXX 1736657277834, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657277934 XXXX 1736657277934, Thread 1052: XXXX 1736657277934, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657277935 XXXX 1736657277935, Thread 1052: XXXX 1736657277935, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657278039 XXXX 1736657278039, Thread 1052: XXXX 1736657278039, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657278040 XXXX 1736657278040, Thread 1052: XXXX 1736657278040, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657278144 XXXX 1736657278144, Thread 1052: XXXX 1736657278144, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657278145 XXXX 1736657278145, Thread 1052: XXXX 1736657278145, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657278250 XXXX 1736657278250, Thread 1052: XXXX 1736657278250, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657278251 XXXX 1736657278251, Thread 1052: XXXX 1736657278251, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657278355 XXXX 1736657278355, Thread 1052: XXXX 1736657278355, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657278356 XXXX 1736657278356, Thread 1052: XXXX 1736657278356, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657278460 XXXX 1736657278460, Thread 1052: XXXX 1736657278460, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657278461 XXXX 1736657278461, Thread 1052: XXXX 1736657278461, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657278565 XXXX 1736657278565, Thread 1052: XXXX 1736657278565, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657278566 XXXX 1736657278566, Thread 1052: XXXX 1736657278566, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657278670 XXXX 1736657278670, Thread 1052: XXXX 1736657278670, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657278671 XXXX 1736657278671, Thread 1052: XXXX 1736657278671, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657278775 XXXX 1736657278775, Thread 1052: XXXX 1736657278775, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657278776 XXXX 1736657278776, Thread 1052: XXXX 1736657278776, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657278879 XXXX 1736657278879, Thread 1052: XXXX 1736657278879, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657278879 XXXX 1736657278879, Thread 1052: XXXX 1736657278879, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657278980 XXXX 1736657278980, Thread 1052: XXXX 1736657278980, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657278981 XXXX 1736657278981, Thread 1052: XXXX 1736657278981, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657279085 XXXX 1736657279085, Thread 1052: XXXX 1736657279085, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657279086 XXXX 1736657279086, Thread 1052: XXXX 1736657279086, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657279190 XXXX 1736657279190, Thread 1052: XXXX 1736657279190, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657279191 XXXX 1736657279191, Thread 1052: XXXX 1736657279191, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657279292 XXXX 1736657279292, Thread 1052: XXXX 1736657279292, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657279292 XXXX 1736657279292, Thread 1052: XXXX 1736657279292, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657279396 XXXX 1736657279396, Thread 1052: XXXX 1736657279396, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657279396 XXXX 1736657279396, Thread 1052: XXXX 1736657279396, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657279501 XXXX 1736657279501, Thread 1052: XXXX 1736657279501, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657279502 XXXX 1736657279502, Thread 1052: XXXX 1736657279502, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657279603 XXXX 1736657279603, Thread 1052: XXXX 1736657279603, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657279603 XXXX 1736657279603, Thread 1052: XXXX 1736657279603, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657279708 XXXX 1736657279708, Thread 1052: XXXX 1736657279708, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657279709 XXXX 1736657279709, Thread 1052: XXXX 1736657279709, Exiting Thread 1052: Commands::runScriptBasic  
 
-771 1736584304691 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Pre:init
-771 1736584304691 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Payload
-771 1736584304691 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: Values:
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: pcAddress = 00000ff9, Vpp = 12.00, useRowEraseIfVoltageIsLow = true, voltageBelowWhichUseRowErase = 3.00, deviceName = PIC18F4520, programmerType = PIC18F
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: MemInfo values:
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = ffff, exists = true, startAddr = 00000000, endAddr = 00007fff, rowSize = 0040, rowEraseSize = 0040, addrInc = 0002, widthProgram = 0002
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 00ff, exists = true, startAddr = 00300000, endAddr = 0030000d, rowSize = 0001, rowEraseSize = 0000, addrInc = 0001, widthProgram = 0001
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 00ff, exists = true, startAddr = 00000000, endAddr = 000000ff, rowSize = 0002, rowEraseSize = 0000, addrInc = 0001, widthProgram = 0001
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 00ff, exists = true, startAddr = 00200000, endAddr = 00200007, rowSize = 0001, rowEraseSize = 0000, addrInc = 0001, widthProgram = 0001
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = ffff, exists = true, startAddr = 00200000, endAddr = 0020003f, rowSize = 0040, rowEraseSize = 0040, addrInc = 0002, widthProgram = 0002
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0001, widthProgram = 0001
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0001, widthProgram = 0001
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0001, widthProgram = 0001
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 7fffffff, exists = true, startAddr = 003ffffe, endAddr = 003fffff, rowSize = 0001, rowEraseSize = 0000, addrInc = 0001, widthProgram = 0001
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: mask = 0000, exists = false, startAddr = 00000000, endAddr = 00000000, rowSize = 0000, rowEraseSize = 0000, addrInc = 0000, widthProgram = 0000
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 DeviceInfo: CfgRequiredBitsMask Values:
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Address = 00300001, Mask = 000000cf
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Address = 00300002, Mask = 0000001f
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Address = 00300003, Mask = 0000001f
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Address = 00300005, Mask = 00000087
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Address = 00300006, Mask = 00000045
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Address = 00300008, Mask = 0000000f
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Address = 00300009, Mask = 000000c0
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Address = 0030000a, Mask = 0000000f
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Address = 0030000b, Mask = 000000e0
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Address = 0030000c, Mask = 0000000f
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Address = 0030000d, Mask = 00000040
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 BasicInfo: Values:
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 BasicInfo: InputStream = com.microchip.mplab.libs.toolpacksupport.EquatableFileInputStream@de8b5c3b, ToolFlavor = PICKit4
-771 1736584304692 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Payload End
-771 1736584306726 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Post:init
-771 1736584306726 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Return Value
-771 1736584306726 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 none
-771 1736584306726 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Return End
-
-771 1736584306726 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Pre:GetInterfaceProvider
-771 1736584306726 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Payload
-771 1736584306726 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 RI4DebugInterface
-771 1736584306726 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Payload End
-771 1736584306726 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Post:GetInterfaceProvider
-771 1736584306726 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Return Value
-771 1736584306726 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 com.microchip.mplab.libs.RI4ToolsController.implementations.RI4DebugInterfaceImpl@419a71f2
-771 1736584306726 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Return End
-
-771 1736584306745 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Pre:GetInterfaceProvider
-771 1736584306745 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Payload
-771 1736584306745 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 RI4ProgramInterface
-771 1736584306745 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Payload End
-771 1736584306745 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Post:GetInterfaceProvider
-771 1736584306745 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Return Value
-771 1736584306745 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 com.microchip.mplab.libs.RI4ToolsController.implementations.RI4ProgramInterfaceImpl@9c41bf9
-771 1736584306745 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Return End
-
-771 1736584306761 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Pre:GetInterfaceProvider
-771 1736584306761 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Payload
-771 1736584306761 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 RI4ConnectInterface
-771 1736584306761 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Payload End
-771 1736584306762 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Post:GetInterfaceProvider
-771 1736584306762 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Return Value
-771 1736584306762 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 com.microchip.mplab.libs.PK4ToolsController.PK4ConnectInterfaceImpl@1db64135
-771 1736584306762 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Return End
-771 1736584306768 GEN4_CONNECT_DIAGNOSTICS:acceptablePIDs = [9012, 9017, 901b, 9036, 9035]
-771 1736584306768 GEN4_CONNECT_DIAGNOSTICS:otherPIDs = [2177, 2179, 217a, 2141]
-771 1736584306768 GEN4_CONNECT_DIAGNOSTICS:Setting selected tool type to pk4
-771 1736584306768 GEN4_CONNECT_DIAGNOSTICS:otherPIDs = [2177, 2179, 217a, 2141]
-771 1736584306768 GEN4_CONNECT_DIAGNOSTICS:acceptablePIDs = [9012, 9017, 901b, 9036, 9035]
-
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Pre:selectCore
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Payload
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 PIC18F4520
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Payload End
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Post:selectCore
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Return Value
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 none
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Return End
-
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Pre:GetInterfaceProvider
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Payload
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 RI4ControllerDiagnosticsInterface
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Payload End
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Post:GetInterfaceProvider
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Return Value
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 com.microchip.mplab.libs.RI4ToolsController.implementations.RI4ControllerDiagnosticsInterfaceImpl@293dccc3
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Return End
-
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Pre:GetInterfaceProvider
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Payload
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 ProgrammerToGo
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Payload End
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Post:GetInterfaceProvider
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Return Value
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 com.microchip.mplab.libs.RI4ToolsController.implementations.ProgrammerToGoImpl@75ef6001
-771 1736584306769 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Return End
-
-771 1736584306770 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Pre:GetInterfaceProvider
-771 1736584306770 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Payload
-771 1736584306770 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Status
-771 1736584306770 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Payload End
-771 1736584306770 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Post:GetInterfaceProvider
-771 1736584306770 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Return Value
-771 1736584306770 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 null
-771 1736584306770 GEN4_TO_CONTROLLER_LOG:GEN4_INIT_INT_LOG_PIC18F4520 Return End
-
-771 1736584306773 GEN4_TO_CONTROLLER_LOG:GEN4_PROGRAM_INT_LOG_PIC18F4520 Pre:SetDebugExec
-771 1736584306773 GEN4_TO_CONTROLLER_LOG:GEN4_PROGRAM_INT_LOG_PIC18F4520 Payload
-771 1736584306774 GEN4_TO_CONTROLLER_LOG:GEN4_PROGRAM_INT_LOG_PIC18F4520 Pgm
-771 1736584306774 GEN4_TO_CONTROLLER_LOG:GEN4_PROGRAM_INT_LOG_PIC18F4520 7dc0
-771 1736584306774 GEN4_TO_CONTROLLER_LOG:GEN4_PROGRAM_INT_LOG_PIC18F4520 Length = 410
-771 1736584306774 GEN4_TO_CONTROLLER_LOG:GEN4_PROGRAM_INT_LOG_PIC18F4520 Payload End
-771 1736584306775 GEN4_TO_CONTROLLER_LOG:GEN4_PROGRAM_INT_LOG_PIC18F4520 Post:SetDebugExec
-771 1736584306775 GEN4_TO_CONTROLLER_LOG:GEN4_PROGRAM_INT_LOG_PIC18F4520 Return Value
-771 1736584306775 GEN4_TO_CONTROLLER_LOG:GEN4_PROGRAM_INT_LOG_PIC18F4520 true
-771 1736584306775 GEN4_TO_CONTROLLER_LOG:GEN4_PROGRAM_INT_LOG_PIC18F4520 Return End
-771 1736584306775 GEN4_CONNECT_DIAGNOSTICS:ENTERING: com.microchip.mplab.mdbcore.RI4Tool.ConnectionHandler.CheckForFWUpdates()
-771 1736584306775 GEN4_CONNECT_DIAGNOSTICS:Created FirmwareUpdateHandler com.microchip.mplab.mdbcore.pk4hybrid.pk4hybridFirmwareUpdateHandler@265c4079
-771 1736584306775 GEN4_CONNECT_DIAGNOSTICS:ENTERING: com.microchip.mplab.mdbcore.pk4hybrid.pk4hybridFirmwareUpdateHandler.UpdateFirmware(FirmwareInfo, UpdateMessage)
-771 1736584306777 GEN4_CONNECT_DIAGNOSTICS:areWeInBoot returned false
-771 1736584306777 GEN4_CONNECT_DIAGNOSTICS:inBoot = false
-771 1736584306777 GEN4_CONNECT_DIAGNOSTICS:uMode = checkingVersions
-771 1736584306777 GEN4_CONNECT_DIAGNOSTICS:selectedTool = pk4
-771 1736584306777 GEN4_CONNECT_DIAGNOSTICS:current toolType = pk4
-771 1736584306777 GEN4_CONNECT_DIAGNOSTICS:current tool mode = pk4
-771 1736584306777 GEN4_CONNECT_DIAGNOSTICS:ENTERING: com.microchip.mplab.mdbcore.pk4hybrid.pk4hybridFirmwareUpdateHandler.GetUpdateInfo()
-771 1736584306778 GEN4_CONNECT_DIAGNOSTICS:Parsing file  for firmware updates
-771 1736584306778 GEN4_CONNECT_DIAGNOSTICS:ENTERING: com.microchip.mplab.mdbcore.pk4hybrid.pk4hybridFirmwareUpdateHandler.ParseSelectedVersionsFromJamFile()
-771 1736584306778 GEN4_CONNECT_DIAGNOSTICS:Jame file line = boot.hex,010000
-771 1736584306779 GEN4_CONNECT_DIAGNOSTICS:Jame file line = scripts.xml,000671
-771 1736584306779 GEN4_CONNECT_DIAGNOSTICS:Jame file line = app1 020135, 0040C000
-771 1736584306779 GEN4_CONNECT_DIAGNOSTICS:Jame file line = app2 1.15.20, 00500000
-771 1736584306779 GEN4_CONNECT_DIAGNOSTICS:Jame file line = app3 000000, FFFFFFFF
-771 1736584306779 GEN4_CONNECT_DIAGNOSTICS:Jame file line = app4 000000, FFFFFFFF
-771 1736584306779 GEN4_CONNECT_DIAGNOSTICS:Jame file line = app5 000000, FFFFFFFF
-771 1736584306779 GEN4_CONNECT_DIAGNOSTICS:Jame file line = app6 000000, FFFFFFFF
-771 1736584306779 GEN4_CONNECT_DIAGNOSTICS:Jame file line = app7 000000, FFFFFFFF
-771 1736584306779 GEN4_CONNECT_DIAGNOSTICS:Jame file line = app8 000000, FFFFFFFF
-771 1736584306779 GEN4_CONNECT_DIAGNOSTICS:EXITING: com.microchip.mplab.mdbcore.pk4hybrid.pk4hybridFirmwareUpdateHandler.ri4ParseSelectedVersionsFromJamFile()
-771 1736584306779 GEN4_CONNECT_DIAGNOSTICS:EXITING: com.microchip.mplab.mdbcore.pk4hybrid.pk4hybridFirmwareUpdateHandler.GetUpdateInfo()
-771 1736584306779 GEN4_CONNECT_DIAGNOSTICS:current toolType = pk4
-
-771 1736584306779 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Pre:EstablishCommunincations
-771 1736584306779 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Payload
-771 1736584306779 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 com.microchip.mplab.mdbcore.PK4Tool.PK4Com@3c99e842
-771 1736584306779 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Payload End
-771 1736584306784 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Post:EstablishCommunincations
-771 1736584306784 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Return Value
-771 1736584306784 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 true
-771 1736584306784 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Return End
-
-771 1736584306784 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Pre:GetFirmwareInfo
-771 1736584306784 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Payload
-771 1736584306784 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 null
-771 1736584306784 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Payload End
-771 1736584306813 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Post:GetFirmwareInfo
-771 1736584306813 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Return Value
-771 1736584306813 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 FirmwareInfo: Values:
-771 1736584306813 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 FirmwareInfo: boot = false, bootVer = 01.00.00, apVer = 00.04.15, fpgaVer = ff.ff.ff, scriptVer = 00.06.71, macAddress = 0495683578354564948485250485149, devID = a1020e01, devID1 = 2, devSN0 = ffffffff, devSN1 = ffffffff, serialNumber = BUR221672038, appCommitID = null, scriptCommitID = 74cdf38a4d, PCB_ID = 6
-771 1736584306813 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Return End
-771 1736584306814 GEN4_CONNECT_DIAGNOSTICS:appNeedsUpdate returned true
-771 1736584306815 GEN4_CONNECT_DIAGNOSTICS:current toolType = pk4
-771 1736584306815 GEN4_CONNECT_DIAGNOSTICS:EXITING: com.microchip.mplab.mdbcore.pk4hybrid.pk4hybridFirmwareUpdateHandler.UpdateFirmware(FirmwareInfo, UpdateMessage)
-771 1736584306815 GEN4_CONNECT_DIAGNOSTICS:EXITING: com.microchip.mplab.mdbcore.RI4Tool.ConnectionHandler.CheckForFWUpdates()
-
-771 1736584306815 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Pre:EstablishCommunincations
-771 1736584306815 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Payload
-771 1736584306815 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 com.microchip.mplab.mdbcore.PK4Tool.PK4Com@3c99e842
-771 1736584306815 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Payload End
-771 1736584306815 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Post:EstablishCommunincations
-771 1736584306815 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Return Value
-771 1736584306815 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 true
-771 1736584306815 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Return End
-
-771 1736584306815 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Pre:GetFirmwareInfo
-771 1736584306815 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Payload
-771 1736584306815 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 null
-771 1736584306815 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Payload End
-771 1736584306844 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Post:GetFirmwareInfo
-771 1736584306844 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Return Value
-771 1736584306844 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 FirmwareInfo: Values:
-771 1736584306844 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 FirmwareInfo: boot = false, bootVer = 01.00.00, apVer = 00.04.15, fpgaVer = ff.ff.ff, scriptVer = 00.06.71, macAddress = 0495683578354564948485250485149, devID = a1020e01, devID1 = 2, devSN0 = ffffffff, devSN1 = ffffffff, serialNumber = BUR221672038, appCommitID = null, scriptCommitID = 74cdf38a4d, PCB_ID = 6
-771 1736584306844 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Return End
-
-771 1736584309840 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Pre:GetFirmwareInfo
-771 1736584309840 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Payload
-771 1736584309840 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 null
-771 1736584309840 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Payload End
-771 1736584309869 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Post:GetFirmwareInfo
-771 1736584309869 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Return Value
-771 1736584309869 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 FirmwareInfo: Values:
-771 1736584309869 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 FirmwareInfo: boot = false, bootVer = 01.00.00, apVer = 00.04.15, fpgaVer = ff.ff.ff, scriptVer = 00.06.71, macAddress = 0495683578354564948485250485149, devID = a1020e01, devID1 = 2, devSN0 = ffffffff, devSN1 = ffffffff, serialNumber = BUR221672038, appCommitID = null, scriptCommitID = 74cdf38a4d, PCB_ID = 6
-771 1736584309869 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Return End
-771 1736584309872 XXXX 1736584309872, Thread 771: XXXX 1736584309872, Entering Thread 771: Commands::runScriptWithUpload with script contents. contents[0] = 0x5e, ...  
-771 1736584309875 XXXX 1736584309875, Thread 771: XXXX 1736584309875, Entering Thread 771: ToolCommUsb::readTransfer, sideData is 0xd bytes long, transferDataLength is 0x4 bytes long  
-771 1736584461630 XXXX 1736584461630, Thread 771: com.Send returned false 
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:ENTERING: com.microchip.mplab.mdbcore.RI4Tool.ConnectionHandler.CheckForFWUpdates()
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:Created FirmwareUpdateHandler com.microchip.mplab.mdbcore.pk4hybrid.pk4hybridFirmwareUpdateHandler@265c4079
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:ENTERING: com.microchip.mplab.mdbcore.pk4hybrid.pk4hybridFirmwareUpdateHandler.UpdateFirmware(FirmwareInfo, UpdateMessage)
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:areWeInBoot returned false
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:inBoot = false
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:uMode = updating
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:selectedTool = pk4
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:current toolType = pk4
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:current tool mode = pk4
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:ENTERING: com.microchip.mplab.mdbcore.pk4hybrid.pk4hybridFirmwareUpdateHandler.updatePk4HybridFirmware()
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:Don't upgrade fimware = false
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:ENTERING: com.microchip.mplab.mdbcore.pk4hybrid.pk4hybridFirmwareUpdateHandler.switchToBoot()
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:ENTERING: com.microchip.mplab.mdbcore.pk4hybrid.pk4hybridFirmwareUpdateHandler.selectConnectInterfaceMode(toolType)
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:Connect interface = com.microchip.mplab.mdbcore.RI4Tool.controllerstack.ControllerInterfacesProvider@4f3a62fe
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:EXITING: com.microchip.mplab.mdbcore.pk4hybrid.pk4hybridFirmwareUpdateHandler.selectConnectInterfaceMode(toolType)
-771 1736584461633 GEN4_CONNECT_DIAGNOSTICS:calling switcher.switchToBoot()
-
-771 1736584461635 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Pre:EnterFirmwareUpgradeMode
-771 1736584461635 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Payload
-771 1736584461635 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 null
-771 1736584461635 GEN4_TO_CONTROLLER_LOG:GEN4_CONNECT_INT_LOG_PIC18F4520 Payload End
+1052 1736657279718 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC18F4520 Pre:HaltTarget
+1052 1736657279718 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC18F4520 Payload
+1052 1736657279718 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC18F4520 null
+1052 1736657279718 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC18F4520 Payload End
+1052 1736657279718 XXXX 1736657279718, Thread 1052: XXXX 1736657279718, Entering Thread 1052: Commands::runScriptBasic, script name = Halt, timeOut = -1 ms  
+1052 1736657279820 XXXX 1736657279820, Thread 1052: XXXX 1736657279820, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657279820 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC18F4520 Post:HaltTarget
+1052 1736657279820 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC18F4520 Return Value
+1052 1736657279820 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC18F4520 true
+1052 1736657279820 GEN4_TO_CONTROLLER_LOG:GEN4_DEBUG_INT_LOG_PIC18F4520 Return End
+1052 1736657279820 XXXX 1736657279820, Thread 1052: XXXX 1736657279820, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657279821 XXXX 1736657279821, Thread 1052: XXXX 1736657279821, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657280079 XXXX 1736657280079, Thread 1052: XXXX 1736657280079, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657280080 XXXX 1736657280080, Thread 1052: XXXX 1736657280080, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657280181 XXXX 1736657280181, Thread 1052: XXXX 1736657280181, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657280183 XXXX 1736657280182, Thread 1052: XXXX 1736657280182, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657280286 XXXX 1736657280286, Thread 1052: XXXX 1736657280286, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657280287 XXXX 1736657280287, Thread 1052: XXXX 1736657280287, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657280388 XXXX 1736657280388, Thread 1052: XXXX 1736657280388, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657280390 XXXX 1736657280390, Thread 1052: XXXX 1736657280389, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657280493 XXXX 1736657280493, Thread 1052: XXXX 1736657280493, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657280494 XXXX 1736657280494, Thread 1052: XXXX 1736657280494, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657280598 XXXX 1736657280598, Thread 1052: XXXX 1736657280598, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657280600 XXXX 1736657280600, Thread 1052: XXXX 1736657280600, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657280704 XXXX 1736657280704, Thread 1052: XXXX 1736657280704, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657280704 XXXX 1736657280704, Thread 1052: XXXX 1736657280704, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657280808 XXXX 1736657280808, Thread 1052: XXXX 1736657280808, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657280809 XXXX 1736657280809, Thread 1052: XXXX 1736657280809, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657280913 XXXX 1736657280913, Thread 1052: XXXX 1736657280913, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657280914 XXXX 1736657280914, Thread 1052: XXXX 1736657280914, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657281018 XXXX 1736657281018, Thread 1052: XXXX 1736657281018, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657281019 XXXX 1736657281019, Thread 1052: XXXX 1736657281019, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657281120 XXXX 1736657281120, Thread 1052: XXXX 1736657281120, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657281120 XXXX 1736657281120, Thread 1052: XXXX 1736657281120, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657281224 XXXX 1736657281224, Thread 1052: XXXX 1736657281224, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657281225 XXXX 1736657281225, Thread 1052: XXXX 1736657281225, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657281325 XXXX 1736657281325, Thread 1052: XXXX 1736657281325, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657281326 XXXX 1736657281326, Thread 1052: XXXX 1736657281326, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657281427 XXXX 1736657281427, Thread 1052: XXXX 1736657281427, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657281427 XXXX 1736657281427, Thread 1052: XXXX 1736657281427, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657281531 XXXX 1736657281531, Thread 1052: XXXX 1736657281531, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657281532 XXXX 1736657281532, Thread 1052: XXXX 1736657281532, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657281636 XXXX 1736657281636, Thread 1052: XXXX 1736657281636, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657281637 XXXX 1736657281637, Thread 1052: XXXX 1736657281637, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657281741 XXXX 1736657281741, Thread 1052: XXXX 1736657281741, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657281742 XXXX 1736657281742, Thread 1052: XXXX 1736657281742, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657281845 XXXX 1736657281845, Thread 1052: XXXX 1736657281845, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657281846 XXXX 1736657281845, Thread 1052: XXXX 1736657281845, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657281950 XXXX 1736657281950, Thread 1052: XXXX 1736657281950, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657281951 XXXX 1736657281951, Thread 1052: XXXX 1736657281951, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657282055 XXXX 1736657282055, Thread 1052: XXXX 1736657282055, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657282056 XXXX 1736657282056, Thread 1052: XXXX 1736657282056, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657282160 XXXX 1736657282160, Thread 1052: XXXX 1736657282160, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657282160 XXXX 1736657282160, Thread 1052: XXXX 1736657282160, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657282264 XXXX 1736657282264, Thread 1052: XXXX 1736657282264, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657282265 XXXX 1736657282265, Thread 1052: XXXX 1736657282265, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657282369 XXXX 1736657282369, Thread 1052: XXXX 1736657282369, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657282370 XXXX 1736657282370, Thread 1052: XXXX 1736657282370, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657282474 XXXX 1736657282474, Thread 1052: XXXX 1736657282474, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657282475 XXXX 1736657282475, Thread 1052: XXXX 1736657282475, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657282579 XXXX 1736657282579, Thread 1052: XXXX 1736657282579, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657282580 XXXX 1736657282580, Thread 1052: XXXX 1736657282580, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657282682 XXXX 1736657282682, Thread 1052: XXXX 1736657282682, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657282682 XXXX 1736657282682, Thread 1052: XXXX 1736657282682, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657282787 XXXX 1736657282787, Thread 1052: XXXX 1736657282787, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657282789 XXXX 1736657282789, Thread 1052: XXXX 1736657282789, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657282892 XXXX 1736657282892, Thread 1052: XXXX 1736657282892, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657282894 XXXX 1736657282894, Thread 1052: XXXX 1736657282894, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657282998 XXXX 1736657282998, Thread 1052: XXXX 1736657282998, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657283000 XXXX 1736657283000, Thread 1052: XXXX 1736657283000, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657283104 XXXX 1736657283104, Thread 1052: XXXX 1736657283104, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657283105 XXXX 1736657283105, Thread 1052: XXXX 1736657283105, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657283209 XXXX 1736657283209, Thread 1052: XXXX 1736657283209, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657283211 XXXX 1736657283211, Thread 1052: XXXX 1736657283211, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657283314 XXXX 1736657283314, Thread 1052: XXXX 1736657283314, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657283314 XXXX 1736657283314, Thread 1052: XXXX 1736657283314, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657283418 XXXX 1736657283418, Thread 1052: XXXX 1736657283418, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657283418 XXXX 1736657283418, Thread 1052: XXXX 1736657283418, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657283523 XXXX 1736657283523, Thread 1052: XXXX 1736657283523, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657283525 XXXX 1736657283525, Thread 1052: XXXX 1736657283525, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657283628 XXXX 1736657283628, Thread 1052: XXXX 1736657283628, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657283630 XXXX 1736657283630, Thread 1052: XXXX 1736657283630, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657283733 XXXX 1736657283733, Thread 1052: XXXX 1736657283733, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657283734 XXXX 1736657283734, Thread 1052: XXXX 1736657283734, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657283838 XXXX 1736657283838, Thread 1052: XXXX 1736657283838, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657283840 XXXX 1736657283840, Thread 1052: XXXX 1736657283840, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657283943 XXXX 1736657283943, Thread 1052: XXXX 1736657283943, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657283945 XXXX 1736657283944, Thread 1052: XXXX 1736657283944, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657284048 XXXX 1736657284048, Thread 1052: XXXX 1736657284048, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657284050 XXXX 1736657284050, Thread 1052: XXXX 1736657284050, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657284153 XXXX 1736657284153, Thread 1052: XXXX 1736657284153, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657284155 XXXX 1736657284155, Thread 1052: XXXX 1736657284155, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657284257 XXXX 1736657284257, Thread 1052: XXXX 1736657284257, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657284259 XXXX 1736657284259, Thread 1052: XXXX 1736657284259, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657284361 XXXX 1736657284361, Thread 1052: XXXX 1736657284361, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657284362 XXXX 1736657284362, Thread 1052: XXXX 1736657284362, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657284466 XXXX 1736657284466, Thread 1052: XXXX 1736657284466, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657284468 XXXX 1736657284468, Thread 1052: XXXX 1736657284468, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657284571 XXXX 1736657284571, Thread 1052: XXXX 1736657284571, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657284573 XXXX 1736657284573, Thread 1052: XXXX 1736657284573, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657284676 XXXX 1736657284676, Thread 1052: XXXX 1736657284676, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657284678 XXXX 1736657284678, Thread 1052: XXXX 1736657284678, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657284778 XXXX 1736657284778, Thread 1052: XXXX 1736657284778, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657284785 XXXX 1736657284785, Thread 1052: XXXX 1736657284785, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657284879 XXXX 1736657284879, Thread 1052: XXXX 1736657284879, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657284880 XXXX 1736657284880, Thread 1052: XXXX 1736657284880, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657284984 XXXX 1736657284984, Thread 1052: XXXX 1736657284984, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657284986 XXXX 1736657284986, Thread 1052: XXXX 1736657284986, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657285089 XXXX 1736657285089, Thread 1052: XXXX 1736657285089, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657285091 XXXX 1736657285091, Thread 1052: XXXX 1736657285091, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657285195 XXXX 1736657285195, Thread 1052: XXXX 1736657285195, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657285197 XXXX 1736657285197, Thread 1052: XXXX 1736657285197, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657285301 XXXX 1736657285301, Thread 1052: XXXX 1736657285301, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657285303 XXXX 1736657285303, Thread 1052: XXXX 1736657285303, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657285407 XXXX 1736657285407, Thread 1052: XXXX 1736657285407, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657285408 XXXX 1736657285408, Thread 1052: XXXX 1736657285408, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657285511 XXXX 1736657285511, Thread 1052: XXXX 1736657285511, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657285513 XXXX 1736657285513, Thread 1052: XXXX 1736657285513, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657285616 XXXX 1736657285616, Thread 1052: XXXX 1736657285616, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657285618 XXXX 1736657285618, Thread 1052: XXXX 1736657285618, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657285721 XXXX 1736657285721, Thread 1052: XXXX 1736657285721, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657285722 XXXX 1736657285722, Thread 1052: XXXX 1736657285722, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657285826 XXXX 1736657285826, Thread 1052: XXXX 1736657285826, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657285827 XXXX 1736657285827, Thread 1052: XXXX 1736657285827, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657285931 XXXX 1736657285931, Thread 1052: XXXX 1736657285931, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657285932 XXXX 1736657285932, Thread 1052: XXXX 1736657285932, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657286032 XXXX 1736657286032, Thread 1052: XXXX 1736657286032, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657286034 XXXX 1736657286034, Thread 1052: XXXX 1736657286034, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657286138 XXXX 1736657286138, Thread 1052: XXXX 1736657286138, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657286140 XXXX 1736657286140, Thread 1052: XXXX 1736657286140, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657286243 XXXX 1736657286243, Thread 1052: XXXX 1736657286243, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657286245 XXXX 1736657286245, Thread 1052: XXXX 1736657286245, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657286348 XXXX 1736657286348, Thread 1052: XXXX 1736657286348, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657286349 XXXX 1736657286349, Thread 1052: XXXX 1736657286349, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657286454 XXXX 1736657286454, Thread 1052: XXXX 1736657286454, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657286455 XXXX 1736657286455, Thread 1052: XXXX 1736657286455, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657286559 XXXX 1736657286559, Thread 1052: XXXX 1736657286559, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657286561 XXXX 1736657286561, Thread 1052: XXXX 1736657286561, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657286665 XXXX 1736657286665, Thread 1052: XXXX 1736657286665, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657286666 XXXX 1736657286666, Thread 1052: XXXX 1736657286666, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657286771 XXXX 1736657286771, Thread 1052: XXXX 1736657286771, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657286772 XXXX 1736657286772, Thread 1052: XXXX 1736657286772, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657286877 XXXX 1736657286877, Thread 1052: XXXX 1736657286877, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657286879 XXXX 1736657286879, Thread 1052: XXXX 1736657286879, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657286983 XXXX 1736657286983, Thread 1052: XXXX 1736657286983, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657286984 XXXX 1736657286984, Thread 1052: XXXX 1736657286984, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657287088 XXXX 1736657287088, Thread 1052: XXXX 1736657287088, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657287090 XXXX 1736657287090, Thread 1052: XXXX 1736657287090, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657287194 XXXX 1736657287194, Thread 1052: XXXX 1736657287193, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657287195 XXXX 1736657287195, Thread 1052: XXXX 1736657287195, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657287298 XXXX 1736657287298, Thread 1052: XXXX 1736657287298, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657287300 XXXX 1736657287300, Thread 1052: XXXX 1736657287300, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657287404 XXXX 1736657287403, Thread 1052: XXXX 1736657287403, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657287405 XXXX 1736657287405, Thread 1052: XXXX 1736657287405, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657287508 XXXX 1736657287508, Thread 1052: XXXX 1736657287508, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657287510 XXXX 1736657287510, Thread 1052: XXXX 1736657287510, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657287610 XXXX 1736657287610, Thread 1052: XXXX 1736657287610, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657287611 XXXX 1736657287611, Thread 1052: XXXX 1736657287611, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657287713 XXXX 1736657287713, Thread 1052: XXXX 1736657287713, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657287715 XXXX 1736657287715, Thread 1052: XXXX 1736657287715, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657287815 XXXX 1736657287815, Thread 1052: XXXX 1736657287815, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657287816 XXXX 1736657287816, Thread 1052: XXXX 1736657287816, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657287918 XXXX 1736657287918, Thread 1052: XXXX 1736657287918, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657287919 XXXX 1736657287919, Thread 1052: XXXX 1736657287919, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657288019 XXXX 1736657288019, Thread 1052: XXXX 1736657288019, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657288021 XXXX 1736657288021, Thread 1052: XXXX 1736657288021, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657288124 XXXX 1736657288124, Thread 1052: XXXX 1736657288124, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657288126 XXXX 1736657288126, Thread 1052: XXXX 1736657288126, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657288230 XXXX 1736657288230, Thread 1052: XXXX 1736657288230, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657288231 XXXX 1736657288231, Thread 1052: XXXX 1736657288231, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657288335 XXXX 1736657288335, Thread 1052: XXXX 1736657288335, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657288336 XXXX 1736657288336, Thread 1052: XXXX 1736657288336, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657288439 XXXX 1736657288439, Thread 1052: XXXX 1736657288439, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657288440 XXXX 1736657288440, Thread 1052: XXXX 1736657288440, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657288545 XXXX 1736657288545, Thread 1052: XXXX 1736657288545, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657288546 XXXX 1736657288546, Thread 1052: XXXX 1736657288546, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657288650 XXXX 1736657288650, Thread 1052: XXXX 1736657288650, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657288652 XXXX 1736657288652, Thread 1052: XXXX 1736657288652, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657288764 XXXX 1736657288764, Thread 1052: XXXX 1736657288764, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657288768 XXXX 1736657288768, Thread 1052: XXXX 1736657288768, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657288870 XXXX 1736657288870, Thread 1052: XXXX 1736657288870, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657288871 XXXX 1736657288871, Thread 1052: XXXX 1736657288871, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657288976 XXXX 1736657288976, Thread 1052: XXXX 1736657288976, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657288977 XXXX 1736657288977, Thread 1052: XXXX 1736657288977, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657289080 XXXX 1736657289080, Thread 1052: XXXX 1736657289080, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657289082 XXXX 1736657289082, Thread 1052: XXXX 1736657289082, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657289183 XXXX 1736657289183, Thread 1052: XXXX 1736657289183, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657289185 XXXX 1736657289185, Thread 1052: XXXX 1736657289185, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657289288 XXXX 1736657289288, Thread 1052: XXXX 1736657289288, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657289290 XXXX 1736657289290, Thread 1052: XXXX 1736657289290, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657289394 XXXX 1736657289394, Thread 1052: XXXX 1736657289394, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657289395 XXXX 1736657289395, Thread 1052: XXXX 1736657289395, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657289499 XXXX 1736657289499, Thread 1052: XXXX 1736657289499, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657289500 XXXX 1736657289500, Thread 1052: XXXX 1736657289500, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657289603 XXXX 1736657289603, Thread 1052: XXXX 1736657289603, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657289604 XXXX 1736657289604, Thread 1052: XXXX 1736657289604, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657289708 XXXX 1736657289708, Thread 1052: XXXX 1736657289708, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657289710 XXXX 1736657289710, Thread 1052: XXXX 1736657289710, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657289811 XXXX 1736657289811, Thread 1052: XXXX 1736657289811, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657289812 XXXX 1736657289812, Thread 1052: XXXX 1736657289812, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657289917 XXXX 1736657289917, Thread 1052: XXXX 1736657289917, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657289918 XXXX 1736657289918, Thread 1052: XXXX 1736657289918, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657290021 XXXX 1736657290021, Thread 1052: XXXX 1736657290021, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657290023 XXXX 1736657290023, Thread 1052: XXXX 1736657290023, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657290126 XXXX 1736657290126, Thread 1052: XXXX 1736657290126, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657290128 XXXX 1736657290128, Thread 1052: XXXX 1736657290128, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657290231 XXXX 1736657290231, Thread 1052: XXXX 1736657290231, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657290233 XXXX 1736657290233, Thread 1052: XXXX 1736657290233, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657290336 XXXX 1736657290336, Thread 1052: XXXX 1736657290336, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657290338 XXXX 1736657290338, Thread 1052: XXXX 1736657290338, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657290441 XXXX 1736657290441, Thread 1052: XXXX 1736657290441, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657290443 XXXX 1736657290443, Thread 1052: XXXX 1736657290443, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657290546 XXXX 1736657290546, Thread 1052: XXXX 1736657290546, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657290548 XXXX 1736657290548, Thread 1052: XXXX 1736657290548, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657290652 XXXX 1736657290652, Thread 1052: XXXX 1736657290652, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657290653 XXXX 1736657290653, Thread 1052: XXXX 1736657290653, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657290757 XXXX 1736657290757, Thread 1052: XXXX 1736657290757, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657290758 XXXX 1736657290758, Thread 1052: XXXX 1736657290758, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657290862 XXXX 1736657290862, Thread 1052: XXXX 1736657290862, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657290863 XXXX 1736657290863, Thread 1052: XXXX 1736657290863, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657290966 XXXX 1736657290966, Thread 1052: XXXX 1736657290966, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657290967 XXXX 1736657290967, Thread 1052: XXXX 1736657290967, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657291072 XXXX 1736657291072, Thread 1052: XXXX 1736657291072, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657291073 XXXX 1736657291073, Thread 1052: XXXX 1736657291073, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657291178 XXXX 1736657291178, Thread 1052: XXXX 1736657291178, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657291179 XXXX 1736657291179, Thread 1052: XXXX 1736657291179, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657291282 XXXX 1736657291282, Thread 1052: XXXX 1736657291282, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657291284 XXXX 1736657291284, Thread 1052: XXXX 1736657291284, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657291388 XXXX 1736657291388, Thread 1052: XXXX 1736657291388, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657291389 XXXX 1736657291389, Thread 1052: XXXX 1736657291389, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657291493 XXXX 1736657291493, Thread 1052: XXXX 1736657291493, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657291494 XXXX 1736657291494, Thread 1052: XXXX 1736657291494, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657291599 XXXX 1736657291598, Thread 1052: XXXX 1736657291598, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657291600 XXXX 1736657291600, Thread 1052: XXXX 1736657291600, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657291704 XXXX 1736657291704, Thread 1052: XXXX 1736657291704, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657291705 XXXX 1736657291705, Thread 1052: XXXX 1736657291705, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657291810 XXXX 1736657291810, Thread 1052: XXXX 1736657291810, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657291812 XXXX 1736657291812, Thread 1052: XXXX 1736657291812, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657291916 XXXX 1736657291916, Thread 1052: XXXX 1736657291916, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657291917 XXXX 1736657291917, Thread 1052: XXXX 1736657291917, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657292022 XXXX 1736657292022, Thread 1052: XXXX 1736657292022, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657292024 XXXX 1736657292024, Thread 1052: XXXX 1736657292024, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657292124 XXXX 1736657292124, Thread 1052: XXXX 1736657292124, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657292125 XXXX 1736657292125, Thread 1052: XXXX 1736657292125, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657292225 XXXX 1736657292225, Thread 1052: XXXX 1736657292225, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657292227 XXXX 1736657292227, Thread 1052: XXXX 1736657292227, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657292327 XXXX 1736657292327, Thread 1052: XXXX 1736657292327, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657292329 XXXX 1736657292329, Thread 1052: XXXX 1736657292329, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657292433 XXXX 1736657292433, Thread 1052: XXXX 1736657292433, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657292434 XXXX 1736657292434, Thread 1052: XXXX 1736657292434, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657292538 XXXX 1736657292538, Thread 1052: XXXX 1736657292538, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657292540 XXXX 1736657292540, Thread 1052: XXXX 1736657292540, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657292644 XXXX 1736657292644, Thread 1052: XXXX 1736657292644, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657292645 XXXX 1736657292645, Thread 1052: XXXX 1736657292645, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657292750 XXXX 1736657292750, Thread 1052: XXXX 1736657292750, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657292751 XXXX 1736657292751, Thread 1052: XXXX 1736657292751, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657292854 XXXX 1736657292854, Thread 1052: XXXX 1736657292854, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657292856 XXXX 1736657292856, Thread 1052: XXXX 1736657292856, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657292960 XXXX 1736657292960, Thread 1052: XXXX 1736657292960, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657292961 XXXX 1736657292961, Thread 1052: XXXX 1736657292961, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657293066 XXXX 1736657293066, Thread 1052: XXXX 1736657293066, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657293067 XXXX 1736657293067, Thread 1052: XXXX 1736657293067, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657293171 XXXX 1736657293171, Thread 1052: XXXX 1736657293171, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657293172 XXXX 1736657293172, Thread 1052: XXXX 1736657293172, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657293273 XXXX 1736657293273, Thread 1052: XXXX 1736657293273, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657293274 XXXX 1736657293274, Thread 1052: XXXX 1736657293274, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657293379 XXXX 1736657293379, Thread 1052: XXXX 1736657293379, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657293380 XXXX 1736657293380, Thread 1052: XXXX 1736657293380, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657293484 XXXX 1736657293484, Thread 1052: XXXX 1736657293484, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657293485 XXXX 1736657293485, Thread 1052: XXXX 1736657293485, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657293585 XXXX 1736657293585, Thread 1052: XXXX 1736657293585, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657293586 XXXX 1736657293586, Thread 1052: XXXX 1736657293586, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657293691 XXXX 1736657293691, Thread 1052: XXXX 1736657293691, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657293692 XXXX 1736657293692, Thread 1052: XXXX 1736657293692, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657293794 XXXX 1736657293794, Thread 1052: XXXX 1736657293794, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657293796 XXXX 1736657293796, Thread 1052: XXXX 1736657293796, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657293897 XXXX 1736657293897, Thread 1052: XXXX 1736657293897, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657293898 XXXX 1736657293898, Thread 1052: XXXX 1736657293898, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657294003 XXXX 1736657294003, Thread 1052: XXXX 1736657294003, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657294004 XXXX 1736657294004, Thread 1052: XXXX 1736657294004, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657294109 XXXX 1736657294109, Thread 1052: XXXX 1736657294109, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657294110 XXXX 1736657294110, Thread 1052: XXXX 1736657294110, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657294213 XXXX 1736657294213, Thread 1052: XXXX 1736657294213, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657294215 XXXX 1736657294215, Thread 1052: XXXX 1736657294215, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657294317 XXXX 1736657294317, Thread 1052: XXXX 1736657294317, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657294318 XXXX 1736657294318, Thread 1052: XXXX 1736657294318, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657294422 XXXX 1736657294422, Thread 1052: XXXX 1736657294422, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657294423 XXXX 1736657294423, Thread 1052: XXXX 1736657294423, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657294527 XXXX 1736657294527, Thread 1052: XXXX 1736657294527, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657294529 XXXX 1736657294529, Thread 1052: XXXX 1736657294529, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657294627 XXXX 1736657294627, Thread 1052: XXXX 1736657294627, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657294629 XXXX 1736657294629, Thread 1052: XXXX 1736657294629, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657294739 XXXX 1736657294739, Thread 1052: XXXX 1736657294739, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657294741 XXXX 1736657294741, Thread 1052: XXXX 1736657294741, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657294844 XXXX 1736657294844, Thread 1052: XXXX 1736657294844, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657294846 XXXX 1736657294846, Thread 1052: XXXX 1736657294846, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657294949 XXXX 1736657294949, Thread 1052: XXXX 1736657294949, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657294951 XXXX 1736657294951, Thread 1052: XXXX 1736657294951, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657295051 XXXX 1736657295051, Thread 1052: XXXX 1736657295051, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657295053 XXXX 1736657295053, Thread 1052: XXXX 1736657295053, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657295156 XXXX 1736657295156, Thread 1052: XXXX 1736657295156, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657295158 XXXX 1736657295158, Thread 1052: XXXX 1736657295158, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657295262 XXXX 1736657295262, Thread 1052: XXXX 1736657295262, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657295263 XXXX 1736657295263, Thread 1052: XXXX 1736657295263, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657295368 XXXX 1736657295368, Thread 1052: XXXX 1736657295368, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657295369 XXXX 1736657295369, Thread 1052: XXXX 1736657295369, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657295474 XXXX 1736657295474, Thread 1052: XXXX 1736657295474, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657295475 XXXX 1736657295475, Thread 1052: XXXX 1736657295475, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657295580 XXXX 1736657295580, Thread 1052: XXXX 1736657295580, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657295581 XXXX 1736657295581, Thread 1052: XXXX 1736657295581, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657295686 XXXX 1736657295686, Thread 1052: XXXX 1736657295686, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657295687 XXXX 1736657295687, Thread 1052: XXXX 1736657295687, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657295791 XXXX 1736657295791, Thread 1052: XXXX 1736657295791, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657295793 XXXX 1736657295793, Thread 1052: XXXX 1736657295793, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657295897 XXXX 1736657295897, Thread 1052: XXXX 1736657295897, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657295898 XXXX 1736657295898, Thread 1052: XXXX 1736657295898, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657296003 XXXX 1736657296003, Thread 1052: XXXX 1736657296003, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657296004 XXXX 1736657296004, Thread 1052: XXXX 1736657296004, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657296108 XXXX 1736657296108, Thread 1052: XXXX 1736657296108, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657296109 XXXX 1736657296109, Thread 1052: XXXX 1736657296109, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657296214 XXXX 1736657296214, Thread 1052: XXXX 1736657296214, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657296215 XXXX 1736657296215, Thread 1052: XXXX 1736657296215, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657296318 XXXX 1736657296318, Thread 1052: XXXX 1736657296318, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657296320 XXXX 1736657296320, Thread 1052: XXXX 1736657296320, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657296421 XXXX 1736657296421, Thread 1052: XXXX 1736657296421, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657296422 XXXX 1736657296422, Thread 1052: XXXX 1736657296422, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657296527 XXXX 1736657296527, Thread 1052: XXXX 1736657296527, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657296529 XXXX 1736657296529, Thread 1052: XXXX 1736657296529, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657296631 XXXX 1736657296631, Thread 1052: XXXX 1736657296631, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657296632 XXXX 1736657296632, Thread 1052: XXXX 1736657296632, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657296736 XXXX 1736657296736, Thread 1052: XXXX 1736657296736, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657296737 XXXX 1736657296737, Thread 1052: XXXX 1736657296737, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657296838 XXXX 1736657296838, Thread 1052: XXXX 1736657296838, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657296839 XXXX 1736657296839, Thread 1052: XXXX 1736657296839, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657296943 XXXX 1736657296943, Thread 1052: XXXX 1736657296943, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657296944 XXXX 1736657296944, Thread 1052: XXXX 1736657296944, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657297049 XXXX 1736657297049, Thread 1052: XXXX 1736657297049, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657297050 XXXX 1736657297050, Thread 1052: XXXX 1736657297050, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657297155 XXXX 1736657297155, Thread 1052: XXXX 1736657297155, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657297156 XXXX 1736657297156, Thread 1052: XXXX 1736657297156, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657297261 XXXX 1736657297261, Thread 1052: XXXX 1736657297261, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657297262 XXXX 1736657297262, Thread 1052: XXXX 1736657297262, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657297367 XXXX 1736657297367, Thread 1052: XXXX 1736657297367, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657297368 XXXX 1736657297368, Thread 1052: XXXX 1736657297368, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657297472 XXXX 1736657297472, Thread 1052: XXXX 1736657297472, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657297474 XXXX 1736657297474, Thread 1052: XXXX 1736657297474, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657297579 XXXX 1736657297579, Thread 1052: XXXX 1736657297579, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657297580 XXXX 1736657297580, Thread 1052: XXXX 1736657297580, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657297684 XXXX 1736657297684, Thread 1052: XXXX 1736657297684, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657297685 XXXX 1736657297685, Thread 1052: XXXX 1736657297685, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657297790 XXXX 1736657297790, Thread 1052: XXXX 1736657297790, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657297792 XXXX 1736657297792, Thread 1052: XXXX 1736657297792, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657297896 XXXX 1736657297896, Thread 1052: XXXX 1736657297896, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657297897 XXXX 1736657297897, Thread 1052: XXXX 1736657297897, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657298002 XXXX 1736657298002, Thread 1052: XXXX 1736657298002, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657298003 XXXX 1736657298003, Thread 1052: XXXX 1736657298003, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657298108 XXXX 1736657298108, Thread 1052: XXXX 1736657298108, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657298109 XXXX 1736657298109, Thread 1052: XXXX 1736657298109, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657298214 XXXX 1736657298214, Thread 1052: XXXX 1736657298214, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657298215 XXXX 1736657298215, Thread 1052: XXXX 1736657298215, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657298319 XXXX 1736657298319, Thread 1052: XXXX 1736657298319, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657298320 XXXX 1736657298320, Thread 1052: XXXX 1736657298320, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657298424 XXXX 1736657298424, Thread 1052: XXXX 1736657298424, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657298425 XXXX 1736657298425, Thread 1052: XXXX 1736657298425, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657298530 XXXX 1736657298530, Thread 1052: XXXX 1736657298530, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657298532 XXXX 1736657298532, Thread 1052: XXXX 1736657298532, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657298632 XXXX 1736657298632, Thread 1052: XXXX 1736657298632, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657298634 XXXX 1736657298634, Thread 1052: XXXX 1736657298634, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657298738 XXXX 1736657298738, Thread 1052: XXXX 1736657298738, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657298739 XXXX 1736657298739, Thread 1052: XXXX 1736657298739, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657298844 XXXX 1736657298844, Thread 1052: XXXX 1736657298844, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657298846 XXXX 1736657298846, Thread 1052: XXXX 1736657298846, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657298951 XXXX 1736657298951, Thread 1052: XXXX 1736657298950, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657298952 XXXX 1736657298952, Thread 1052: XXXX 1736657298952, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657299056 XXXX 1736657299056, Thread 1052: XXXX 1736657299056, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657299058 XXXX 1736657299058, Thread 1052: XXXX 1736657299058, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657299162 XXXX 1736657299162, Thread 1052: XXXX 1736657299162, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657299163 XXXX 1736657299163, Thread 1052: XXXX 1736657299163, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657299268 XXXX 1736657299268, Thread 1052: XXXX 1736657299268, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657299269 XXXX 1736657299269, Thread 1052: XXXX 1736657299269, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657299371 XXXX 1736657299371, Thread 1052: XXXX 1736657299371, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657299373 XXXX 1736657299373, Thread 1052: XXXX 1736657299373, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657299477 XXXX 1736657299477, Thread 1052: XXXX 1736657299477, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657299478 XXXX 1736657299478, Thread 1052: XXXX 1736657299478, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657299583 XXXX 1736657299583, Thread 1052: XXXX 1736657299583, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657299584 XXXX 1736657299584, Thread 1052: XXXX 1736657299584, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657299689 XXXX 1736657299689, Thread 1052: XXXX 1736657299689, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657299690 XXXX 1736657299690, Thread 1052: XXXX 1736657299690, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657299795 XXXX 1736657299795, Thread 1052: XXXX 1736657299795, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657299796 XXXX 1736657299796, Thread 1052: XXXX 1736657299796, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657299901 XXXX 1736657299901, Thread 1052: XXXX 1736657299901, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657299902 XXXX 1736657299902, Thread 1052: XXXX 1736657299902, Exiting Thread 1052: Commands::runScriptBasic  
+1052 1736657300007 XXXX 1736657300007, Thread 1052: XXXX 1736657300007, Entering Thread 1052: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+1052 1736657300008 XXXX 1736657300008, Thread 1052: com.Send returned false 
+1052 1736657300008 XXXX 1736657300008, Thread 1052: transfer: exception after writeHeaderAndGetResult null 
+1052 1736657300009 XXXX 1736657300009, Thread 1052: XXXX 1736657300009, Entering Thread 1052: ToolCommUsb::recoverFromProtocolError, type = NO_SCRIPT  
+1052 1736657300009 XXXX 1736657300009, Thread 1052: Send Abort Script Engine Command 
+1052 1736657300009 XXXX 1736657300009, Thread 1052: XXXX 1736657300009, Entering Thread 1052: ToolCommUsb::killScriptEngine  
+1052 1736657300009 XXXX 1736657300009, Thread 1052: com.Send returned false 
+1052 1736657300009 XXXX 1736657300009, Thread 1052: Failed sending Abort Script Engine Command. Set nuclear option = true 
+1052 1736657300009 XXXX 1736657300009, Thread 1052: About to nuke 
+1052 1736657300009 XXXX 1736657300009, Thread 1052: XXXX 1736657300009, Entering Thread 1052: ToolCommUsb::nuclearOption  
+1052 1736657300009 XXXX 1736657300009, Thread 1052: com.Send returned false 
