@@ -1,6 +1,5 @@
 import time
 
-import pandas as pd
 import serial
 from mido import MidiFile
 
