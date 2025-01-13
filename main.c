@@ -143,6 +143,8 @@ void __interrupt(low_priority) LowIsr(void){
                     if(token != NULL){
                         rotate_pitch_motor(atoi(token));
                     }
+                } else if(strcmp(token, "pick") == 0){
+                    rotate_pick_motor();
                 } else if(strcmp(token, "base") == 0){
                     token = strtok(NULL, " ");
                     if(token != NULL){

@@ -6,7 +6,7 @@ from mido import MidiFile
 # Configure the serial port
 ser = serial.Serial(
     # port='/dev/cu.usbserial-1320',  # Replace with your UART device path
-    port='/dev/cu.JLabGOAir',  # Replace with your UART device path
+    port='COM8',  # Replace with your UART device path
     baudrate=1200,        # Set the correct baud rate for your device
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
@@ -33,7 +33,8 @@ try:
                 ser.write(pitch_data.encode('utf-8'))  # Send data
                 print("Data sent:", pitch_data)
 
-                time.sleep(1)   # wait for motor to move
+                # time.sleep(1)   # wait for motor to move
+                time.sleep(0.1)
                 time.sleep(message.time * 0.001)
 
                 pick_data = 'pick\r'
