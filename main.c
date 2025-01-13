@@ -15,10 +15,7 @@
 #include "utils/config.h"
 #include "utils/timer.h"
 #define MOTOR_PERIOD_MS 20
-#define MOTOR_POS_90_DEG_US 2400
-#define MOTOR_POS_45_DEG_US 1925
-#define MOTOR_0_DEG_US 1450
-#define MOTOR_NEG_45_DEG_US 975
+#define MOTOR_POS_90_DEG_US 2500
 #define MOTOR_NEG_90_DEG_US 500
 
 int flag = 0;
@@ -28,6 +25,9 @@ int start_val = 0;
 int duty_cycle_us = MOTOR_NEG_90_DEG_US;
 
 int pitch_duty_cycles[180];
+int degree_delta = 0;
+int prev_val = 0;
+int base_degree = 0;
 
 
 //void putch(char c){
@@ -54,9 +54,10 @@ void SystemInitialize(void){
     };
 
     OscillatorInitialize();
-    ComponentInitialize(COMPONENT_LED | COMPONENT_UART | COMPONENT_PWM,
+    ComponentInitialize(COMPONENT_LED | COMPONENT_UART | COMPONENT_PWM | COMPONENT_ADC,
                         &int_config, component_config);
-    PWMSetDutyCycle(MOTOR_NEG_90_DEG_US);
+    MotorRotateDegree(0);
+    Motor2RotateDegree(0);
 }
 
 void main(void) {
@@ -68,6 +69,28 @@ void main(void) {
 
 void __interrupt(high_priority) HighIsr(void){
     if(BUTTON_IF){ 
+        if(state){
+            int next_degree = current_degree + degree_delta;
+            if(next_degree > 90){
+                next_degree = 90;
+            }
+            MotorRotateDegree(next_degree);
+            Motor2RotateDegree(next_degree);
+            UartSendString("Motor degree: ");
+            UartSendInt(next_degree);
+            UartSendString("\n");
+        }else{
+            int next_degree = current_degree - degree_delta;
+            if(next_degree < -90){
+                next_degree = -90;
+            }
+            MotorRotateDegree(next_degree);
+            Motor2RotateDegree(next_degree);
+            UartSendString("Motor degree: ");
+            UartSendInt(next_degree);
+            UartSendString("\n");
+        }
+        state = !state;
         ButtonIntDone();
     }
     if(Timer2IF){
@@ -86,8 +109,11 @@ void __interrupt(low_priority) LowIsr(void){
 //             int pitch = atoi(str);
 //             PWMSetDutyCycle(pitch_duty_cycles[pitch]);
 
-             duty_cycle_us = atoi(str);
-             PWMSetDutyCycle(duty_cycle_us);
+            
+            base_degree = atoi(str);
+            UartSendString("Base degree: ");
+            UartSendInt(base_degree);
+            UartSendString("\n");
 
 //            int num = atoi(str);
 //            LedSet(num);
@@ -96,7 +122,10 @@ void __interrupt(low_priority) LowIsr(void){
     }
     if(ADC_IF){
         int val = AdcGetResultHigh();
-        PWMSetDutyCycle((MOTOR_POS_90_DEG_US - MOTOR_0_DEG_US) * (double)val / 0b11111111 + MOTOR_0_DEG_US);
+        if(abs(val - prev_val) > 10){
+            degree_delta = (long long)(0b11111111 - val) * 90 / 0b11111111;
+            prev_val = val;
+        }
         AdcStartConversion();
         AdcIntDone();
     }
