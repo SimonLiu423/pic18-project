@@ -54,7 +54,7 @@ void SystemInitialize(void){
     };
 
     OscillatorInitialize();
-    ComponentInitialize(COMPONENT_LED | COMPONENT_UART | COMPONENT_PWM | COMPONENT_ADC,
+    ComponentInitialize(COMPONENT_LED | COMPONENT_UART | COMPONENT_PWM | COMPONENT_ADC | COMPONENT_BUTTON,
                         &int_config, component_config);
     MotorRotateDegree(0);
     Motor2RotateDegree(0);
@@ -80,7 +80,7 @@ void __interrupt(high_priority) HighIsr(void){
             Motor2RotateDegree(next_degree);
             UartSendString("Motor degree: ");
             UartSendInt(next_degree);
-            UartSendString("\n");
+            UartSendString("\n\r");
         }else{
             int next_degree = base_degree - degree_delta;
             if(next_degree < -90){
@@ -90,7 +90,7 @@ void __interrupt(high_priority) HighIsr(void){
             Motor2RotateDegree(next_degree);
             UartSendString("Motor degree: ");
             UartSendInt(next_degree);
-            UartSendString("\n");
+            UartSendString("\n\r");
         }
         state = !state;
         ButtonIntDone();
@@ -115,7 +115,7 @@ void __interrupt(low_priority) LowIsr(void){
             base_degree = atoi(str);
             UartSendString("Base degree: ");
             UartSendInt(base_degree);
-            UartSendString("\n");
+            UartSendString("\n\r");
 
 //            int num = atoi(str);
 //            LedSet(num);
