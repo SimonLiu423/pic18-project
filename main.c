@@ -63,6 +63,8 @@ void SystemInitialize(void){
 void main(void) {
     SystemInitialize();
     while(1){
+        __delay_ms(200);
+        AdcStartConversion();
     };
     return;
 }
@@ -70,7 +72,7 @@ void main(void) {
 void __interrupt(high_priority) HighIsr(void){
     if(BUTTON_IF){ 
         if(state){
-            int next_degree = current_degree + degree_delta;
+            int next_degree = base_degree + degree_delta;
             if(next_degree > 90){
                 next_degree = 90;
             }
@@ -80,7 +82,7 @@ void __interrupt(high_priority) HighIsr(void){
             UartSendInt(next_degree);
             UartSendString("\n");
         }else{
-            int next_degree = current_degree - degree_delta;
+            int next_degree = base_degree - degree_delta;
             if(next_degree < -90){
                 next_degree = -90;
             }
@@ -126,7 +128,6 @@ void __interrupt(low_priority) LowIsr(void){
             degree_delta = (long long)(0b11111111 - val) * 90 / 0b11111111;
             prev_val = val;
         }
-        AdcStartConversion();
         AdcIntDone();
     }
 }
