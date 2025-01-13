@@ -15,8 +15,6 @@
 #include "utils/config.h"
 #include "utils/timer.h"
 #define MOTOR_PERIOD_MS 20
-#define MOTOR_POS_90_DEG_US 2500
-#define MOTOR_NEG_90_DEG_US 500
 
 int flag = 0;
 int prev_adc_val = 0;
@@ -56,7 +54,7 @@ void SystemInitialize(void){
     OscillatorInitialize();
     ComponentInitialize(COMPONENT_LED | COMPONENT_UART | COMPONENT_PWM | COMPONENT_ADC | COMPONENT_BUTTON,
                         &int_config, component_config);
-    MotorRotateDegree(0);
+    MotorRotateDegree(-90);
     Motor2RotateDegree(0);
 }
 
@@ -76,7 +74,6 @@ void __interrupt(high_priority) HighIsr(void){
             if(next_degree > 90){
                 next_degree = 90;
             }
-            MotorRotateDegree(next_degree);
             Motor2RotateDegree(next_degree);
             UartSendString("Motor degree: ");
             UartSendInt(next_degree);
@@ -86,7 +83,6 @@ void __interrupt(high_priority) HighIsr(void){
             if(next_degree < -90){
                 next_degree = -90;
             }
-            MotorRotateDegree(next_degree);
             Motor2RotateDegree(next_degree);
             UartSendString("Motor degree: ");
             UartSendInt(next_degree);
@@ -108,19 +104,35 @@ void __interrupt(low_priority) LowIsr(void){
         if(ch == '\r'){
             char str[20];
             UartCopyBufferToString(str);
-//             int pitch = atoi(str);
-//             PWMSetDutyCycle(pitch_duty_cycles[pitch]);
 
-            
-            base_degree = atoi(str);
-            MotorRotateDegree(base_degree);
-            Motor2RotateDegree(base_degree);
-            UartSendString("Base degree: ");
-            UartSendInt(base_degree);
-            UartSendString("\n\r");
-
-//            int num = atoi(str);
-//            LedSet(num);
+            char *token = strtok(str, " ");
+            if (token != NULL) {
+                if(strcmp(token, "pitch") == 0){
+                    token = strtok(NULL, " ");
+                    if(token != NULL){
+                        // int pitch = atoi(token);
+                        // PWMSetDutyCycle(pitch_duty_cycles[pitch]);
+                        int degree = atoi(token);
+                        if(-90 <= degree && degree <= 90){
+                            MotorRotateDegree(degree);
+                        }
+                    }
+                } else if(strcmp(token, "base") == 0){
+                    token = strtok(NULL, " ");
+                    if(token != NULL){
+                        int degree = atoi(token);
+                        if(-90 <= degree && degree <= 90){
+                            base_degree = degree;
+                            Motor2RotateDegree(base_degree);
+                            UartSendString("Base degree: ");
+                            UartSendInt(base_degree);
+                            UartSendString("\n\r");
+                        } else {
+                            UartSendString("Base degree must be between -90 and 90\n\r");
+                        }
+                    }
+                }
+            }
             UartClearBuffer();
         }
     }
@@ -128,9 +140,9 @@ void __interrupt(low_priority) LowIsr(void){
         int val = AdcGetResultHigh();
         if(abs(val - prev_val) > 10){
             degree_delta = (long long)(0b11111111 - val) * 90 / 0b11111111;
-            UartSendString("Degree delta: ");
-            UartSendInt(degree_delta);
-            UartSendString("\n\r");
+            // UartSendString("Degree delta: ");
+            // UartSendInt(degree_delta);
+            // UartSendString("\n\r");
             prev_val = val;
         }
         AdcIntDone();
