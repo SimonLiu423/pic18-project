@@ -6,7 +6,8 @@ from mido import MidiFile
 
 # Configure the serial port
 ser = serial.Serial(
-    port='/dev/cu.usbserial-1320',  # Replace with your UART device path
+    # port='/dev/cu.usbserial-1320',  # Replace with your UART device path
+    port='/dev/cu.JLabGOAir',  # Replace with your UART device path
     baudrate=1200,        # Set the correct baud rate for your device
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
@@ -23,13 +24,22 @@ if not ser.is_open:
 try:
     for i, track in enumerate(midi_file.tracks):
         for message in track:
-            time.sleep(message.time * 0.01)
             # if message.type in ['note_on', 'note_off']:
-            if message.type == 'note_on':
-                data_to_send = str(message.note) + '\r'
 
-                ser.write(data_to_send.encode('utf-8'))  # Send data
-                print("Data sent:", data_to_send)
+            if message.type == 'note_off':
+                time.sleep(message.time * 0.001)
+
+            if message.type == 'note_on':
+                pitch_data = 'pitch ' + str(message.note) + '\r'
+                ser.write(pitch_data.encode('utf-8'))  # Send data
+                print("Data sent:", pitch_data)
+
+                time.sleep(1)   # wait for motor to move
+                time.sleep(message.time * 0.001)
+
+                pick_data = 'pick\r'
+                ser.write(pick_data.encode('utf-8'))
+                print("Data sent:", pick_data)
 
                 # notes.append({
                 # "Track": i,
