@@ -14,15 +14,18 @@
 #include "utils/uart.h"
 #include "utils/config.h"
 #include "utils/timer.h"
+#include <string.h>
+
 #define MOTOR_PERIOD_MS 20
 
 int flag = 0;
 int prev_adc_val = 0;
-int state = 0;
+int pick_state = 0;
+int pitch_state = 0;
 int start_val = 0;
 int duty_cycle_us = MOTOR_NEG_90_DEG_US;
 
-int pitch_duty_cycles[180];
+int pitch_degree_table[180];
 int degree_delta = 0;
 int prev_val = 0;
 int base_degree = 0;
@@ -58,6 +61,53 @@ void SystemInitialize(void){
     Motor2RotateDegree(0);
 }
 
+void rotate_pitch_motor(int pitch){
+    // MotorRotateDegree(pitch_degree_table[pitch]);
+    if(pitch_state){
+        int next_degree = base_degree + degree_delta;
+        if(next_degree > 90){
+            next_degree = 90;
+        }
+        MotorRotateDegree(next_degree);
+        UartSendString("Motor degree: ");
+        UartSendInt(next_degree);
+        UartSendString("\n\r");
+    }else{
+        int next_degree = base_degree - degree_delta;
+        if(next_degree < -90){
+            next_degree = -90;
+        }
+        MotorRotateDegree(next_degree);
+        UartSendString("Motor degree: ");
+        UartSendInt(next_degree);
+        UartSendString("\n\r");
+    }
+    pitch_state = !pitch_state; 
+}
+
+void rotate_pick_motor(){
+    if(pick_state){
+        int next_degree = base_degree + degree_delta;
+        if(next_degree > 90){
+            next_degree = 90;
+        }
+        Motor2RotateDegree(next_degree);
+        UartSendString("Motor degree: ");
+        UartSendInt(next_degree);
+        UartSendString("\n\r");
+    }else{
+        int next_degree = base_degree - degree_delta;
+        if(next_degree < -90){
+            next_degree = -90;
+        }
+        Motor2RotateDegree(next_degree);
+        UartSendString("Motor degree: ");
+        UartSendInt(next_degree);
+        UartSendString("\n\r");
+    }
+    pick_state = !pick_state;
+}
+
 void main(void) {
     SystemInitialize();
     while(1){
@@ -69,26 +119,7 @@ void main(void) {
 
 void __interrupt(high_priority) HighIsr(void){
     if(BUTTON_IF){ 
-        if(state){
-            int next_degree = base_degree + degree_delta;
-            if(next_degree > 90){
-                next_degree = 90;
-            }
-            Motor2RotateDegree(next_degree);
-            UartSendString("Motor degree: ");
-            UartSendInt(next_degree);
-            UartSendString("\n\r");
-        }else{
-            int next_degree = base_degree - degree_delta;
-            if(next_degree < -90){
-                next_degree = -90;
-            }
-            Motor2RotateDegree(next_degree);
-            UartSendString("Motor degree: ");
-            UartSendInt(next_degree);
-            UartSendString("\n\r");
-        }
-        state = !state;
+        rotate_pick_motor(0);
         ButtonIntDone();
     }
     if(Timer2IF){
@@ -110,12 +141,7 @@ void __interrupt(low_priority) LowIsr(void){
                 if(strcmp(token, "pitch") == 0){
                     token = strtok(NULL, " ");
                     if(token != NULL){
-                        // int pitch = atoi(token);
-                        // PWMSetDutyCycle(pitch_duty_cycles[pitch]);
-                        int degree = atoi(token);
-                        if(-90 <= degree && degree <= 90){
-                            MotorRotateDegree(degree);
-                        }
+                        rotate_pitch_motor(atoi(token));
                     }
                 } else if(strcmp(token, "base") == 0){
                     token = strtok(NULL, " ");
