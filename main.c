@@ -113,6 +113,8 @@ void __interrupt(low_priority) LowIsr(void){
 
             
             base_degree = atoi(str);
+            MotorRotateDegree(base_degree);
+            Motor2RotateDegree(base_degree);
             UartSendString("Base degree: ");
             UartSendInt(base_degree);
             UartSendString("\n\r");
@@ -126,6 +128,9 @@ void __interrupt(low_priority) LowIsr(void){
         int val = AdcGetResultHigh();
         if(abs(val - prev_val) > 10){
             degree_delta = (long long)(0b11111111 - val) * 90 / 0b11111111;
+            UartSendString("Degree delta: ");
+            UartSendInt(degree_delta);
+            UartSendString("\n\r");
             prev_val = val;
         }
         AdcIntDone();
