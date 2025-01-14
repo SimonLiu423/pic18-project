@@ -32,7 +32,6 @@ int degree_delta = 0;
 int prev_val = 0;
 int base_degree = 0;
 
-
 //void putch(char c){
 //    UartSendChar(c);
 //}
@@ -132,8 +131,9 @@ void play_midi(char *str){
         strcpy(tmp, token);
 
         int pwm_val, delay_val;
-        sscanf(tmp, "%d,%d", &pwm_val, &delay_val);
-
+        if(!(sscanf(tmp, "%d,%d", &pwm_val, &delay_val) == 2)){
+            return;
+        }
         PWMSetDutyCycle(pwm_val);
         __delay_ms(5);
         UartSendString("Playing note: ");
