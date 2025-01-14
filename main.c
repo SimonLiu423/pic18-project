@@ -55,34 +55,10 @@ void SystemInitialize(void){
     };
 
     OscillatorInitialize();
-    ComponentInitialize(COMPONENT_LED | COMPONENT_UART | COMPONENT_PWM | COMPONENT_ADC | COMPONENT_BUTTON,
+    ComponentInitialize(COMPONENT_LED | COMPONENT_UART | COMPONENT_PWM | COMPONENT_BUTTON,
                         &int_config, component_config);
-    MotorRotateDegree(-90);
+    MotorRotateDegree(-80);
     Motor2RotateDegree(0);
-}
-
-void rotate_pitch_motor(int pitch){
-    // MotorRotateDegree(pitch_degree_table[pitch]);
-    if(pitch_state){
-        int next_degree = base_degree + degree_delta;
-        if(next_degree > 90){
-            next_degree = 90;
-        }
-        MotorRotateDegree(next_degree);
-        UartSendString("Motor degree: ");
-        UartSendInt(next_degree);
-        UartSendString("\n\r");
-    }else{
-        int next_degree = base_degree - degree_delta;
-        if(next_degree < -90){
-            next_degree = -90;
-        }
-        MotorRotateDegree(next_degree);
-        UartSendString("Motor degree: ");
-        UartSendInt(next_degree);
-        UartSendString("\n\r");
-    }
-    pitch_state = !pitch_state; 
 }
 
 void rotate_pick_motor(){
@@ -119,7 +95,7 @@ void main(void) {
 
 void __interrupt(high_priority) HighIsr(void){
     if(BUTTON_IF){ 
-        rotate_pick_motor(0);
+        rotate_pick_motor();
         ButtonIntDone();
     }
     if(Timer2IF){
@@ -132,35 +108,49 @@ void __interrupt(low_priority) LowIsr(void){
         UartReceiveChar();
         char ch = UartGetChar();
 
+        // enter received
         if(ch == '\r'){
-            char str[20];
+            char str[100];
             UartCopyBufferToString(str);
 
-            char *token = strtok(str, " ");
-            if (token != NULL) {
-                if(strcmp(token, "pitch") == 0){
-                    token = strtok(NULL, " ");
-                    if(token != NULL){
-                        rotate_pitch_motor(atoi(token));
-                    }
-                } else if(strcmp(token, "pick") == 0){
-                    rotate_pick_motor();
-                } else if(strcmp(token, "base") == 0){
-                    token = strtok(NULL, " ");
-                    if(token != NULL){
-                        int degree = atoi(token);
-                        if(-90 <= degree && degree <= 90){
-                            base_degree = degree;
-                            Motor2RotateDegree(base_degree);
-                            UartSendString("Base degree: ");
-                            UartSendInt(base_degree);
-                            UartSendString("\n\r");
-                        } else {
-                            UartSendString("Base degree must be between -90 and 90\n\r");
-                        }
-                    }
+            int pitch_val, base_val;
+            if(sscanf(str, "pitch set pulse width us %d", &pitch_val) == 1) {
+                if(MOTOR_NEG_90_DEG_US <= pitch_val && pitch_val <= MOTOR_POS_90_DEG_US){
+                    PWMSetDutyCycle(pitch_val);
+                    UartSendString("Set pitch motor pulse width to ");
+                    UartSendInt(pitch_val);
+                    UartSendString(" us\n\r");
+                } else {
+                    UartSendString("Failed to set pitch motor pulse width, must be between ");
+                    UartSendInt(MOTOR_NEG_90_DEG_US);
+                    UartSendString(" and ");
+                    UartSendInt(MOTOR_POS_90_DEG_US);
+                    UartSendString(" us\n\r");
                 }
+            } else if (sscanf(str, "pitch set degree %d", &pitch_val) == 1) {
+                if(-90 <= pitch_val && pitch_val <= 90){
+                    MotorRotateDegree(pitch_val);
+                    UartSendString("Set pitch motor degree to ");
+                    UartSendInt(pitch_val);
+                    UartSendString(" degree\n\r");
+                } else {
+                    UartSendString("Failed to set pitch motor degree, must be between -90 and 90\n\r");
+                }
+            } else if(sscanf(str, "pick set base degree %d", &base_val) == 1) {
+                if(-90 <= base_val && base_val <= 90){
+                    base_degree = base_val;
+                    Motor2RotateDegree(base_degree);
+                    UartSendString("Set pick motor base degree to ");
+                    UartSendInt(base_degree);
+                    UartSendString(" degree\n\r");
+                } else {
+                    UartSendString("Failed to set pick motor base degree, must be between -90 and 90\n\r");
+                }
+            } else if(strcmp(str, "pick") == 0) {
+                rotate_pick_motor();
+                UartSendString("Rotate pick motor\n\r");
             }
+
             UartClearBuffer();
         }
     }
