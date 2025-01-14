@@ -88,20 +88,39 @@ void rotate_pick_motor(){
 void delay(int ms){
     if((ms) & 1){
         __delay_ms(1);
-    }else if((ms) & 2){
+    }
+    if((ms) & 2){
         __delay_ms(2);
-    }else if((ms) & 4){
+    }
+    if((ms) & 4){
         __delay_ms(4);
-    }else if((ms) & 8){
+    }
+    if((ms) & 8){
         __delay_ms(8);
-    }else if((ms) & 0x10){
+    }
+    if((ms) & 0x10){
         __delay_ms(16);
-    }else if((ms) & 0x20){
+    }
+    if((ms) & 0x20){
         __delay_ms(32);
-    }else if((ms) & 0x40){
+    }
+    if((ms) & 0x40){
         __delay_ms(64);
-    }else if((ms) & 0x80){
+    }
+    if((ms) & 0x80){
         __delay_ms(128);
+    }
+    if((ms) & 0x100){
+        __delay_ms(256);
+    }
+    if((ms) & 0x200){
+        __delay_ms(512);
+    }
+    if((ms) & 0x400){
+        __delay_ms(1024);
+    }
+    if((ms) & 0x800){
+        __delay_ms(2048);
     }
 }
 
