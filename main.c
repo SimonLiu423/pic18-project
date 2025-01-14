@@ -124,6 +124,18 @@ void delay(int ms){
     }
 }
 
+void play_midi(char *str){
+    UartSendString("Playing...\n\r");
+    char *token = strtok(str, ",");
+    while(token != NULL){
+        UartSendString(token);
+        UartSendString("\n\r");
+        rotate_pick_motor();
+        delay(atoi(token));
+        token = strtok(NULL, ",");
+    }
+}
+
 void main(void) {
     SystemInitialize();
     while(1){
@@ -153,7 +165,7 @@ void __interrupt(low_priority) LowIsr(void){
             char str[100];
             UartCopyBufferToString(str);
 
-            int pitch_val, base_val, delta_val, pick_delay_ms;
+            int pitch_val, base_val, delta_val;
             if(sscanf(str, "pitch set pulse width us %d", &pitch_val) == 1) {
                 if(MOTOR_NEG_90_DEG_US <= pitch_val && pitch_val <= MOTOR_POS_90_DEG_US){
                     PWMSetDutyCycle(pitch_val);
@@ -195,12 +207,14 @@ void __interrupt(low_priority) LowIsr(void){
                 } else {
                     UartSendString("Failed to set pick motor degree delta, must be between -90 and 90\n\r");
                 }
-            } else if(sscanf(str, "pick %d", &pick_delay_ms)){
+            } else if(strcmp(str, "pick\r") == 0) {
                 rotate_pick_motor();
                 UartSendString("Rotate pick motor\n\r");
-                delay(pick_delay_ms);
+            } else if(strncmp(str, "play", 4) == 0) {
+                char play_str[2048];
+                strcpy(play_str, str + 4);
+                play_midi(play_str);
             }
-
             UartSendString("<end>");
 
             UartClearBuffer();
