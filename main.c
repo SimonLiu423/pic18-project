@@ -26,6 +26,7 @@ int pitch_state = 0;
 int start_val = 0;
 int duty_cycle_us = MOTOR_NEG_90_DEG_US;
 
+int play_flag = 0;
 int pitch_degree_table[180];
 int degree_delta = 0;
 int prev_val = 0;
@@ -127,14 +128,11 @@ void delay(int ms){
 void play_midi(char *str){
     char *token = strtok(str, " ");
     while(token != NULL){
+        char tmp[32];
+        strcpy(tmp, token);
+
         int pwm_val, delay_val;
-        char *token2 = strtok(token, ",");
-        if (token2 == NULL) break;
-        pwm_val = atoi(token2);
-        
-        token2 = strtok(NULL, " ");
-        if (token2 == NULL) break;
-        delay_val = atoi(token2);
+        sscanf(tmp, "%d,%d", &pwm_val, &delay_val);
 
         PWMSetDutyCycle(pwm_val);
         __delay_ms(5);
@@ -241,16 +239,15 @@ void __interrupt(low_priority) LowIsr(void){
             } else if(strncmp(str, "play", 4) == 0) {
                 UartSendString("Playing...\n\r");
                 char play_str[UART_BUFFER_SIZE];
-                
-                strcpy(play_str, str + 5);  // Copy everything after "play "
-                
+                play_flag = 1;
                 if(UartBufferEndsWith("<end>\r")) {
-                    play_str[strlen(play_str) - 5] = '\0';  // Remove "<end>" from play_str
-                    play_midi(play_str);
+                    play_flag = 0;
+                    str[strlen(str) - 5] = '\0';  // Remove "<end>"
+                }
+                strcpy(play_str, str + 5);
+                play_midi(play_str);
+                if(!play_flag){
                     UartSendString("<end>");
-                } else {
-                    play_flag = 1;  // Set flag for continued input
-                    play_midi(play_str);
                 }
             }
 
