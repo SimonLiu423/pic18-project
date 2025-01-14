@@ -113,7 +113,7 @@ void __interrupt(low_priority) LowIsr(void){
             char str[100];
             UartCopyBufferToString(str);
 
-            int pitch_val, base_val;
+            int pitch_val, base_val, delta_val;
             if(sscanf(str, "pitch set pulse width us %d", &pitch_val) == 1) {
                 if(MOTOR_NEG_90_DEG_US <= pitch_val && pitch_val <= MOTOR_POS_90_DEG_US){
                     PWMSetDutyCycle(pitch_val);
@@ -145,6 +145,15 @@ void __interrupt(low_priority) LowIsr(void){
                     UartSendString(" degree\n\r");
                 } else {
                     UartSendString("Failed to set pick motor base degree, must be between -90 and 90\n\r");
+                }
+            } else if(sscanf(str, "pick set degree delta %d", &delta_val) == 1) {
+                if(-90 <= delta_val && delta_val <= 90){
+                    degree_delta = delta_val;
+                    UartSendString("Set pick motor degree delta to ");
+                    UartSendInt(degree_delta);
+                    UartSendString(" degree\n\r");
+                } else {
+                    UartSendString("Failed to set pick motor degree delta, must be between -90 and 90\n\r");
                 }
             } else if(strcmp(str, "pick") == 0) {
                 rotate_pick_motor();
