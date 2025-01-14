@@ -176,9 +176,9 @@ void __interrupt(low_priority) LowIsr(void){
             UartCopyBufferToString(str);
 
             if(play_flag){
-                if(UartBufferEndsWith("<end>\r")){
+                if(UartBufferEndsWith("<done>\r")){
                     play_flag = 0;
-                    str[strlen(str) - 5] = '\0';  // Remove "<end>"
+                    str[strlen(str) - 6] = '\0';  // Remove "<done>"
                     UartSendString("<end>");
                 }
                 play_midi(str);
@@ -240,9 +240,9 @@ void __interrupt(low_priority) LowIsr(void){
                 UartSendString("Playing...\n\r");
                 char play_str[UART_BUFFER_SIZE];
                 play_flag = 1;
-                if(UartBufferEndsWith("<end>\r")) {
+                if(UartBufferEndsWith("<done>\r")) {
                     play_flag = 0;
-                    str[strlen(str) - 5] = '\0';  // Remove "<end>"
+                    str[strlen(str) - 6] = '\0';  // Remove "<done>"
                 }
                 strcpy(play_str, str + 5);
                 play_midi(play_str);
