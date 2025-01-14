@@ -128,9 +128,12 @@ void play_midi(char *str){
     char *token = strtok(str, " ");
     while(token != NULL){
         int pwm_val, delay_val;
-        char *token2 = strtok(NULL, ",");
+        char *token2 = strtok(token, ",");
+        if (token2 == NULL) break;
         pwm_val = atoi(token2);
-        token2 = strtok(NULL, ",");
+        
+        token2 = strtok(NULL, " ");
+        if (token2 == NULL) break;
         delay_val = atoi(token2);
 
         PWMSetDutyCycle(pwm_val);
@@ -175,7 +178,7 @@ void __interrupt(low_priority) LowIsr(void){
             UartCopyBufferToString(str);
 
             if(play_flag){
-                if(UartBufferEndsWith("<end>")){
+                if(UartBufferEndsWith("<end>\r")){
                     play_flag = 0;
                     str[strlen(str) - 5] = '\0';  // Remove "<end>"
                     UartSendString("<end>");
@@ -238,15 +241,16 @@ void __interrupt(low_priority) LowIsr(void){
             } else if(strncmp(str, "play", 4) == 0) {
                 UartSendString("Playing...\n\r");
                 char play_str[UART_BUFFER_SIZE];
-                play_flag = 1;
-                if(UartBufferEndsWith("<end>")) {
-                    play_flag = 0;
-                    str[strlen(str) - 5] = '\0';  // Remove "<end>"
-                }
-                strcpy(play_str, str + 4);
-                play_midi(play_str);
-                if(!play_flag){
+                
+                strcpy(play_str, str + 5);  // Copy everything after "play "
+                
+                if(UartBufferEndsWith("<end>\r")) {
+                    play_str[strlen(play_str) - 5] = '\0';  // Remove "<end>" from play_str
+                    play_midi(play_str);
                     UartSendString("<end>");
+                } else {
+                    play_flag = 1;  // Set flag for continued input
+                    play_midi(play_str);
                 }
             }
 
