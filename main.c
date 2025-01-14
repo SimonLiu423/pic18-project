@@ -59,7 +59,7 @@ void SystemInitialize(void){
     ComponentInitialize(COMPONENT_LED | COMPONENT_UART | COMPONENT_PWM | COMPONENT_BUTTON,
                         &int_config, component_config);
     MotorRotateDegree(-80);
-    Motor2RotateDegree(0);
+    // Motor2RotateDegree(0);
 }
 
 void rotate_pick_motor(){
@@ -69,18 +69,18 @@ void rotate_pick_motor(){
             next_degree = 90;
         }
         Motor2RotateDegree(next_degree);
-        UartSendString("Motor degree: ");
+        UartSendString("<Motor degree: ");
         UartSendInt(next_degree);
-        UartSendString("\n\r");
+        UartSendString(">\n\r");
     }else{
         int next_degree = base_degree - degree_delta;
         if(next_degree < -90){
             next_degree = -90;
         }
         Motor2RotateDegree(next_degree);
-        UartSendString("Motor degree: ");
+        UartSendString("<Motor degree: ");
         UartSendInt(next_degree);
-        UartSendString("\n\r");
+        UartSendString(">\n\r");
     }
     pick_state = !pick_state;
 }
@@ -118,47 +118,47 @@ void __interrupt(low_priority) LowIsr(void){
             if(sscanf(str, "pitch set pulse width us %d", &pitch_val) == 1) {
                 if(MOTOR_NEG_90_DEG_US <= pitch_val && pitch_val <= MOTOR_POS_90_DEG_US){
                     PWMSetDutyCycle(pitch_val);
-                    UartSendString("Set pitch motor pulse width to ");
+                    UartSendString("<Set pitch motor pulse width to ");
                     UartSendInt(pitch_val);
-                    UartSendString(" us\n\r");
+                    UartSendString(" us>\n\r");
                 } else {
-                    UartSendString("Failed to set pitch motor pulse width, must be between ");
+                    UartSendString("<Failed to set pitch motor pulse width, must be between ");
                     UartSendInt(MOTOR_NEG_90_DEG_US);
                     UartSendString(" and ");
                     UartSendInt(MOTOR_POS_90_DEG_US);
-                    UartSendString(" us\n\r");
+                    UartSendString(" us>\n\r");
                 }
             } else if (sscanf(str, "pitch set degree %d", &pitch_val) == 1) {
                 if(-90 <= pitch_val && pitch_val <= 90){
                     MotorRotateDegree(pitch_val);
-                    UartSendString("Set pitch motor degree to ");
+                    UartSendString("<Set pitch motor degree to ");
                     UartSendInt(pitch_val);
-                    UartSendString(" degree\n\r");
+                    UartSendString(" degree>\n\r");
                 } else {
-                    UartSendString("Failed to set pitch motor degree, must be between -90 and 90\n\r");
+                    UartSendString("<Failed to set pitch motor degree, must be between -90 and 90>\n\r");
                 }
             } else if(sscanf(str, "pick set base degree %d", &base_val) == 1) {
                 if(-90 <= base_val && base_val <= 90){
                     base_degree = base_val;
                     Motor2RotateDegree(base_degree);
-                    UartSendString("Set pick motor base degree to ");
+                    UartSendString("<Set pick motor base degree to ");
                     UartSendInt(base_degree);
-                    UartSendString(" degree\n\r");
+                    UartSendString(" degree>\n\r");
                 } else {
-                    UartSendString("Failed to set pick motor base degree, must be between -90 and 90\n\r");
+                    UartSendString("<Failed to set pick motor base degree, must be between -90 and 90>\n\r");
                 }
             } else if(sscanf(str, "pick set degree delta %d", &delta_val) == 1) {
                 if(-90 <= delta_val && delta_val <= 90){
                     degree_delta = delta_val;
-                    UartSendString("Set pick motor degree delta to ");
+                    UartSendString("<Set pick motor degree delta to ");
                     UartSendInt(degree_delta);
-                    UartSendString(" degree\n\r");
+                    UartSendString(" degree>\n\r");
                 } else {
-                    UartSendString("Failed to set pick motor degree delta, must be between -90 and 90\n\r");
+                    UartSendString("<Failed to set pick motor degree delta, must be between -90 and 90>\n\r");
                 }
-            } else if(strcmp(str, "pick") == 0) {
+            } else if(strcmp(str, "pick\r") == 0) {
                 rotate_pick_motor();
-                UartSendString("Rotate pick motor\n\r");
+                UartSendString("<Rotate pick motor>\n\r");
             }
 
             UartClearBuffer();
