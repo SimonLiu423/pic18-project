@@ -85,6 +85,26 @@ void rotate_pick_motor(){
     pick_state = !pick_state;
 }
 
+void delay(int ms){
+    if((delay) & 1){
+        __delay_ms(1);
+    }else if((delay) & 2){
+        __delay_ms(2);
+    }else if((delay) & 4){
+        __delay_ms(4);
+    }else if((delay) & 8){
+        __delay_ms(8);
+    }else if((delay) & 0x10){
+        __delay_ms(16);
+    }else if((delay) & 0x20){
+        __delay_ms(32);
+    }else if((delay) & 0x40){
+        __delay_ms(64);
+    }else if((delay) & 0x80){
+        __delay_ms(128);
+    }
+}
+
 void main(void) {
     SystemInitialize();
     while(1){
@@ -159,7 +179,7 @@ void __interrupt(low_priority) LowIsr(void){
             } else if(sscanf(str, "pick %d", &pick_delay_ms)){
                 rotate_pick_motor();
                 UartSendString("Rotate pick motor\n\r");
-                __delay_ms(pick_delay_ms);
+                delay(pick_delay_ms);
             }
 
             UartSendString("<end>");
