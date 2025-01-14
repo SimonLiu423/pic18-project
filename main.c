@@ -15,6 +15,7 @@
 #include "utils/config.h"
 #include "utils/timer.h"
 #include <string.h>
+#include <stdio.h>
 
 #define MOTOR_PERIOD_MS 20
 
