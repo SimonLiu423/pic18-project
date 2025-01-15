@@ -18,53 +18,52 @@
 #include <stdio.h>
 
 #define MOTOR_PERIOD_MS 20
+#define BUFFER_SIZE 8
 
-int flag = 0;
-int prev_adc_val = 0;
-int pick_state = 0;
-int pitch_state = 0;
-int start_val = 0;
-int duty_cycle_us = MOTOR_NEG_90_DEG_US;
+typedef struct {
+    unsigned int pwm_values[BUFFER_SIZE];
+    unsigned int delays[BUFFER_SIZE];
+    unsigned char count;
+    unsigned char current_idx;
+} NoteBuffer;
 
-int play_flag = 0;
-int pitch_degree_table[180];
-int degree_delta = 0;
-int prev_val = 0;
-int base_degree = 0;
+NoteBuffer buffer1 = {0};
+NoteBuffer buffer2 = {0};
+NoteBuffer *active_buffer = &buffer1;
+NoteBuffer *filling_buffer = &buffer2;
 
-//void putch(char c){
-//    UartSendChar(c);
-//}
-//
-//int getch(void){
-//    return UartGetChar();
-//}
+__bit is_playing = 0;
+__bit pick_state = 0;
+unsigned char degree_delta = 0;
+unsigned char base_degree = 0;
 
 void SystemInitialize(void){
     IntConfig int_config = {
         .button = INTERRUPT_HIGH,
         .adc = INTERRUPT_LOW,
-        .timer = INTERRUPT_NONE,
+        .timer1 = INTERRUPT_HIGH,
+        .timer2 = INTERRUPT_NONE,
         .uart_tx = INTERRUPT_NONE,
         .uart_rx = INTERRUPT_LOW,
     };
     ComponentConfig component_config = {
-        .prescaler = 16,
-        .postscaler = 16,
+        .prescaler1 = 8,
+        .prescaler2 = 16,
+        .postscaler2 = 16,
         .timer_period_ms = 1000,
         .pwm_period_ms = MOTOR_PERIOD_MS,
     };
 
     OscillatorInitialize();
-    ComponentInitialize(COMPONENT_LED | COMPONENT_UART | COMPONENT_PWM | COMPONENT_BUTTON,
+    ComponentInitialize(COMPONENT_LED | COMPONENT_UART | COMPONENT_PWM | COMPONENT_BUTTON | COMPONENT_TIMER1,
                         &int_config, component_config);
-    MotorRotateDegree(-80);
+    PWMSetDutyCycle(1120);
     Motor2RotateDegree(0);
 }
 
 void rotate_pick_motor(){
     if(pick_state){
-        int next_degree = base_degree + degree_delta;
+        unsigned char next_degree = base_degree + degree_delta;
         if(next_degree > 90){
             next_degree = 90;
         }
@@ -73,7 +72,7 @@ void rotate_pick_motor(){
         UartSendInt(next_degree);
         UartSendString("\n\r");
     }else{
-        int next_degree = base_degree - degree_delta;
+        unsigned char next_degree = base_degree - degree_delta;
         if(next_degree < -90){
             next_degree = -90;
         }
@@ -85,7 +84,7 @@ void rotate_pick_motor(){
     pick_state = !pick_state;
 }
 
-void delay(int ms){
+void delay(unsigned int ms){
     if((ms) & 1){
         __delay_ms(1);
     }
@@ -124,23 +123,50 @@ void delay(int ms){
     }
 }
 
-void play_midi(char *str){
+void swap_buffers(){
+    NoteBuffer *tmp = active_buffer;
+    active_buffer = filling_buffer;
+    filling_buffer = tmp;
+}
+
+void play_next_note(){
+    UartSendString("Playing note: ");
+    UartSendInt(active_buffer->pwm_values[active_buffer->current_idx]);
+    UartSendString("\n\r");
+    UartSendString("<end>");
+            
+    PWMSetDutyCycle(active_buffer->pwm_values[active_buffer->current_idx]);
+    rotate_pick_motor();
+    int delay_val = active_buffer->delays[active_buffer->current_idx];
+    // delay(delay_val);
+    Timer1Start(delay_val);
+            
+    active_buffer->current_idx++;
+            
+    // If buffer is done, signal ready for more data
+    if(active_buffer->current_idx >= active_buffer->count) {
+        active_buffer->count = 0;
+        swap_buffers();
+        UartSendString("<ready><end>");
+    }
+}
+
+void parse_to_buffer(char *str){
+    filling_buffer->count = 0;
+    filling_buffer->current_idx = 0;
+
     char *token = strtok(str, " ");
-    while(token != NULL){
-        char tmp[32];
+    while(token != NULL && filling_buffer->count < BUFFER_SIZE){
+        char tmp[UART_BUFFER_SIZE];
         strcpy(tmp, token);
 
         int pwm_val, delay_val;
         if(!(sscanf(tmp, "%d,%d", &pwm_val, &delay_val) == 2)){
             return;
         }
-        PWMSetDutyCycle(pwm_val);
-        __delay_ms(5);
-        UartSendString("Playing note: ");
-        UartSendInt(pwm_val);
-        UartSendString("\n\r");
-        rotate_pick_motor();
-        delay(delay_val);
+        filling_buffer->pwm_values[filling_buffer->count] = pwm_val;
+        filling_buffer->delays[filling_buffer->count] = delay_val;
+        filling_buffer->count++;
 
         token = strtok(NULL, " ");
     }
@@ -149,8 +175,6 @@ void play_midi(char *str){
 void main(void) {
     SystemInitialize();
     while(1){
-        __delay_ms(200);
-        AdcStartConversion();
     };
     return;
 }
@@ -159,6 +183,14 @@ void __interrupt(high_priority) HighIsr(void){
     if(BUTTON_IF){ 
         rotate_pick_motor();
         ButtonIntDone();
+    }
+    if(Timer1IF){
+        if(active_buffer->current_idx < active_buffer->count){
+            play_next_note();
+        }else{
+            is_playing = 0;
+        }
+        Timer1IntDone();
     }
     if(Timer2IF){
         Timer2IntDone();
@@ -174,17 +206,6 @@ void __interrupt(low_priority) LowIsr(void){
         if(ch == '\r'){
             char str[UART_BUFFER_SIZE];
             UartCopyBufferToString(str);
-
-            if(play_flag){
-                if(UartBufferEndsWith("<done>\r")){
-                    play_flag = 0;
-                    str[strlen(str) - 6] = '\0';  // Remove "<done>"
-                    UartSendString("<end>");
-                }
-                play_midi(str);
-                UartClearBuffer();
-                return;
-            }
 
             int pitch_val, base_val, delta_val;
             if(sscanf(str, "pitch set pulse width us %d", &pitch_val) == 1) {
@@ -236,18 +257,22 @@ void __interrupt(low_priority) LowIsr(void){
                 rotate_pick_motor();
                 UartSendString("Rotate pick motor\n\r");
                 UartSendString("<end>");
+            // }else if (strncmp(str, "play end", 8) == 0) {
+            //     play_flag = 0;
+            //     UartSendString("<end>");
             } else if(strncmp(str, "play", 4) == 0) {
-                UartSendString("Playing...\n\r");
                 char play_str[UART_BUFFER_SIZE];
-                play_flag = 1;
-                if(UartBufferEndsWith("<done>\r")) {
-                    play_flag = 0;
-                    str[strlen(str) - 6] = '\0';  // Remove "<done>"
-                }
                 strcpy(play_str, str + 5);
-                play_midi(play_str);
-                if(!play_flag){
-                    UartSendString("<end>");
+                if(!strstr(play_str, "<done>")){
+                    parse_to_buffer(play_str);
+                    if(!is_playing){
+                        is_playing = 1;
+                        UartSendString("Playing...\n\r");
+                        swap_buffers();
+                        UartSendString("<ready><end>");
+                        UartSendString("\n\r");
+                        play_next_note();
+                    }
                 }
             }
 

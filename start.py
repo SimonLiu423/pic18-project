@@ -56,6 +56,14 @@ def uart_send(data: str, debug=False):
         print("\033[2m UART received:", uart_get(), "\033[0m")
 
 
+def uart_send_and_wait(data: str, debug=False):
+    uart_send(data, debug=debug)
+    while True:
+        response = uart_get()
+        if '<ready>' in response:
+            break
+
+
 def set_pitch_pwm(new_pwm=None, debug=False):
     global prev_pitch_pwm
 
@@ -282,13 +290,16 @@ def play_midi(debug=False):
     delays = delays[1:] + [delays[0]]
     data = [f'{NOTE_TO_PWM[note]},{delay}' for note, delay in zip(notes, delays)]
 
-    seg_idx = 0
-    step = 1
-    while seg_idx + step < len(notes):
-        uart_send('play ' + ' '.join(data[seg_idx:seg_idx+step]) + '<done>\r', debug=debug)
-        # time.sleep(0.005)
-        seg_idx += step
-    uart_send('play ' + ' '.join(data[seg_idx:]) + '<done>\r', debug=debug)
+    idx = 0
+    BATCH_SIZE = 4
+    while idx + BATCH_SIZE < len(notes):
+        batch = data[idx:idx+BATCH_SIZE]
+        uart_send_and_wait('play ' + ' '.join(batch) + '\r', debug=debug)
+        idx += BATCH_SIZE
+
+    batch = data[idx:]
+    uart_send_and_wait('play ' + ' '.join(batch) + '\r', debug=debug)
+    uart_send('play <done>\r', debug=debug)
 
 
 def pick_mode(debug=False):
