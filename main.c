@@ -57,7 +57,7 @@ void SystemInitialize(void){
     IntConfig int_config = {
         .button = INTERRUPT_HIGH,
         .adc = INTERRUPT_LOW,
-        .timer1 = INTERRUPT_HIGH,
+        .timer1 = INTERRUPT_LOW,
         .timer2 = INTERRUPT_NONE,
         .uart_tx = INTERRUPT_NONE,
         .uart_rx = INTERRUPT_LOW,
@@ -199,6 +199,13 @@ void __interrupt(high_priority) HighIsr(void){
         rotate_pick_motor();
         ButtonIntDone();
     }
+    if(Timer2IF){
+        Timer2IntDone();
+    }
+}
+
+void __interrupt(low_priority) LowIsr(void){
+
     if(Timer1IF){
         LedSet(LedValue()+1);
         UartSendString("current_idx: ");
@@ -219,12 +226,6 @@ void __interrupt(high_priority) HighIsr(void){
         }
         Timer1IntDone();
     }
-    if(Timer2IF){
-        Timer2IntDone();
-    }
-}
-
-void __interrupt(low_priority) LowIsr(void){
     if(RCIF){
         UartReceiveChar();
         char ch = UartGetChar();
