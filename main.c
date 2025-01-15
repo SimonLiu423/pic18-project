@@ -146,10 +146,10 @@ void swap_buffers(){
 }
 
 void play_next_note(){
-    UartSendString("Playing note: ");
-    UartSendInt(active_buffer->pwm_values[active_buffer->current_idx]);
-    UartSendString("\n\r");
-    UartSendString("<end>");
+    // UartSendString("Playing note: ");
+    // UartSendInt(active_buffer->pwm_values[active_buffer->current_idx]);
+    // UartSendString("\n\r");
+    // UartSendString("<end>");
             
     PWMSetDutyCycle(active_buffer->pwm_values[active_buffer->current_idx]);
     rotate_pick_motor();
@@ -208,16 +208,16 @@ void __interrupt(low_priority) LowIsr(void){
 
     if(Timer1IF){
         LedSet(LedValue()+1);
-        UartSendString("current_idx: ");
-        UartSendInt(active_buffer->current_idx);
-        UartSendString(" count: ");
-        UartSendInt(active_buffer->count);
-        UartSendString("\n\r");
-        UartSendString("filling_buffer idx: ");
-        UartSendInt(filling_buffer->current_idx);
-        UartSendString(" count: ");
-        UartSendInt(filling_buffer->count);
-        UartSendString("\n\r");
+        // UartSendString("current_idx: ");
+        // UartSendInt(active_buffer->current_idx);
+        // UartSendString(" count: ");
+        // UartSendInt(active_buffer->count);
+        // UartSendString("\n\r");
+        // UartSendString("filling_buffer idx: ");
+        // UartSendInt(filling_buffer->current_idx);
+        // UartSendString(" count: ");
+        // UartSendInt(filling_buffer->count);
+        // UartSendString("\n\r");
         if(active_buffer->current_idx < active_buffer->count){
             play_next_note();
         }else{
@@ -301,7 +301,7 @@ void __interrupt(low_priority) LowIsr(void){
                     parse_to_buffer(play_str);
                     if(!is_playing){
                         is_playing = 1;
-                        UartSendString("Playing...\n\r");
+                        // UartSendString("Playing...\n\r");
                         swap_buffers();
                         UartSendString("<ready><end>");
                         play_next_note();
