@@ -206,6 +206,11 @@ void __interrupt(high_priority) HighIsr(void){
         UartSendString(" count: ");
         UartSendInt(active_buffer->count);
         UartSendString("\n\r");
+        UartSendString("filling_buffer idx: ");
+        UartSendInt(filling_buffer->current_idx);
+        UartSendString(" count: ");
+        UartSendInt(filling_buffer->count);
+        UartSendString("\n\r");
         if(active_buffer->current_idx < active_buffer->count){
             play_next_note();
         }else{
