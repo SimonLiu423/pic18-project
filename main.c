@@ -39,10 +39,12 @@ int base_degree = 0;
 unsigned int pending_notes = 0;
 
 void reset(){
-    buffer1 = {0};
-    buffer2 = {0};
-    *active_buffer = &buffer1;
-    *filling_buffer = &buffer2;
+    buffer1.count = 0;
+    buffer1.current_idx = 0;
+    buffer2.count = 0;
+    buffer2.current_idx = 0;
+    active_buffer = &buffer1;
+    filling_buffer = &buffer2;
                 
     is_playing = 0;
     degree_delta = 20;
