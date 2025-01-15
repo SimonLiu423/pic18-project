@@ -201,6 +201,11 @@ void __interrupt(high_priority) HighIsr(void){
     }
     if(Timer1IF){
         LedSet(LedValue()+1);
+        UartSendString("current_idx: ");
+        UartSendInt(active_buffer->current_idx);
+        UartSendString(" count: ");
+        UartSendInt(active_buffer->count);
+        UartSendString("\n\r");
         if(active_buffer->current_idx < active_buffer->count){
             play_next_note();
         }else{
