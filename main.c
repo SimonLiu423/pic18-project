@@ -18,7 +18,7 @@
 #include <stdio.h>
 
 #define MOTOR_PERIOD_MS 20
-#define BUFFER_SIZE 128
+#define BUFFER_SIZE 80
 
 typedef struct {
     unsigned int pwm_values[BUFFER_SIZE];
@@ -132,11 +132,6 @@ void delay(unsigned int ms){
     }
 }
 
-void swap_buffers(){
-    NoteBuffer *tmp = active_buffer;
-    active_buffer = filling_buffer;
-    filling_buffer = tmp;
-}
 
 void play_midi(){
     for(int i = 0; i < buffer1.count; i++){
@@ -153,29 +148,6 @@ void play_midi(){
         delay(buffer1.delays[i]);
     }
 }
-
-// void play_next_note(){
-//     UartSendString("Playing note: ");
-//     UartSendInt(active_buffer->pwm_values[active_buffer->current_idx]);
-//     UartSendString("\n\r");
-//     UartSendString("<end>");
-            
-//     PWMSetDutyCycle(active_buffer->pwm_values[active_buffer->current_idx]);
-//     rotate_pick_motor();
-//     int delay_val = active_buffer->delays[active_buffer->current_idx];
-//     // delay(delay_val);
-//     // Timer1StartInterrupt(delay_val);
-            
-//     active_buffer->current_idx++;
-            
-//     // If buffer is done, signal ready for more data
-//     // if(active_buffer->current_idx >= active_buffer->count) {
-//     //     active_buffer->count = 0;
-//     //     active_buffer->current_idx = 0;
-//     //     swap_buffers();
-//     //     UartSendString("<ready><end>");
-//     // }
-// }
 
 void parse_to_buffer(char *str){
     char *token = strtok(str, " ");
@@ -216,23 +188,6 @@ void __interrupt(high_priority) HighIsr(void){
 void __interrupt(low_priority) LowIsr(void){
 
     if(Timer1IF){
-        LedSet(LedValue()+1);
-        UartSendString("current_idx: ");
-        UartSendInt(active_buffer->current_idx);
-        UartSendString(" count: ");
-        UartSendInt(active_buffer->count);
-        UartSendString("\n\r");
-        UartSendString("filling_buffer idx: ");
-        UartSendInt(filling_buffer->current_idx);
-        UartSendString(" count: ");
-        UartSendInt(filling_buffer->count);
-        UartSendString("\n\r");
-        if(active_buffer->current_idx < active_buffer->count){
-            play_next_note();
-        }else{
-            is_playing = 0;
-            Timer1StopInterrupt();
-        }
         Timer1IntDone();
     }
     if(RCIF){
