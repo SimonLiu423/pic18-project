@@ -280,14 +280,6 @@ void __interrupt(low_priority) LowIsr(void){
         }
     }
     if(ADC_IF){
-        int val = AdcGetResultHigh();
-        if(abs(val - prev_val) > 10){
-            degree_delta = (long long)(0b11111111 - val) * 90 / 0b11111111;
-            // UartSendString("Degree delta: ");
-            // UartSendInt(degree_delta);
-            // UartSendString("\n\r");
-            prev_val = val;
-        }
         AdcIntDone();
     }
 }
