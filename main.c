@@ -18,7 +18,7 @@
 #include <stdio.h>
 
 #define MOTOR_PERIOD_MS 20
-#define BUFFER_SIZE 4
+#define BUFFER_SIZE 128
 
 typedef struct {
     unsigned int pwm_values[BUFFER_SIZE];
@@ -28,9 +28,6 @@ typedef struct {
 } NoteBuffer;
 
 NoteBuffer buffer1 = {0};
-NoteBuffer buffer2 = {0};
-NoteBuffer *active_buffer = &buffer1;
-NoteBuffer *filling_buffer = &buffer2;
 
 __bit is_playing = 0;
 __bit pick_state = 0;
@@ -41,11 +38,7 @@ unsigned int pending_notes = 0;
 void reset(){
     buffer1.count = 0;
     buffer1.current_idx = 0;
-    buffer2.count = 0;
-    buffer2.current_idx = 0;
-    active_buffer = &buffer1;
-    filling_buffer = &buffer2;
-                
+
     is_playing = 0;
     degree_delta = 20;
     base_degree = 0;
@@ -145,32 +138,40 @@ void swap_buffers(){
     filling_buffer = tmp;
 }
 
-void play_next_note(){
-    UartSendString("Playing note: ");
-    UartSendInt(active_buffer->pwm_values[active_buffer->current_idx]);
-    UartSendString("\n\r");
-    UartSendString("<end>");
-            
-    PWMSetDutyCycle(active_buffer->pwm_values[active_buffer->current_idx]);
-    rotate_pick_motor();
-    int delay_val = active_buffer->delays[active_buffer->current_idx];
-    // delay(delay_val);
-    Timer1StartInterrupt(delay_val);
-            
-    active_buffer->current_idx++;
-            
-    // If buffer is done, signal ready for more data
-    if(active_buffer->current_idx >= active_buffer->count) {
-        active_buffer->count = 0;
-        active_buffer->current_idx = 0;
-        swap_buffers();
-        UartSendString("<ready><end>");
+void play_midi(){
+    for(int i = 0; i < buffer1.count; i++){
+        PWMSetDutyCycle(buffer1.pwm_values[i]);
+        rotate_pick_motor();
+        delay(buffer1.delays[i]);
     }
 }
 
+// void play_next_note(){
+//     UartSendString("Playing note: ");
+//     UartSendInt(active_buffer->pwm_values[active_buffer->current_idx]);
+//     UartSendString("\n\r");
+//     UartSendString("<end>");
+            
+//     PWMSetDutyCycle(active_buffer->pwm_values[active_buffer->current_idx]);
+//     rotate_pick_motor();
+//     int delay_val = active_buffer->delays[active_buffer->current_idx];
+//     // delay(delay_val);
+//     // Timer1StartInterrupt(delay_val);
+            
+//     active_buffer->current_idx++;
+            
+//     // If buffer is done, signal ready for more data
+//     // if(active_buffer->current_idx >= active_buffer->count) {
+//     //     active_buffer->count = 0;
+//     //     active_buffer->current_idx = 0;
+//     //     swap_buffers();
+//     //     UartSendString("<ready><end>");
+//     // }
+// }
+
 void parse_to_buffer(char *str){
     char *token = strtok(str, " ");
-    while(token != NULL && filling_buffer->count < BUFFER_SIZE && pending_notes > 0){
+    while(token != NULL && buffer1.count < BUFFER_SIZE && pending_notes > 0){
         char tmp[UART_BUFFER_SIZE];
         strcpy(tmp, token);
 
@@ -178,9 +179,9 @@ void parse_to_buffer(char *str){
         if(!(sscanf(tmp, "%d,%d", &pwm_val, &delay_val) == 2)){
             return;
         }
-        filling_buffer->pwm_values[filling_buffer->count] = pwm_val;
-        filling_buffer->delays[filling_buffer->count] = delay_val;
-        filling_buffer->count++;
+        buffer1.pwm_values[buffer1.count] = pwm_val;
+        buffer1.delays[buffer1.count] = delay_val;
+        buffer1.count++;
         pending_notes--;
 
         token = strtok(NULL, " ");
@@ -299,13 +300,17 @@ void __interrupt(low_priority) LowIsr(void){
                     UartSendString("<ready><end>");
                 } else {
                     parse_to_buffer(play_str);
-                    if(!is_playing){
-                        is_playing = 1;
-                        UartSendString("Playing...\n\r");
-                        swap_buffers();
-                        UartSendString("<ready><end>");
-                        play_next_note();
+                    if(pending_notes == 0){
+                        UartSendString("Playing...\n\r<end>");
+                        play_midi();
                     }
+                    // if(!is_playing){
+                    //     is_playing = 1;
+                    //     UartSendString("Playing...\n\r");
+                    //     swap_buffers();
+                    //     UartSendString("<ready><end>");
+                    //     play_next_note();
+                    // }
                 }
             }
 
