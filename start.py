@@ -37,12 +37,14 @@ prev_pitch_pwm = None
 
 def uart_get():
     ret_str = ''
-    while ser.in_waiting or not ret_str.endswith('<end>'):
+    start_time = time.time()
+    while not ret_str.endswith('<end>'):
+        if time.time() - start_time > 2:
+            return ret_str
         try:
             ret_str += ser.read(1).decode('utf-8', errors='replace')
         except UnicodeDecodeError:
             ret_str += '<?>'  # Replace invalid bytes with a placeholder
-    ret_str = ret_str.replace('<end>', '')
     return ret_str
 
 
@@ -52,16 +54,21 @@ def uart_send(data: str, debug=False):
 
     print("\033[2m UART sent:", data, "\033[0m")
 
+    response = '\033[2mUART DEBUG RESPONSE\033[0m'
     if not debug:
-        print("\033[2m UART received:", uart_get(), "\033[0m")
+        response = uart_get()
+        print("\033[2m UART received:", response, "\033[0m")
+
+    return response
 
 
 def uart_send_and_wait(data: str, debug=False):
-    uart_send(data, debug=debug)
-    while True:
+    response = uart_send(data, debug=debug)
+    while '<ready>' not in response:
         response = uart_get()
-        if '<ready>' in response:
-            break
+        print("\033[2m UART received:", response, "\033[0m")
+
+    return response
 
 
 def set_pitch_pwm(new_pwm=None, debug=False):
@@ -291,15 +298,19 @@ def play_midi(debug=False):
     data = [f'{NOTE_TO_PWM[note]},{delay}' for note, delay in zip(notes, delays)]
 
     idx = 0
-    BATCH_SIZE = 4
-    while idx + BATCH_SIZE < len(notes):
+    BATCH_SIZE = 3
+    uart_send(f'play {len(data)}\r', debug=debug)
+    while idx + BATCH_SIZE < len(data):
         batch = data[idx:idx+BATCH_SIZE]
-        uart_send_and_wait('play ' + ' '.join(batch) + '\r', debug=debug)
+        uart_send('play ' + ' '.join(batch) + '\r', debug=debug)
+        # input("Press Enter to continue...")
         idx += BATCH_SIZE
 
     batch = data[idx:]
-    uart_send_and_wait('play ' + ' '.join(batch) + '\r', debug=debug)
-    uart_send('play <done>\r', debug=debug)
+    uart_send('play ' + ' '.join(batch) + '\r', debug=debug)
+    response = uart_send('play start\r', debug=debug)
+    while '<done>' not in response:
+        response = uart_get()
 
 
 def pick_mode(debug=False):
@@ -347,9 +358,11 @@ if __name__ == "__main__":
                 print("\n[Debug mode]")
                 mode = int(
                     input(
-                        "Enter mode: 1)Tune 2)Play 3)Tune Result 4)Exit Debug 5)Pick 6)Test MIDI: "))
+                        "Enter mode: 1)Tune 2)Play 3)Tune Result 4)Exit Debug 5)Pick 6)Test MIDI 7)Reset 8)Status: "))
             else:
-                mode = int(input("Enter mode: 1)Tune 2)Play 3)Tune Result 4)Debug 5)Pick 6)Test MIDI: "))
+                mode = int(
+                    input(
+                        "Enter mode: 1)Tune 2)Play 3)Tune Result 4)Debug 5)Pick 6)Test MIDI 7)Reset 8)Status: "))
 
             if mode == 1:
                 tune(debug=debug_enable)
@@ -366,6 +379,10 @@ if __name__ == "__main__":
                 pick_mode(debug=debug_enable)
             elif mode == 6:
                 test_midi(debug=debug_enable)
+            elif mode == 7:
+                uart_send('reset\r', debug=debug_enable)
+            elif mode == 8:
+                uart_send('status\r', debug=debug_enable)
             else:
                 print("Invalid mode")
                 continue
