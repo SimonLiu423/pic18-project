@@ -23,8 +23,8 @@
 typedef struct {
     unsigned int pwm_values[BUFFER_SIZE];
     unsigned int delays[BUFFER_SIZE];
-    unsigned char count;
-    unsigned char current_idx;
+    unsigned int count;
+    unsigned int current_idx;
 } NoteBuffer;
 
 NoteBuffer buffer1 = {0};
@@ -36,7 +36,7 @@ __bit is_playing = 0;
 __bit pick_state = 0;
 int degree_delta = 0;
 int base_degree = 0;
-unsigned char pending_notes = 0;
+unsigned int pending_notes = 0;
 
 void reset(){
     buffer1 = {0};
