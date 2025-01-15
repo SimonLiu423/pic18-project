@@ -36,6 +36,7 @@ __bit is_playing = 0;
 __bit pick_state = 0;
 unsigned char degree_delta = 0;
 unsigned char base_degree = 0;
+unsigned char pending_notes = 0;
 
 void SystemInitialize(void){
     IntConfig int_config = {
@@ -156,7 +157,7 @@ void parse_to_buffer(char *str){
     filling_buffer->current_idx = 0;
 
     char *token = strtok(str, " ");
-    while(token != NULL && filling_buffer->count < BUFFER_SIZE){
+    while(token != NULL && filling_buffer->count < BUFFER_SIZE && pending_notes > 0){
         char tmp[UART_BUFFER_SIZE];
         strcpy(tmp, token);
 
@@ -167,6 +168,7 @@ void parse_to_buffer(char *str){
         filling_buffer->pwm_values[filling_buffer->count] = pwm_val;
         filling_buffer->delays[filling_buffer->count] = delay_val;
         filling_buffer->count++;
+        pending_notes--;
 
         token = strtok(NULL, " ");
     }
@@ -264,14 +266,15 @@ void __interrupt(low_priority) LowIsr(void){
             } else if(strncmp(str, "play", 4) == 0) {
                 char play_str[UART_BUFFER_SIZE];
                 strcpy(play_str, str + 5);
-                if(!strstr(play_str, "<done>")){
+                if(pending_notes == 0){
+                    pending_notes = atoi(play_str);
+                } else {
                     parse_to_buffer(play_str);
                     if(!is_playing){
                         is_playing = 1;
                         UartSendString("Playing...\n\r");
                         swap_buffers();
                         UartSendString("<ready><end>");
-                        UartSendString("\n\r");
                         play_next_note();
                     }
                 }
