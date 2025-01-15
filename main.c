@@ -18,7 +18,7 @@
 #include <stdio.h>
 
 #define MOTOR_PERIOD_MS 20
-#define BUFFER_SIZE 8
+#define BUFFER_SIZE 4
 
 typedef struct {
     unsigned int pwm_values[BUFFER_SIZE];
@@ -34,11 +34,24 @@ NoteBuffer *filling_buffer = &buffer2;
 
 __bit is_playing = 0;
 __bit pick_state = 0;
-unsigned char degree_delta = 0;
-unsigned char base_degree = 0;
+int degree_delta = 0;
+int base_degree = 0;
 unsigned char pending_notes = 0;
 
+void reset(){
+    buffer1 = {0};
+    buffer2 = {0};
+    *active_buffer = &buffer1;
+    *filling_buffer = &buffer2;
+                
+    is_playing = 0;
+    degree_delta = 20;
+    base_degree = 0;
+    pending_notes = 0;
+}
+
 void SystemInitialize(void){
+    reset();
     IntConfig int_config = {
         .button = INTERRUPT_HIGH,
         .adc = INTERRUPT_LOW,
@@ -64,7 +77,7 @@ void SystemInitialize(void){
 
 void rotate_pick_motor(){
     if(pick_state){
-        unsigned char next_degree = base_degree + degree_delta;
+        int next_degree = base_degree + degree_delta;
         if(next_degree > 90){
             next_degree = 90;
         }
@@ -73,7 +86,7 @@ void rotate_pick_motor(){
         UartSendInt(next_degree);
         UartSendString("\n\r");
     }else{
-        unsigned char next_degree = base_degree - degree_delta;
+        int next_degree = base_degree - degree_delta;
         if(next_degree < -90){
             next_degree = -90;
         }
@@ -147,15 +160,13 @@ void play_next_note(){
     // If buffer is done, signal ready for more data
     if(active_buffer->current_idx >= active_buffer->count) {
         active_buffer->count = 0;
+        active_buffer->current_idx = 0;
         swap_buffers();
         UartSendString("<ready><end>");
     }
 }
 
 void parse_to_buffer(char *str){
-    filling_buffer->count = 0;
-    filling_buffer->current_idx = 0;
-
     char *token = strtok(str, " ");
     while(token != NULL && filling_buffer->count < BUFFER_SIZE && pending_notes > 0){
         char tmp[UART_BUFFER_SIZE];
@@ -187,6 +198,7 @@ void __interrupt(high_priority) HighIsr(void){
         ButtonIntDone();
     }
     if(Timer1IF){
+        LedSet(LedValue()+1);
         if(active_buffer->current_idx < active_buffer->count){
             play_next_note();
         }else{
@@ -211,7 +223,10 @@ void __interrupt(low_priority) LowIsr(void){
             UartCopyBufferToString(str);
 
             int pitch_val, base_val, delta_val;
-            if(sscanf(str, "pitch set pulse width us %d", &pitch_val) == 1) {
+            if(strcmp(str, "reset\r") == 0){
+                reset();
+                UartSendString("<end>");
+            } else if(sscanf(str, "pitch set pulse width us %d", &pitch_val) == 1) {
                 if(MOTOR_NEG_90_DEG_US <= pitch_val && pitch_val <= MOTOR_POS_90_DEG_US){
                     PWMSetDutyCycle(pitch_val);
                     UartSendString("Set pitch motor pulse width to ");
@@ -268,6 +283,7 @@ void __interrupt(low_priority) LowIsr(void){
                 strcpy(play_str, str + 5);
                 if(pending_notes == 0){
                     pending_notes = atoi(play_str);
+                    UartSendString("<ready><end>");
                 } else {
                     parse_to_buffer(play_str);
                     if(!is_playing){
