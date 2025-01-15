@@ -1,36 +1,26 @@
+import os
 import time
 
 import matplotlib.pyplot as plt
 import numpy as np
 import serial
-from mido import MidiFile
 from scipy.interpolate import interp1d
+
+from roll import MidiFile
 
 PITCH_PWM_DIFF_THRESHOLD = 100
 SERIAL_PORT = '/dev/cu.usbserial-120'
 
 NOTE_TO_PWM = {
-    45: 500,
-    46: 550,
-    47: 600,
-    48: 700,
-    49: 735,
-    50: 770,
-    51: 785,
-    52: 795,
-    53: 850,
-    54: 867,
-    55: 885,
-    56: 892,
-    57: 910,
-    58: 923,
-    59: 937,
-    60: 940,
-    61: 943,
-    62: 650,
-    63: 700,
-    64: 750,
-    65: 800,
+    48: 1120,    # C3 -> A3
+    50: 1150,    # D3 -> B3
+    52: 1180,    # E3 -> C4#
+    53: 1195,    # F3 -> D4
+    55: 1235,    # G3 -> E4
+    57: 1250,    # A3 -> F4#
+    # 58: 1310,
+    59: 1330,    # B3 -> G4#
+    60: 1360,    # C4 -> A4
 }
 
 # Configure the serial port
@@ -41,9 +31,6 @@ ser = serial.Serial(
     bytesize=serial.EIGHTBITS,
     timeout=1             # Optional: timeout in seconds
 )
-
-# Load your MIDI file
-midi_file = MidiFile('birthday.mid')
 
 prev_pitch_pwm = None
 
@@ -65,8 +52,8 @@ def uart_send(data: str, debug=False):
 
     print("\033[2m UART sent:", data, "\033[0m")
 
-    # if not debug:
-    print("\033[2m UART received:", uart_get(), "\033[0m")
+    if not debug:
+        print("\033[2m UART received:", uart_get(), "\033[0m")
 
 
 def set_pitch_pwm(new_pwm=None, debug=False):
@@ -215,10 +202,65 @@ def tune(debug=False):
         print("\n\033[91mExit tuning...\033[0m")
 
 
+def select_midi_file():
+    # Get all .mid files from midi directory
+    try:
+        midi_files = [f for f in os.listdir('midi') if f.endswith('.mid')]
+    except FileNotFoundError:
+        print("'midi' directory not found")
+        return None
+
+    if not midi_files:
+        print("No MIDI files found in 'midi' directory")
+        return None
+
+    # Print numbered list of files
+    print("\nAvailable MIDI files:")
+    for i, file in enumerate(midi_files, 1):
+        print(f"{i}) {file}")
+
+    # Get user selection
+    while True:
+        try:
+            selection = int(input("\nSelect a song number: "))
+            if 1 <= selection <= len(midi_files):
+                return os.path.join('midi', midi_files[selection-1])
+            print("Invalid selection. Please try again.")
+        except ValueError:
+            print("Please enter a valid number")
+        except KeyboardInterrupt:
+            print("\nSelection cancelled")
+            return None
+
+
+def test_midi(debug=False):
+    for note, pwm in NOTE_TO_PWM.items():
+        current_pwm = pwm
+        while True:
+            uart_send(f'play {current_pwm},500<done>\r', debug=debug)
+            result = input("Enter result(+/-/y): ")
+            if not result:
+                continue
+            if result.startswith('+'):
+                current_pwm += int(result[1:])
+            elif result.startswith('-'):
+                current_pwm -= int(result[1:])
+            elif result == 'y':
+                print(f"note, PWM: {note}, {current_pwm}")
+                break
+            else:
+                print("Invalid result")
+
+
 def play_midi(debug=False):
     data = []
+    notes = []
+    delays = []
     sum = 0
     flag = False
+    midi_file = MidiFile(select_midi_file())
+    # midi_file.draw_roll()
+    # input("Press Enter to continue...")
     try:
         for i, track in enumerate(midi_file.tracks):
             for message in track:
@@ -230,42 +272,19 @@ def play_midi(debug=False):
                         flag = not flag
                         if not flag:
                             continue
-                        data.append(f'{NOTE_TO_PWM[message.note]},{sum}')
+                        notes.append(message.note)
+                        delays.append(int(sum*0.5))
                         sum = 0
-
-                        # uart_send('pitch ' + str(message.note) + '\r', debug=debug)
-
-                        # uart_send(f'pick {message.time*10}\r', debug=debug)
-
-                    # notes.append({
-                    #     "Track": i,
-                    #     "Type": message.type,
-                    #     "Note": message.note,
-                    #     "Velocity": message.velocity,
-                    #     "Time": message.time
-                    # })
-
-        # for note in notes:
-        #     print(note)
-            # while True:
-            #     data_to_send = str(num) + '\r'
-            #     ser.write(data_to_send.encode('utf-8'))  # Send data
-            #     print("Data sent:", data_to_send)
-            #     num += 1
-            #     time.sleep(0.5)
-
-            # Optional: Wait and read response
-            # time.sleep(1)  # Wait for response (if needed)
-            # if ser.in_waiting:
-            # response = ser.read(ser.in_waiting).decode('utf-8')  # Read available data
-            # print("Received:", response)
 
     except Exception as e:
         print("Error:", e)
 
+    delays = delays[1:] + [delays[0]]
+    data = [f'{NOTE_TO_PWM[note]},{delay}' for note, delay in zip(notes, delays)]
+
     seg_idx = 0
-    step = 3
-    while seg_idx + step < len(data):
+    step = 1
+    while seg_idx + step < len(notes):
         uart_send('play ' + ' '.join(data[seg_idx:seg_idx+step]) + '<done>\r', debug=debug)
         # time.sleep(0.005)
         seg_idx += step
@@ -315,9 +334,11 @@ if __name__ == "__main__":
         while True:
             if debug_enable:
                 print("\n[Debug mode]")
-                mode = int(input("Enter mode: 1)Tune 2)Play 3)Tune Result 4)Exit Debug 5)Pick: "))
+                mode = int(
+                    input(
+                        "Enter mode: 1)Tune 2)Play 3)Tune Result 4)Exit Debug 5)Pick 6)Test MIDI: "))
             else:
-                mode = int(input("Enter mode: 1)Tune 2)Play 3)Tune Result 4)Debug 5)Pick: "))
+                mode = int(input("Enter mode: 1)Tune 2)Play 3)Tune Result 4)Debug 5)Pick 6)Test MIDI: "))
 
             if mode == 1:
                 tune(debug=debug_enable)
@@ -332,6 +353,8 @@ if __name__ == "__main__":
                     debug_enable = not debug_enable
             elif mode == 5:
                 pick_mode(debug=debug_enable)
+            elif mode == 6:
+                test_midi(debug=debug_enable)
             else:
                 print("Invalid mode")
                 continue
