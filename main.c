@@ -149,6 +149,9 @@ void play_midi(){
         rotate_pick_motor();
         delay(buffer1.delays[i]);
     }
+    buffer1.count = 0;
+    buffer1.current_idx = 0;
+    
 }
 
 void parse_to_buffer(char *str){
