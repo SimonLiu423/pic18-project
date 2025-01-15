@@ -139,7 +139,7 @@ void play_next_note(){
     rotate_pick_motor();
     int delay_val = active_buffer->delays[active_buffer->current_idx];
     // delay(delay_val);
-    Timer1Start(delay_val);
+    Timer1StartInterrupt(delay_val);
             
     active_buffer->current_idx++;
             
@@ -189,6 +189,7 @@ void __interrupt(high_priority) HighIsr(void){
             play_next_note();
         }else{
             is_playing = 0;
+            Timer1StopInterrupt();
         }
         Timer1IntDone();
     }
