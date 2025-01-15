@@ -140,7 +140,15 @@ void swap_buffers(){
 
 void play_midi(){
     for(int i = 0; i < buffer1.count; i++){
+        UartSendString("Playing note: ");
+        UartSendInt(buffer1.pwm_values[i]);
+        UartSendString("\n\r");
+        UartSendString("<end>");
+
+        PWMSetDutyCycle(900);
+        __delay_ms(50);
         PWMSetDutyCycle(buffer1.pwm_values[i]);
+        __delay_ms(5);
         rotate_pick_motor();
         delay(buffer1.delays[i]);
     }
@@ -295,7 +303,10 @@ void __interrupt(low_priority) LowIsr(void){
             } else if(strncmp(str, "play", 4) == 0) {
                 char play_str[UART_BUFFER_SIZE];
                 strcpy(play_str, str + 5);
-                if(pending_notes == 0){
+                if(strcmp(play_str, "start\r") == 0){
+                    play_midi();
+                    UartSendString("<done><end>");
+                } else if(pending_notes == 0){
                     pending_notes = atoi(play_str);
                     UartSendString("<ready><end>");
                 } else {
