@@ -18,7 +18,7 @@
 #include <stdio.h>
 
 #define MOTOR_PERIOD_MS 20
-#define BUFFER_SIZE 80
+#define BUFFER_SIZE 64
 
 typedef struct {
     unsigned int pwm_values[BUFFER_SIZE];
@@ -137,6 +137,8 @@ void play_midi(){
     for(int i = 0; i < buffer1.count; i++){
         UartSendString("Playing note: ");
         UartSendInt(buffer1.pwm_values[i]);
+        UartSendString(", delay: ");
+        UartSendInt(buffer1.delays[i]);
         UartSendString("\n\r");
         UartSendString("<end>");
 
@@ -266,17 +268,7 @@ void __interrupt(low_priority) LowIsr(void){
                     UartSendString("<ready><end>");
                 } else {
                     parse_to_buffer(play_str);
-                    if(pending_notes == 0){
-                        UartSendString("Playing...\n\r<end>");
-                        play_midi();
-                    }
-                    // if(!is_playing){
-                    //     is_playing = 1;
-                    //     UartSendString("Playing...\n\r");
-                    //     swap_buffers();
-                    //     UartSendString("<ready><end>");
-                    //     play_next_note();
-                    // }
+                    UartSendString("<end>");
                 }
             }
 
