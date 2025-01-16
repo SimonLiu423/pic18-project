@@ -143,15 +143,15 @@ void play_midi(){
         UartSendString("<end>");
 
         PWMSetDutyCycle(900);
-        __delay_ms(50);
+        __delay_ms(75);
         PWMSetDutyCycle(buffer1.pwm_values[i]);
         __delay_ms(5);
         rotate_pick_motor();
-        delay(buffer1.delays[i]);
+        if(buffer1.delays[i] >= 80) delay(buffer1.delays[i] - 80);
     }
     buffer1.count = 0;
     buffer1.current_idx = 0;
-    
+
 }
 
 void parse_to_buffer(char *str){

@@ -12,15 +12,15 @@ PITCH_PWM_DIFF_THRESHOLD = 100
 SERIAL_PORT = '/dev/cu.usbserial-120'
 
 NOTE_TO_PWM = {
-    48: 1120,    # C3 -> A3
-    50: 1150,    # D3 -> B3
-    52: 1180,    # E3 -> C4#
-    53: 1195,    # F3 -> D4
-    55: 1235,    # G3 -> E4
-    57: 1250,    # A3 -> F4#
-    # 58: 1310,
-    59: 1330,    # B3 -> G4#
-    60: 1360,    # C4 -> A4
+    48: 1173,    # C3 -> A3
+    50: 1208,    # D3 -> B3
+    52: 1236,    # E3 -> C4#
+    53: 1244,    # F3 -> D4
+    55: 1264,    # G3 -> E4
+    57: 1294,    # A3 -> F4#z
+    58: 1302,
+    59: 1319,    # B3 -> G4#
+    60: 1348,    # C4 -> A4
 }
 
 # Configure the serial port
@@ -37,10 +37,7 @@ prev_pitch_pwm = None
 
 def uart_get():
     ret_str = ''
-    start_time = time.time()
     while not ret_str.endswith('<end>'):
-        if time.time() - start_time > 2:
-            return ret_str
         try:
             ret_str += ser.read(1).decode('utf-8', errors='replace')
         except UnicodeDecodeError:
@@ -252,7 +249,9 @@ def test_midi(debug=False):
     for note, pwm in NOTE_TO_PWM.items():
         current_pwm = pwm
         while True:
-            uart_send(f'play {current_pwm},500<done>\r', debug=debug)
+            uart_send('play 1\r', debug=debug)
+            uart_send(f'play {current_pwm},500\r', debug=debug)
+            uart_send('play start\r', debug=debug)
             result = input("Enter result(+/-/y): ")
             if not result:
                 continue
@@ -311,6 +310,7 @@ def play_midi(debug=False):
     response = uart_send('play start\r', debug=debug)
     while '<done>' not in response:
         response = uart_get()
+        print("\033[2m UART received:", response, "\033[0m")
 
 
 def pick_mode(debug=False):
