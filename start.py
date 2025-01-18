@@ -12,12 +12,15 @@ PITCH_PWM_DIFF_THRESHOLD = 100
 SERIAL_PORT = '/dev/cu.usbserial-120'
 
 NOTE_TO_PWM = {
+    46: 1133,
     48: 1173,    # C3 -> A3
-    50: 1208,    # D3 -> B3
-    52: 1236,    # E3 -> C4#
+    50: 1213,    # D3 -> B3
+    51: 1225,
+    52: 1237,    # E3 -> C4#
     53: 1244,    # F3 -> D4
     55: 1264,    # G3 -> E4
-    57: 1294,    # A3 -> F4#z
+    56: 1279,
+    57: 1295,    # A3 -> F4#z
     58: 1302,
     59: 1319,    # B3 -> G4#
     60: 1348,    # C4 -> A4
@@ -251,8 +254,13 @@ def test_midi(debug=False):
         while True:
             uart_send('play 1\r', debug=debug)
             uart_send(f'play {current_pwm},500\r', debug=debug)
-            uart_send('play start\r', debug=debug)
-            result = input("Enter result(+/-/y): ")
+            response = uart_send('play start\r', debug=debug)
+
+            while '<done>' not in response:
+                response = uart_get()
+                print("\033[2m UART received:", response, "\033[0m")
+                result = input("Enter result(+/-/y): ")
+
             if not result:
                 continue
             if result.startswith('+'):
